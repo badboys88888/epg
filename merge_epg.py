@@ -3,23 +3,31 @@ import gzip
 import xml.etree.ElementTree as ET
 
 SOURCE_FILE = "epg_sources.txt"
-OUTPUT_FILE = "merged_epg.xml"
+OUTPUT_FILE = "e.xml"
 
+# ========== 读取源 ==========
 def load_sources():
     with open(SOURCE_FILE, "r", encoding="utf-8") as f:
         return [x.strip() for x in f if x.strip()]
 
+# ========== 自动识别 XML / GZ ==========
 def load_xml(url):
-    r = requests.get(url, timeout=30)
+    headers = {
+        "User-Agent": "Mozilla/5.0"
+    }
+
+    r = requests.get(url, headers=headers, timeout=30)
     r.raise_for_status()
 
-    if url.endswith(".gz"):
-        data = gzip.decompress(r.content)
-    else:
-        data = r.content
+    content = r.content
 
-    return ET.fromstring(data)
+    # gzip 判断（关键）
+    if content[:2] == b'\x1f\x8b':
+        content = gzip.decompress(content)
 
+    return ET.fromstring(content)
+
+# ========== 主逻辑 ==========
 channels = {}
 programmes = []
 seen = set()
@@ -28,11 +36,13 @@ for url in load_sources():
     try:
         root = load_xml(url)
 
+        # channel 去重
         for ch in root.findall("channel"):
             cid = ch.get("id")
-            if cid not in channels:
+            if cid and cid not in channels:
                 channels[cid] = ch
 
+        # programme 去重
         for p in root.findall("programme"):
             key = (p.get("channel"), p.get("start"), p.get("stop"))
             if key not in seen:
@@ -43,7 +53,9 @@ for url in load_sources():
 
     except Exception as e:
         print("FAIL:", url, e)
+        continue
 
+# ========== 生成 XML ==========
 tv = ET.Element("tv")
 
 for ch in channels.values():
