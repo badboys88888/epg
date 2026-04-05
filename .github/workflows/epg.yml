@@ -1,8 +1,8 @@
-name: epg build
+name: Auto Build EPG
 
 on:
   schedule:
-    - cron: "0 3 * * *"
+    - cron: "0 */6 * * *"   # 每6小时更新一次
   workflow_dispatch:
 
 permissions:
@@ -13,22 +13,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # 1️⃣ 拉代码
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      # 2️⃣ Python环境
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - run: pip install requests
+      # 3️⃣ 安装依赖
+      - name: Install deps
+        run: |
+          pip install requests
 
-      - run: python merge_epg.py
+      # 4️⃣ 运行脚本
+      - name: Run script
+        run: |
+          python merge_epg.py
 
-      - name: commit
+      # 5️⃣ 提交文件（关键）
+      - name: Commit & Push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          git add e.xml.gz epg_data.json
+          git add e.xml.gz epg_data.json index.json
 
-          git commit -m "update epg" || echo "no change"
+          git commit -m "update epg" || echo "no changes"
+
           git push
