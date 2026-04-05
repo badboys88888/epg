@@ -4,16 +4,15 @@
 import re
 import json
 import gzip
+import os
 import requests
 from opencc import OpenCC
 from rapidfuzz import fuzz
 
-# ===================== 配置区 ===================== #
+# ===================== 配置 ===================== #
 
 INPUT_SOURCES = [
     {"type": "m3u", "path": "input.m3u"},
-    # {"type": "json", "path": "channels.json"},
-    # {"type": "api", "url": "http://127.0.0.1/api"}
 ]
 
 EPG_SOURCE_FILE = "epg.txt"
@@ -25,7 +24,8 @@ OUT_XMLGZ = "e.xml.gz"
 
 cc = OpenCC("t2s")
 
-# ===================== 基础工具 ===================== #
+
+# ===================== 工具 ===================== #
 
 def norm(name: str):
     name = cc.convert(name)
@@ -42,7 +42,7 @@ def load_icon_map():
         return {}
 
 
-# ===================== 多轨索引（核心） ===================== #
+# ===================== 多轨索引 ===================== #
 
 def build_keys(name: str):
     keys = set()
@@ -54,59 +54,65 @@ def build_keys(name: str):
     keys.add(base)
     keys.add(simp)
 
-    # CCTV规则（正则核心）
+    # CCTV规则
     m = re.search(r'cctv[- ]*(\d{1,2})', base)
     if m:
         keys.add(f"cctv{m.group(1)}")
         keys.add("cctv")
 
-    # 卫视规则
+    # 常见频道
     if "hunan" in base or "湖南" in name:
         keys.add("hunan")
+
     if "dongfang" in base or "东方" in name:
         keys.add("dongfang")
-    if "guangdong" in base or "广东" in name:
-        keys.add("guangdong")
 
-    # 港台
     if "tvb" in base:
         keys.add("tvb")
 
     return list(keys)
 
 
-# ===================== EPG加载 ===================== #
+# ===================== EPG ===================== #
 
 def load_epg():
     epg_list = []
 
-    try:
-        with open(EPG_SOURCE_FILE, "r", encoding="utf-8") as f:
-            for line in f:
-                if "|" not in line:
-                    continue
+    if not os.path.exists(EPG_SOURCE_FILE):
+        print("⚠️ epg.txt not found, skip epg load")
+        return []
 
-                name = line.split("|")[0].strip()
-                epg_list.append({
-                    "name": name,
-                    "norm": norm(name),
-                    "keys": build_keys(name)
-                })
-    except:
-        pass
+    with open(EPG_SOURCE_FILE, "r", encoding="utf-8") as f:
+        for line in f:
+            if "|" not in line:
+                continue
+
+            name = line.split("|")[0].strip()
+
+            epg_list.append({
+                "name": name,
+                "norm": norm(name),
+                "keys": build_keys(name)
+            })
 
     return epg_list
 
 
-# ===================== 输入适配层 ===================== #
+# ===================== 输入层（关键修复） ===================== #
 
 def parse_m3u(path):
+    if not os.path.exists(path):
+        print(f"⚠️ skip missing m3u: {path}")
+        return []
+
     items = []
+
     with open(path, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     for i in range(len(lines)):
-        if lines[i].startswith("#EXTINF"):
+        if lines[i].startswith("#EXTINF") and i + 1 < len(lines):
+
             name = lines[i].split(",")[-1].strip()
             url = lines[i + 1].strip()
 
@@ -126,14 +132,21 @@ def load_channels():
         if src["type"] == "m3u":
             result += parse_m3u(src["path"])
 
+    if not result:
+        print("⚠️ no input channels loaded, running empty mode")
+
     return result
 
 
 # ===================== 匹配引擎 ===================== #
 
+def build_channel_keys(name):
+    return build_keys(name)
+
+
 def match_channel(ch, epg_list):
 
-    ch_keys = build_keys(ch["name"])
+    ch_keys = build_channel_keys(ch["name"])
     ch_norm = norm(ch["name"])
 
     best = None
@@ -141,11 +154,11 @@ def match_channel(ch, epg_list):
 
     for e in epg_list:
 
-        # 1. 精确匹配（多轨）
+        # 精确命中
         if set(ch_keys) & set(e["keys"]):
             return e
 
-        # 2. fuzzy
+        # fuzzy
         score = fuzz.ratio(ch_norm, e["norm"])
         if score > best_score:
             best_score = score
@@ -157,14 +170,13 @@ def match_channel(ch, epg_list):
     return None
 
 
-# ===================== 输出EPG XML ===================== #
+# ===================== 输出 ===================== #
 
 def build_xml(epg_list):
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
 
     for e in epg_list:
         cid = norm(e["name"])
-
         xml.append(f'<channel id="{cid}">')
         xml.append(f'<display-name>{e["name"]}</display-name>')
         xml.append('</channel>')
@@ -182,12 +194,17 @@ def save_gz(xml_str):
 
 def main():
 
+    print("🚀 IPTV Engine v3.1 starting...")
+
     icon_map = load_icon_map()
     epg_list = load_epg()
     channels = load_channels()
 
     out_m3u = []
     out_json = []
+
+    if not channels:
+        print("⚠️ No channels found, but engine continues")
 
     for ch in channels:
 
@@ -210,9 +227,11 @@ def main():
             })
 
         else:
-            out_m3u.append(
-                f'#EXTINF:-1,{ch["name"]}\n{ch["url"]}'
-            )
+
+            if ch:
+                out_m3u.append(
+                    f'#EXTINF:-1,{ch["name"]}\n{ch["url"]}'
+                )
 
     # ===== 输出 M3U ===== #
     with open(OUT_M3U, "w", encoding="utf-8") as f:
@@ -226,7 +245,7 @@ def main():
     xml = build_xml(epg_list)
     save_gz(xml)
 
-    print("✅ v3 AI引擎执行完成")
+    print("✅ v3.1 completed successfully")
 
 
 if __name__ == "__main__":
