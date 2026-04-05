@@ -3,7 +3,7 @@ import json
 with open("channels.json", "r", encoding="utf-8") as f:
     channels = json.load(f)
 
-with open("logo_map.json", "r", encoding="utf-8") as f:
+with open("icon_map.json", "r", encoding="utf-8") as f:
     logo_map = json.load(f)
 
 def get_logo(name):
