@@ -2,7 +2,7 @@ name: EPG Auto Build
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # 每6小时运行一次
+    - cron: "0 */6 * * *"   # 每6小时执行一次
   workflow_dispatch:        # 手动触发
 
 jobs:
@@ -11,10 +11,10 @@ jobs:
 
     steps:
       # 1️⃣ 拉取代码
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ 安装Python
+      # 2️⃣ 安装 Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -25,19 +25,24 @@ jobs:
         run: |
           pip install requests
 
-      # 4️⃣ 运行EPG合并
-      - name: Run merge_epg
+      # 4️⃣ 生成 EPG（第一步）
+      - name: Generate EPG
         run: |
           python merge_epg.py
 
-      # 5️⃣ 提交生成结果
+      # 5️⃣ 提取频道（第二步，依赖EPG）
+      - name: Extract channels
+        run: |
+          python extract_channels.py
+
+      # 6️⃣ 提交结果回仓库
       - name: Commit results
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
 
-          git add epg.xml.gz
+          git add epg.xml.gz channels.json || true
 
-          git commit -m "auto: update epg" || echo "no changes"
+          git commit -m "auto: update epg & channels" || echo "no changes"
 
           git push
