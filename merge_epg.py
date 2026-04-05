@@ -1,137 +1,103 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-import json
-import gzip
 import requests
+import gzip
 import xml.etree.ElementTree as ET
-from rules import make_epgid, norm
+from io import BytesIO
 
-EPG_SOURCE_FILE = "epg_sources.txt"
-
-OUT_ENTITIES = "epg_entities.json"
-OUT_INDEX = "epg_index.json"
-OUT_ALIAS = "epg_alias.json"
+SOURCE_FILE = "epg_sources.txt"
 
 
-# ===================== sources ===================== #
 def load_sources():
-    with open(EPG_SOURCE_FILE, "r", encoding="utf-8") as f:
-        return [x.strip() for x in f if x.strip()]
+    with open(SOURCE_FILE, "r", encoding="utf-8") as f:
+        return [x.strip() for x in f.readlines() if x.strip()]
 
 
-# ===================== fetch ===================== #
-def fetch(url):
-    r = requests.get(url, timeout=30, headers={
-        "User-Agent": "Mozilla/5.0"
-    })
+def download(url):
+    r = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
     data = r.content
+
     if url.endswith(".gz"):
-        data = gzip.decompress(data)
+        try:
+            data = gzip.decompress(data)
+        except:
+            pass
+
     return data
 
 
-# ===================== parse ===================== #
-def parse_xml(data):
-    root = ET.fromstring(data)
-    epg = {}
+def match_channel(name):
+    if not name:
+        return None
 
-    for ch in root.findall("channel"):
-        names = [n.text.strip() for n in ch.findall("display-name") if n.text]
-        if not names:
-            continue
+    n = name.lower()
 
-        primary = names[0]
-        cid = make_epgid(primary)
+    if "cctv" in n or "央视" in n:
+        return "cctv"
 
-        icon = ch.find("icon")
-        logo = icon.attrib.get("src") if icon is not None else ""
+    if "bbc" in n:
+        return "bbc"
 
-        if cid not in epg:
-            epg[cid] = {
-                "epgid": cid,
-                "logo": logo,
-                "names": set()
-            }
+    if "tvb" in n or "jade" in n:
+        return "tvb"
 
-        for n in names:
-            epg[cid]["names"].add(n)
+    if "hbo" in n:
+        return "hbo"
 
-    return epg
+    return None
 
 
-# ===================== merge ===================== #
-def merge(*sources):
-    out = {}
-
-    for src in sources:
-        for k, v in src.items():
-            if k not in out:
-                out[k] = v
-            else:
-                out[k]["names"].update(v["names"])
-
-    return out
-
-
-# ===================== index ===================== #
-def build_index(epg_map):
-    index = {}
-
-    for epgid, epg in epg_map.items():
-        for name in epg["names"]:
-            index[norm(name)] = epgid
-            index[name] = epgid
-
-    return index
-
-
-# ===================== alias ===================== #
-def build_alias(epg_map):
-    alias = {}
-
-    for epgid, epg in epg_map.items():
-        alias[epgid] = list(epg["names"])
-
-    return alias
-
-
-# ===================== main ===================== #
 def main():
 
     sources = load_sources()
 
-    all_epg = []
+    tv = ET.Element("tv")
+    seen = set()
+
+    print("sources:", len(sources))
 
     for url in sources:
+
         try:
-            data = fetch(url)
-            epg = parse_xml(data)
-            all_epg.append(epg)
+            data = download(url)
+            root = ET.fromstring(data)
+
+            print("OK:", url)
+
+            for prog in root.findall("programme"):
+
+                ch = prog.attrib.get("channel", "")
+                cid = match_channel(ch)
+
+                if not cid:
+                    continue
+
+                title = prog.find("title")
+                title = title.text if title is not None else ""
+
+                start = prog.attrib.get("start", "")
+
+                key = cid + start + title
+                if key in seen:
+                    continue
+                seen.add(key)
+
+                p = ET.SubElement(tv, "programme", {
+                    "channel": cid,
+                    "start": start,
+                    "stop": prog.attrib.get("stop", "")
+                })
+
+                t = ET.SubElement(p, "title")
+                t.text = title
+
         except Exception as e:
-            print("❌", url, e)
+            print("FAIL:", url, e)
 
-    epg_map = merge(*all_epg)
+    xml = ET.tostring(tv, encoding="utf-8")
 
-    # set → list
-    for k in epg_map:
-        epg_map[k]["names"] = list(epg_map[k]["names"])
+    with gzip.open("epg.xml.gz", "wb") as f:
+        f.write(xml)
 
-    index = build_index(epg_map)
-    alias = build_alias(epg_map)
-
-    # ===================== output ===================== #
-    with open(OUT_ENTITIES, "w", encoding="utf-8") as f:
-        json.dump(epg_map, f, ensure_ascii=False, indent=2)
-
-    with open(OUT_INDEX, "w", encoding="utf-8") as f:
-        json.dump(index, f, ensure_ascii=False, indent=2)
-
-    with open(OUT_ALIAS, "w", encoding="utf-8") as f:
-        json.dump(alias, f, ensure_ascii=False, indent=2)
-
-    print("✅ epg:", len(epg_map))
-    print("✅ index:", len(index))
+    print("DONE → epg.xml.gz")
 
 
 if __name__ == "__main__":
