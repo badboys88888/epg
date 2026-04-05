@@ -1,4 +1,4 @@
-name: build epg
+name: epg build
 
 on:
   schedule:
@@ -23,16 +23,12 @@ jobs:
 
       - run: python merge_epg.py
 
-      - name: commit & push
+      - name: commit
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          echo "checking files..."
-          ls -lh
-
-          # 🔥 关键：永远不会写错文件名
-          git add e.xml.gz epg_data.json || true
+          git add e.xml.gz epg_data.json
 
           git commit -m "update epg" || echo "no change"
           git push
