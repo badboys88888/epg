@@ -3,12 +3,12 @@
 
 import json
 import re
+import sys
 from rapidfuzz import process, fuzz
 from opencc import OpenCC
 
 INDEX_FILE = "index.json"
 ENTITY_FILE = "epg_entities.json"
-EPG_ENTITY_INDEX = "epg_entity_index.json"  # 可选扩展缓存
 
 cc = OpenCC("t2s")
 
@@ -29,82 +29,120 @@ def load_json(path):
         return json.load(f)
 
 
-# ===================== 构建反向索引 ===================== #
-def build_reverse_index(index):
-    """
-    index.json: name -> epgid
-    转成 epgid -> [names]
-    """
-    rev = {}
-
-    for name, epgid in index.items():
-        rev.setdefault(epgid, []).append(name)
-
-    return rev
-
-
-# ===================== fuzzy候选池 ===================== #
+# ===================== 候选池 ===================== #
 def build_candidates(index):
     return list(index.keys())
 
 
-# ===================== 三层匹配 ===================== #
+# ===================== 匹配 ===================== #
 def match_channel(name, index, candidates):
-    raw = name
+
     n = norm(name)
 
-    # 1️⃣ 精确匹配
+    # 1️⃣ 精确
     if n in index:
-        return index[n], "exact_norm"
+        return index[n], "exact_norm", 100
 
     if name in index:
-        return index[name], "exact_raw"
+        return index[name], "exact_raw", 100
 
-    # 2️⃣ alias/弱匹配（包含匹配）
+    # 2️⃣ 子串
     for k, v in index.items():
         if n in k or k in n:
-            return v, "substring"
+            return v, "substring", 85
 
-    # 3️⃣ rapidfuzz 模糊匹配（核心）
-    best = process.extractOne(
-        n,
-        candidates,
-        scorer=fuzz.WRatio
-    )
+    # 3️⃣ fuzzy
+    best = process.extractOne(n, candidates, scorer=fuzz.WRatio)
 
     if best:
         match, score, _ = best
-        if score >= 80:
-            return index[match], f"fuzzy_{score}"
+        if score >= 75:
+            return index[match], f"fuzzy_{score}", score
 
-    return None, "unmatched"
+    return None, "unmatched", 0
 
 
-# ===================== 测试入口 ===================== #
+# ===================== 主程序 ===================== #
 def main():
 
     index = load_json(INDEX_FILE)
     entities = load_json(ENTITY_FILE)
 
     candidates = build_candidates(index)
-    rev = build_reverse_index(index)
 
     print("✅ index size:", len(index))
     print("✅ entities:", len(entities))
 
-    print("\n👉 输入频道名测试（exit退出）\n")
+    # ===================== CI模式 ===================== #
+    if not sys.stdin.isatty():
+
+        test_cases = [
+            "CCTV1",
+            "CCTV-1 HD",
+            "央视一套",
+            "中央一套",
+            "BBC ONE",
+            "HBO HD",
+            "cttv1",
+            "凤凰卫视",
+            "未知频道xxx"
+        ]
+
+        run_tests(test_cases, index, candidates)
+        return
+
+    # ===================== 手动模式 ===================== #
+    print("\n👉 输入频道名（exit退出）\n")
 
     while True:
         name = input("channel> ").strip()
         if name.lower() == "exit":
             break
 
-        epgid, mode = match_channel(name, index, candidates)
+        epgid, mode, score = match_channel(name, index, candidates)
+        print(f"{name} → {epgid} ({mode}, {score})")
+
+
+# ===================== 测试统计 ===================== #
+def run_tests(test_cases, index, candidates):
+
+    total = len(test_cases)
+    ok = 0
+    fuzzy = 0
+    exact = 0
+    failed = []
+
+    print("\n================= MATCH TEST =================\n")
+
+    for name in test_cases:
+        epgid, mode, score = match_channel(name, index, candidates)
 
         if epgid:
-            print(f"✔ 匹配成功：{epgid} ({mode})")
+            ok += 1
+            if "fuzzy" in mode:
+                fuzzy += 1
+            if "exact" in mode:
+                exact += 1
+
+            print(f"✔ {name} → {epgid} ({mode}, {score})")
         else:
-            print("❌ 未匹配")
+            failed.append(name)
+            print(f"❌ {name} → 未匹配")
+
+    print("\n================= STATS =================")
+
+    hit_rate = round(ok / total * 100, 2)
+
+    print(f"📊 总数: {total}")
+    print(f"📊 命中: {ok}")
+    print(f"📊 命中率: {hit_rate}%")
+    print(f"📊 精确命中: {exact}")
+    print(f"📊 fuzzy命中: {fuzzy}")
+
+    if failed:
+        print("\n❌ 未匹配列表:")
+        for f in failed:
+            print(" -", f)
 
 
 if __name__ == "__main__":
