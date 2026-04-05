@@ -1,8 +1,8 @@
-name: EPG Auto Merge
+name: build epg
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # 每天 3点自动跑
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,24 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install deps
-        run: pip install -r requirements.txt
+      - run: pip install requests
 
-      - name: Run merge script
-        run: python merge_epg.py
+      - run: python merge_epg.py
 
-      - name: Commit result
+      - name: commit
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add merged_epg.xml
-          git commit -m "update epg" || echo "no changes"
+          git add e.xml
+          git commit -m "update epg" || echo "no change"
           git push
