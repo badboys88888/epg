@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 import json
 
 SOURCE_FILE = "epg_sources.txt"
-XML_OUTPUT = "e.xml"
+XML_OUTPUT = "e.xml.gz"
 JSON_OUTPUT = "epg_data.json"
 ICON_BASE = "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/"
 
