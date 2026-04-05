@@ -2,37 +2,70 @@ import requests
 import gzip
 import xml.etree.ElementTree as ET
 import json
-import os
+import re
 
 SOURCE_FILE = "epg_sources.txt"
 
-XML_GZ = "e.xml.gz"
-JSON_OUTPUT = "epg_data.json"
+EPG_XML_GZ = "e.xml.gz"
+EPG_JSON = "epg_data.json"
 
-ICON_BASE = "https://raw.githubusercontent.com/badboys88888/scmobilemulticast/main/icons/"
+ICON_MAP_URL = "https://raw.githubusercontent.com/badboys88888/epg/main/icon_map.json"
 
-# ========= 读取源 =========
+
+# ===================== 读取源 =====================
 def load_sources():
     with open(SOURCE_FILE, "r", encoding="utf-8") as f:
         return [x.strip() for x in f if x.strip()]
 
-# ========= 自动处理 xml / gz =========
+
+# ===================== 获取远程icon =====================
+icon_map = requests.get(ICON_MAP_URL, timeout=30).json()
+
+
+# ===================== 统一名称 =====================
+def normalize(name):
+    name = name.strip()
+    name = re.sub(r'\s+', '', name)
+    name = name.replace("高清", "")
+    name = name.replace("HD", "")
+    name = name.replace("4K", "")
+    name = name.replace("-", "")
+    return name.lower()
+
+
+# ===================== icon匹配 =====================
+def get_icon(name):
+    key = normalize(name)
+
+    # 1️⃣ 精确匹配
+    if key in icon_map:
+        return icon_map[key]
+
+    # 2️⃣ 模糊匹配
+    for k, v in icon_map.items():
+        if normalize(k) == key:
+            return v
+
+    return ""
+
+
+# ===================== 解析XML =====================
 def fetch_xml(url):
     r = requests.get(url, timeout=30)
     r.raise_for_status()
     data = r.content
 
-    # gzip 自动识别
     if data[:2] == b'\x1f\x8b':
         data = gzip.decompress(data)
 
     return ET.fromstring(data)
 
+
 channels = {}
 programmes = []
 seen = set()
 
-# ========= 合并 =========
+# ===================== 合并EPG =====================
 for url in load_sources():
     try:
         root = fetch_xml(url)
@@ -53,7 +86,8 @@ for url in load_sources():
     except Exception as e:
         print("FAIL:", url, e)
 
-# ========= 输出 XML =========
+
+# ===================== XML输出 =====================
 tv = ET.Element("tv")
 
 for ch in channels.values():
@@ -64,24 +98,34 @@ for p in programmes:
 
 tree = ET.ElementTree(tv)
 
-with gzip.open(XML_GZ, "wt", encoding="utf-8") as f:
+with gzip.open(EPG_XML_GZ, "wt", encoding="utf-8") as f:
     tree.write(f, encoding="unicode", xml_declaration=True)
 
-print("DONE XML ->", XML_GZ)
+print("DONE XML ->", EPG_XML_GZ)
 
-# ========= 输出 JSON =========
+
+# ===================== JSON输出 =====================
 epg_list = []
-for cid in channels.keys():
+
+for cid, ch in channels.items():
+
+    # 取频道名
+    name = None
+    for n in ch.findall("display-name"):
+        if n.text:
+            name = n.text.strip()
+            break
+
+    if not name:
+        name = cid
+
     epg_list.append({
         "epgid": cid,
-        "logo": ICON_BASE + cid + ".png",
-        "name": cid
+        "name": name,
+        "logo": get_icon(name)
     })
 
-with open(JSON_OUTPUT, "w", encoding="utf-8") as f:
+with open(EPG_JSON, "w", encoding="utf-8") as f:
     json.dump(epg_list, f, ensure_ascii=False, indent=2)
 
-print("DONE JSON ->", JSON_OUTPUT)
-
-# ========= 自动返回文件列表（关键防错） =========
-print("FILES:", os.listdir("."))
+print("DONE JSON ->", EPG_JSON)
