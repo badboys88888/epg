@@ -5,7 +5,7 @@ import json
 INPUT_FILE = "epg.xml.gz"
 OUTPUT_FILE = "channels.json"
 ICON_MAP_FILE = "icon_map.json"
-ALIAS_MAP_FILE = "alias_map.json"
+ALIAS_FILE = "alias_map.json"
 
 
 # ===================== 读取EPG ===================== #
@@ -23,23 +23,13 @@ def load_icon_map():
         return {}
 
 
-# ===================== 读取别名映射 ===================== #
-def load_alias_map():
+# ===================== 读取alias ===================== #
+def load_alias():
     try:
-        with open(ALIAS_MAP_FILE, "r", encoding="utf-8") as f:
+        with open(ALIAS_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
     except:
         return {}
-
-
-# ===================== 统一频道名 ===================== #
-def normalize(name):
-    return (
-        name.upper()
-        .replace(" ", "")
-        .replace("-", "")
-        .replace("_", "")
-    )
 
 
 # ===================== 主逻辑 ===================== #
@@ -47,7 +37,7 @@ def main():
 
     root = load_epg()
     icon_map = load_icon_map()
-    alias_map = load_alias_map()
+    alias_map = load_alias()
 
     channels = {}
 
@@ -57,8 +47,8 @@ def main():
         if not cid:
             continue
 
+        # ===== 读取 display-name ===== #
         names = []
-
         for n in ch.findall("display-name"):
             if n.text:
                 names.append(n.text.strip())
@@ -66,37 +56,35 @@ def main():
         if not names:
             names = [cid]
 
-        # ⭐ alias 扩展（核心新增）
-        if cid in alias_map:
-            for a in alias_map[cid]:
-                if a not in names:
-                    names.append(a)
+        # ⭐ 关键1：用名字做 key（人类可读）
+        key = names[0]
 
-        # ⭐ epgid（统一用 normalize 后的key）
-        key = normalize(names[0])
-
-        # ⭐ logo 匹配
-        logo = ""
-        for n in names:
-            nk = normalize(n)
-            if nk in icon_map:
-                logo = icon_map[nk]
-                break
-
-        # ⭐ 初始化
+        # ===== 初始化 ===== #
         if key not in channels:
             channels[key] = {
-                "epgid": key,
+                "epgid": cid,
                 "names": [],
                 "logo": ""
             }
 
-        # ⭐ names 去重（原样）
+        # ===== 合并 names ===== #
         for n in names:
             if n not in channels[key]["names"]:
                 channels[key]["names"].append(n)
 
-        # ⭐ logo优先写入
+        # ===== ⭐ alias 扩展 ===== #
+        if cid in alias_map:
+            for a in alias_map[cid]:
+                if a not in channels[key]["names"]:
+                    channels[key]["names"].append(a)
+
+        # ===== logo匹配 ===== #
+        logo = ""
+        for n in channels[key]["names"]:
+            if n in icon_map:
+                logo = icon_map[n]
+                break
+
         if logo:
             channels[key]["logo"] = logo
 
