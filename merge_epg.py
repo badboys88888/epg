@@ -42,57 +42,77 @@ def normalize(name):
 
     return name.lower()
 
-# ===================== 索引规则 =====================
+# ===================== 正则索引（核心） =====================
+
+def match_cctv(name):
+    n = normalize(name)
+
+    # 匹配 CCTV 编号
+    match = re.search(r'cctv[-\s]*(\d{1,2})', n, re.IGNORECASE)
+    if match:
+        num = match.group(1)
+        return f"CCTV{num}"
+
+    return None
+
+
+def match_satellite(name):
+    n = normalize(name)
+
+    # 省级卫视（湖南卫视、浙江卫视等）
+    match = re.search(r'(北京|上海|广东|湖南|湖北|浙江|江苏|山东|安徽|福建|江西|辽宁|吉林|黑龙江).*卫视', n)
+    if match:
+        return match.group(1) + "卫视"
+
+    return None
+
+
+def match_region(name):
+    n = normalize(name)
+
+    # 地方台归一
+    match = re.search(r'(黑龙江|湖南|广东|北京|上海|江苏|浙江)', n)
+    if match:
+        return match.group(1)
+
+    return None
+
+
+# ===================== 分类规则（辅助） =====================
 INDEX_RULES = {
-
-    # ===== CCTV（精准）=====
-    "CCTV1": ["cctv1"],
-    "CCTV2": ["cctv2"],
-    "CCTV3": ["cctv3"],
-    "CCTV4": ["cctv4"],
-    "CCTV5": ["cctv5"],
-    "CCTV6": ["cctv6"],
-    "CCTV7": ["cctv7"],
-    "CCTV8": ["cctv8"],
-    "CCTV9": ["cctv9"],
-    "CCTV10": ["cctv10"],
-    "CCTV11": ["cctv11"],
-    "CCTV12": ["cctv12"],
-    "CCTV13": ["cctv13"],
-    "CCTV14": ["cctv14"],
-    "CCTV15": ["cctv15"],
-    "CCTV16": ["cctv16"],
-    "CCTV17": ["cctv17"],
-
-    # ===== 分类 =====
     "电影": ["1905", "电影", "影院"],
     "体育": ["体育", "sport", "espn"],
     "新闻": ["新闻", "news", "cnn", "bbc"],
-    "少儿": ["少儿", "动漫"],
-
-    # ===== 地区 =====
-    "黑龙江": ["黑龙江"],
-    "湖南": ["湖南"],
-    "广东": ["广东"],
-    "北京": ["北京"],
-    "上海": ["东方", "新视觉"],
+    "少儿": ["少儿", "动漫", "卡通"],
 }
 
-# ===================== 匹配索引 =====================
+# ===================== 匹配入口 =====================
 def match_index(name):
     n = normalize(name)
 
+    # ⭐ 1. CCTV（最高优先级）
+    cctv = match_cctv(name)
+    if cctv:
+        return cctv
+
+    # ⭐ 2. 卫视
+    sat = match_satellite(name)
+    if sat:
+        return sat
+
+    # ⭐ 3. 地区
+    region = match_region(name)
+    if region:
+        return region
+
+    # ⭐ 4. 分类
     for key, aliases in INDEX_RULES.items():
         for a in aliases:
-
-            # CCTV保护
-            if key.startswith("CCTV") and "cctv" not in n:
-                continue
-
             if a in n:
                 return key
 
     return name
+
 
 # ===================== icon匹配 =====================
 def get_icon(key):
@@ -120,7 +140,6 @@ def fetch_xml(url):
 
     data = r.content
 
-    # 自动判断 gzip
     if data[:2] == b'\x1f\x8b':
         data = gzip.decompress(data)
 
@@ -137,13 +156,11 @@ for url in load_sources():
     try:
         root = fetch_xml(url)
 
-        # 频道
         for ch in root.findall("channel"):
             cid = ch.get("id")
             if cid and cid not in channels:
                 channels[cid] = ch
 
-        # 节目
         for p in root.findall("programme"):
             key = (p.get("channel"), p.get("start"), p.get("stop"))
             if key not in seen_programmes:
@@ -191,14 +208,13 @@ for cid, ch in channels.items():
 
     group = match_index(name)
 
-    # epg数据
     epg_list.append({
         "epgid": group,
         "name": name,
         "logo": get_icon(group)
     })
 
-    # index（只记录归一的）
+    # index（只记录归一）
     if group != name:
         if group not in index_output:
             index_output[group] = []
