@@ -14,7 +14,7 @@ def load_epg():
         return ET.parse(f).getroot()
 
 
-# ===================== 读取logo映射 ===================== #
+# ===================== 读取logo ===================== #
 def load_icon_map():
     try:
         with open(ICON_MAP_FILE, "r", encoding="utf-8") as f:
@@ -32,8 +32,20 @@ def load_alias():
         return {}
 
 
+# ===================== 统一名称（核心） ===================== #
+def normalize(name):
+    return (
+        name.upper()
+        .replace(" ", "")
+        .replace("-", "")
+        .replace("_", "")
+    )
+
+
 # ===================== 主逻辑 ===================== #
 def main():
+
+    print("🚀 RUNNING extract_channels FINAL")
 
     root = load_epg()
     icon_map = load_icon_map()
@@ -56,8 +68,8 @@ def main():
         if not names:
             names = [cid]
 
-        # ⭐ 关键1：用名字做 key（人类可读）
-        key = names[0]
+        # ⭐ 核心：统一key（不会再乱）
+        key = normalize(names[0])
 
         # ===== 初始化 ===== #
         if key not in channels:
@@ -67,18 +79,30 @@ def main():
                 "logo": ""
             }
 
-        # ===== 合并 names ===== #
+        # ===== 合并EPG names ===== #
         for n in names:
             if n not in channels[key]["names"]:
                 channels[key]["names"].append(n)
 
-        # ===== ⭐ alias 扩展 ===== #
+        # ===== ⭐ alias 补充（用 cid） ===== #
         if cid in alias_map:
             for a in alias_map[cid]:
                 if a not in channels[key]["names"]:
                     channels[key]["names"].append(a)
 
-        # ===== logo匹配 ===== #
+        # ===== ⭐ 去重（防重复） ===== #
+        seen = set()
+        final_names = []
+
+        for n in channels[key]["names"]:
+            nn = normalize(n)
+            if nn not in seen:
+                final_names.append(n)
+                seen.add(nn)
+
+        channels[key]["names"] = final_names
+
+        # ===== ⭐ logo匹配 ===== #
         logo = ""
         for n in channels[key]["names"]:
             if n in icon_map:
@@ -92,7 +116,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(channels, f, ensure_ascii=False, indent=2)
 
-    print("DONE:", len(channels))
+    print("✅ DONE:", len(channels))
 
 
 if __name__ == "__main__":
