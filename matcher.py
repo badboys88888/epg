@@ -1,58 +1,111 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import json
-from opencc import OpenCC
 import re
+from rapidfuzz import process, fuzz
+from opencc import OpenCC
+
+INDEX_FILE = "index.json"
+ENTITY_FILE = "epg_entities.json"
+EPG_ENTITY_INDEX = "epg_entity_index.json"  # 可选扩展缓存
 
 cc = OpenCC("t2s")
 
-INDEX_FILE = "index.json"
-EPG_FILE = "epg_data.json"
 
-
-def norm(name):
+# ===================== 标准化 ===================== #
+def norm(name: str) -> str:
+    if not name:
+        return ""
     name = cc.convert(name)
     name = name.lower()
     name = re.sub(r'[\s\-\_\(\)\[\]\.]+', '', name)
     return name
 
 
-# ===================== 加载索引 ===================== #
-
-def load_index():
-
-    with open(INDEX_FILE, "r", encoding="utf-8") as f:
+# ===================== 加载 ===================== #
+def load_json(path):
+    with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-# ===================== 匹配核心 ===================== #
+# ===================== 构建反向索引 ===================== #
+def build_reverse_index(index):
+    """
+    index.json: name -> epgid
+    转成 epgid -> [names]
+    """
+    rev = {}
 
-def match_channel(name, index):
+    for name, epgid in index.items():
+        rev.setdefault(epgid, []).append(name)
 
-    key = norm(name)
+    return rev
 
-    # 1. 精确匹配
-    if key in index:
-        return index[key]
 
-    # 2. 包含匹配（增强）
+# ===================== fuzzy候选池 ===================== #
+def build_candidates(index):
+    return list(index.keys())
+
+
+# ===================== 三层匹配 ===================== #
+def match_channel(name, index, candidates):
+    raw = name
+    n = norm(name)
+
+    # 1️⃣ 精确匹配
+    if n in index:
+        return index[n], "exact_norm"
+
+    if name in index:
+        return index[name], "exact_raw"
+
+    # 2️⃣ alias/弱匹配（包含匹配）
     for k, v in index.items():
-        if k in key or key in k:
-            return v
+        if n in k or k in n:
+            return v, "substring"
 
-    return None
+    # 3️⃣ rapidfuzz 模糊匹配（核心）
+    best = process.extractOne(
+        n,
+        candidates,
+        scorer=fuzz.WRatio
+    )
+
+    if best:
+        match, score, _ = best
+        if score >= 80:
+            return index[match], f"fuzzy_{score}"
+
+    return None, "unmatched"
 
 
-# ===================== 测试 ===================== #
+# ===================== 测试入口 ===================== #
+def main():
+
+    index = load_json(INDEX_FILE)
+    entities = load_json(ENTITY_FILE)
+
+    candidates = build_candidates(index)
+    rev = build_reverse_index(index)
+
+    print("✅ index size:", len(index))
+    print("✅ entities:", len(entities))
+
+    print("\n👉 输入频道名测试（exit退出）\n")
+
+    while True:
+        name = input("channel> ").strip()
+        if name.lower() == "exit":
+            break
+
+        epgid, mode = match_channel(name, index, candidates)
+
+        if epgid:
+            print(f"✔ 匹配成功：{epgid} ({mode})")
+        else:
+            print("❌ 未匹配")
+
 
 if __name__ == "__main__":
-
-    index = load_index()
-
-    tests = [
-        "CCTV-1 综合",
-        "央视一套",
-        "湖南卫视 HD",
-        "BBC儿童亚洲"
-    ]
-
-    for t in tests:
-        print(t, "=>", match_channel(t, index))
+    main()
