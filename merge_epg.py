@@ -1,237 +1,233 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import requests
-import gzip
-import xml.etree.ElementTree as ET
-import json
 import re
+import json
+import gzip
+import requests
 from opencc import OpenCC
+from rapidfuzz import fuzz
 
-# ===================== 配置 =====================
-SOURCE_FILE = "epg_sources.txt"
+# ===================== 配置区 ===================== #
 
-XML_OUTPUT = "e.xml.gz"
-JSON_OUTPUT = "epg_data.json"
-INDEX_OUTPUT = "index.json"
+INPUT_SOURCES = [
+    {"type": "m3u", "path": "input.m3u"},
+    # {"type": "json", "path": "channels.json"},
+    # {"type": "api", "url": "http://127.0.0.1/api"}
+]
 
+EPG_SOURCE_FILE = "epg.txt"
 ICON_MAP_URL = "https://raw.githubusercontent.com/badboys88888/epg/main/icon_map.json"
 
-# ===================== 初始化 =====================
-cc = OpenCC('t2s')
+OUT_M3U = "output.m3u"
+OUT_JSON = "epg_data.json"
+OUT_XMLGZ = "e.xml.gz"
 
-# ===================== 加载icon =====================
-try:
-    icon_map = requests.get(ICON_MAP_URL, timeout=30).json()
-except:
-    icon_map = {}
-    print("⚠️ icon_map 加载失败")
+cc = OpenCC("t2s")
 
-# ===================== 名字清洗 =====================
-def normalize(name):
-    name = name.strip()
+# ===================== 基础工具 ===================== #
+
+def norm(name: str):
     name = cc.convert(name)
-
-    name = re.sub(r'\s+', '', name)
-    name = name.replace("-", "")
-    name = name.replace("高清", "")
-    name = name.replace("HD", "")
-    name = name.replace("频道", "")
-    name = name.replace("台", "")
-    name = name.replace("4K", "")
-
-    return name.lower()
-
-# ===================== 正则索引（核心） =====================
-
-def match_cctv(name):
-    n = normalize(name)
-
-    # 匹配 CCTV 编号
-    match = re.search(r'cctv[-\s]*(\d{1,2})', n, re.IGNORECASE)
-    if match:
-        num = match.group(1)
-        return f"CCTV{num}"
-
-    return None
-
-
-def match_satellite(name):
-    n = normalize(name)
-
-    # 省级卫视（湖南卫视、浙江卫视等）
-    match = re.search(r'(北京|上海|广东|湖南|湖北|浙江|江苏|山东|安徽|福建|江西|辽宁|吉林|黑龙江).*卫视', n)
-    if match:
-        return match.group(1) + "卫视"
-
-    return None
-
-
-def match_region(name):
-    n = normalize(name)
-
-    # 地方台归一
-    match = re.search(r'(黑龙江|湖南|广东|北京|上海|江苏|浙江)', n)
-    if match:
-        return match.group(1)
-
-    return None
-
-
-# ===================== 分类规则（辅助） =====================
-INDEX_RULES = {
-    "电影": ["1905", "电影", "影院"],
-    "体育": ["体育", "sport", "espn"],
-    "新闻": ["新闻", "news", "cnn", "bbc"],
-    "少儿": ["少儿", "动漫", "卡通"],
-}
-
-# ===================== 匹配入口 =====================
-def match_index(name):
-    n = normalize(name)
-
-    # ⭐ 1. CCTV（最高优先级）
-    cctv = match_cctv(name)
-    if cctv:
-        return cctv
-
-    # ⭐ 2. 卫视
-    sat = match_satellite(name)
-    if sat:
-        return sat
-
-    # ⭐ 3. 地区
-    region = match_region(name)
-    if region:
-        return region
-
-    # ⭐ 4. 分类
-    for key, aliases in INDEX_RULES.items():
-        for a in aliases:
-            if a in n:
-                return key
-
+    name = name.lower().strip()
+    name = re.sub(r'[\s\-\_\[\]\(\)\.\|]+', '', name)
+    name = name.replace("hd", "").replace("4k", "")
     return name
 
 
-# ===================== icon匹配 =====================
-def get_icon(key):
-    k = normalize(key)
-
-    if k in icon_map:
-        return icon_map[k]
-
-    for i, v in icon_map.items():
-        if normalize(i) == k:
-            return v
-
-    return ""
-
-# ===================== 读取源 =====================
-def load_sources():
-    with open(SOURCE_FILE, "r", encoding="utf-8") as f:
-        return [x.strip() for x in f if x.strip()]
-
-# ===================== 获取XML =====================
-def fetch_xml(url):
-    headers = {"User-Agent": "Mozilla/5.0"}
-    r = requests.get(url, headers=headers, timeout=30)
-    r.raise_for_status()
-
-    data = r.content
-
-    if data[:2] == b'\x1f\x8b':
-        data = gzip.decompress(data)
-
-    return ET.fromstring(data)
-
-# ===================== 主流程 =====================
-channels = {}
-programmes = []
-seen_programmes = set()
-
-print("🚀 开始合并EPG...")
-
-for url in load_sources():
+def load_icon_map():
     try:
-        root = fetch_xml(url)
+        return requests.get(ICON_MAP_URL, timeout=10).json()
+    except:
+        return {}
 
-        for ch in root.findall("channel"):
-            cid = ch.get("id")
-            if cid and cid not in channels:
-                channels[cid] = ch
 
-        for p in root.findall("programme"):
-            key = (p.get("channel"), p.get("start"), p.get("stop"))
-            if key not in seen_programmes:
-                seen_programmes.add(key)
-                programmes.append(p)
+# ===================== 多轨索引（核心） ===================== #
 
-        print("✅ OK:", url)
+def build_keys(name: str):
+    keys = set()
 
-    except Exception as e:
-        print("❌ FAIL:", url, e)
+    base = norm(name)
+    simp = cc.convert(name)
 
-print("📊 频道数:", len(channels))
-print("📊 节目数:", len(programmes))
+    keys.add(name)
+    keys.add(base)
+    keys.add(simp)
 
-# ===================== 输出XML =====================
-tv = ET.Element("tv")
+    # CCTV规则（正则核心）
+    m = re.search(r'cctv[- ]*(\d{1,2})', base)
+    if m:
+        keys.add(f"cctv{m.group(1)}")
+        keys.add("cctv")
 
-for ch in channels.values():
-    tv.append(ch)
+    # 卫视规则
+    if "hunan" in base or "湖南" in name:
+        keys.add("hunan")
+    if "dongfang" in base or "东方" in name:
+        keys.add("dongfang")
+    if "guangdong" in base or "广东" in name:
+        keys.add("guangdong")
 
-for p in programmes:
-    tv.append(p)
+    # 港台
+    if "tvb" in base:
+        keys.add("tvb")
 
-tree = ET.ElementTree(tv)
+    return list(keys)
 
-with gzip.open(XML_OUTPUT, "wt", encoding="utf-8") as f:
-    tree.write(f, encoding="unicode", xml_declaration=True)
 
-print("✅ XML 输出完成")
+# ===================== EPG加载 ===================== #
 
-# ===================== 生成 JSON + INDEX =====================
-epg_list = []
-index_output = {}
+def load_epg():
+    epg_list = []
 
-for cid, ch in channels.items():
+    try:
+        with open(EPG_SOURCE_FILE, "r", encoding="utf-8") as f:
+            for line in f:
+                if "|" not in line:
+                    continue
 
-    name = None
-    for n in ch.findall("display-name"):
-        if n.text:
-            name = n.text.strip()
-            break
+                name = line.split("|")[0].strip()
+                epg_list.append({
+                    "name": name,
+                    "norm": norm(name),
+                    "keys": build_keys(name)
+                })
+    except:
+        pass
 
-    if not name:
-        name = cid
+    return epg_list
 
-    group = match_index(name)
 
-    epg_list.append({
-        "epgid": group,
-        "name": name,
-        "logo": get_icon(group)
-    })
+# ===================== 输入适配层 ===================== #
 
-    # index（只记录归一）
-    if group != name:
-        if group not in index_output:
-            index_output[group] = []
+def parse_m3u(path):
+    items = []
+    with open(path, "r", encoding="utf-8") as f:
+        lines = f.readlines()
 
-        if name not in index_output[group]:
-            index_output[group].append(name)
+    for i in range(len(lines)):
+        if lines[i].startswith("#EXTINF"):
+            name = lines[i].split(",")[-1].strip()
+            url = lines[i + 1].strip()
 
-# 去重
-for k in index_output:
-    index_output[k] = list(set(index_output[k]))
+            items.append({
+                "name": name,
+                "url": url
+            })
 
-# ===================== 写文件 =====================
-with open(JSON_OUTPUT, "w", encoding="utf-8") as f:
-    json.dump(epg_list, f, ensure_ascii=False, indent=2)
+    return items
 
-with open(INDEX_OUTPUT, "w", encoding="utf-8") as f:
-    json.dump(index_output, f, ensure_ascii=False, indent=2)
 
-print("✅ JSON 输出完成")
-print("🎉 全部完成")
+def load_channels():
+    result = []
+
+    for src in INPUT_SOURCES:
+
+        if src["type"] == "m3u":
+            result += parse_m3u(src["path"])
+
+    return result
+
+
+# ===================== 匹配引擎 ===================== #
+
+def match_channel(ch, epg_list):
+
+    ch_keys = build_keys(ch["name"])
+    ch_norm = norm(ch["name"])
+
+    best = None
+    best_score = 0
+
+    for e in epg_list:
+
+        # 1. 精确匹配（多轨）
+        if set(ch_keys) & set(e["keys"]):
+            return e
+
+        # 2. fuzzy
+        score = fuzz.ratio(ch_norm, e["norm"])
+        if score > best_score:
+            best_score = score
+            best = e
+
+    if best_score >= 85:
+        return best
+
+    return None
+
+
+# ===================== 输出EPG XML ===================== #
+
+def build_xml(epg_list):
+    xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
+
+    for e in epg_list:
+        cid = norm(e["name"])
+
+        xml.append(f'<channel id="{cid}">')
+        xml.append(f'<display-name>{e["name"]}</display-name>')
+        xml.append('</channel>')
+
+    xml.append('</tv>')
+    return "\n".join(xml)
+
+
+def save_gz(xml_str):
+    with gzip.open(OUT_XMLGZ, "wb") as f:
+        f.write(xml_str.encode("utf-8"))
+
+
+# ===================== 主流程 ===================== #
+
+def main():
+
+    icon_map = load_icon_map()
+    epg_list = load_epg()
+    channels = load_channels()
+
+    out_m3u = []
+    out_json = []
+
+    for ch in channels:
+
+        epg = match_channel(ch, epg_list)
+
+        if epg:
+
+            tvg_id = norm(epg["name"])
+            tvg_name = epg["name"]
+            tvg_logo = icon_map.get(tvg_id, "")
+
+            out_m3u.append(
+                f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name}" tvg-logo="{tvg_logo}",{tvg_name}\n{ch["url"]}'
+            )
+
+            out_json.append({
+                "channel": ch["name"],
+                "epg": epg["name"],
+                "tvg_id": tvg_id
+            })
+
+        else:
+            out_m3u.append(
+                f'#EXTINF:-1,{ch["name"]}\n{ch["url"]}'
+            )
+
+    # ===== 输出 M3U ===== #
+    with open(OUT_M3U, "w", encoding="utf-8") as f:
+        f.write("\n".join(out_m3u))
+
+    # ===== 输出 JSON ===== #
+    with open(OUT_JSON, "w", encoding="utf-8") as f:
+        json.dump(out_json, f, ensure_ascii=False, indent=2)
+
+    # ===== 输出 XML ===== #
+    xml = build_xml(epg_list)
+    save_gz(xml)
+
+    print("✅ v3 AI引擎执行完成")
+
+
+if __name__ == "__main__":
+    main()
