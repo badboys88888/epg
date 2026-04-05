@@ -2,48 +2,46 @@ import requests
 import gzip
 import xml.etree.ElementTree as ET
 import json
+import os
 
 SOURCE_FILE = "epg_sources.txt"
-XML_OUTPUT = "e.xml.gz"
-JSON_OUTPUT = "epg_data.json"
-ICON_BASE = "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/"
 
-# ========== 读取EPG源 ==========
+XML_GZ = "e.xml.gz"
+JSON_OUTPUT = "epg_data.json"
+
+ICON_BASE = "https://raw.githubusercontent.com/badboys88888/scmobilemulticast/main/icons/"
+
+# ========= 读取源 =========
 def load_sources():
     with open(SOURCE_FILE, "r", encoding="utf-8") as f:
         return [x.strip() for x in f if x.strip()]
 
-# ========== 自动识别 XML / GZ ==========
-def load_xml(url):
-    headers = {"User-Agent": "Mozilla/5.0"}
-
-    r = requests.get(url, headers=headers, timeout=30)
+# ========= 自动处理 xml / gz =========
+def fetch_xml(url):
+    r = requests.get(url, timeout=30)
     r.raise_for_status()
+    data = r.content
 
-    content = r.content
+    # gzip 自动识别
+    if data[:2] == b'\x1f\x8b':
+        data = gzip.decompress(data)
 
-    # gzip 自动识别（关键）
-    if content[:2] == b'\x1f\x8b':
-        content = gzip.decompress(content)
-
-    return ET.fromstring(content)
+    return ET.fromstring(data)
 
 channels = {}
 programmes = []
 seen = set()
 
-# ========== 合并EPG ==========
+# ========= 合并 =========
 for url in load_sources():
     try:
-        root = load_xml(url)
+        root = fetch_xml(url)
 
-        # channel 去重
         for ch in root.findall("channel"):
             cid = ch.get("id")
             if cid and cid not in channels:
                 channels[cid] = ch
 
-        # programme 去重
         for p in root.findall("programme"):
             key = (p.get("channel"), p.get("start"), p.get("stop"))
             if key not in seen:
@@ -55,7 +53,7 @@ for url in load_sources():
     except Exception as e:
         print("FAIL:", url, e)
 
-# ========== 输出 e.xml.gz ==========
+# ========= 输出 XML =========
 tv = ET.Element("tv")
 
 for ch in channels.values():
@@ -66,22 +64,24 @@ for p in programmes:
 
 tree = ET.ElementTree(tv)
 
-with gzip.open(XML_OUTPUT, "wt", encoding="utf-8") as f:
+with gzip.open(XML_GZ, "wt", encoding="utf-8") as f:
     tree.write(f, encoding="unicode", xml_declaration=True)
 
-print("DONE XML ->", XML_OUTPUT)
+print("DONE XML ->", XML_GZ)
 
-# ========== 输出 epg_data.json ==========
+# ========= 输出 JSON =========
 epg_list = []
-
 for cid in channels.keys():
     epg_list.append({
         "epgid": cid,
         "logo": ICON_BASE + cid + ".png",
-        "name": cid + ","
+        "name": cid
     })
 
 with open(JSON_OUTPUT, "w", encoding="utf-8") as f:
     json.dump(epg_list, f, ensure_ascii=False, indent=2)
 
 print("DONE JSON ->", JSON_OUTPUT)
+
+# ========= 自动返回文件列表（关键防错） =========
+print("FILES:", os.listdir("."))
