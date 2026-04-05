@@ -2,62 +2,47 @@
 # -*- coding: utf-8 -*-
 
 import json
-import re
 import gzip
 import requests
 import xml.etree.ElementTree as ET
-from opencc import OpenCC
+from rules import make_epgid, norm
 
 EPG_SOURCE_FILE = "epg_sources.txt"
 
-OUT_ENTITY = "epg_entities.json"
-OUT_INDEX = "index.json"
-
-cc = OpenCC("t2s")
-
-
-# ===================== 标准化 ===================== #
-
-def norm(name):
-    if not name:
-        return ""
-
-    name = cc.convert(name)
-    name = name.lower()
-    name = re.sub(r'[\s\-\_\(\)\[\]\.]+', '', name)
-    return name
+OUT_ENTITIES = "epg_entities.json"
+OUT_INDEX = "epg_index.json"
+OUT_ALIAS = "epg_alias.json"
 
 
-# ===================== 读取源 ===================== #
-
+# ===================== sources ===================== #
 def load_sources():
     with open(EPG_SOURCE_FILE, "r", encoding="utf-8") as f:
         return [x.strip() for x in f if x.strip()]
 
 
-# ===================== 下载 ===================== #
-
+# ===================== fetch ===================== #
 def fetch(url):
-    r = requests.get(url, timeout=30)
+    r = requests.get(url, timeout=30, headers={
+        "User-Agent": "Mozilla/5.0"
+    })
     data = r.content
     if url.endswith(".gz"):
         data = gzip.decompress(data)
     return data
 
 
-# ===================== XML解析 ===================== #
-
+# ===================== parse ===================== #
 def parse_xml(data):
-
     root = ET.fromstring(data)
-
     epg = {}
 
     for ch in root.findall("channel"):
+        names = [n.text.strip() for n in ch.findall("display-name") if n.text]
+        if not names:
+            continue
 
-        cid = ch.attrib.get("id")
-
-        names = [n.text for n in ch.findall("display-name") if n.text]
+        primary = names[0]
+        cid = make_epgid(primary)
 
         icon = ch.find("icon")
         logo = icon.attrib.get("src") if icon is not None else ""
@@ -75,15 +60,12 @@ def parse_xml(data):
     return epg
 
 
-# ===================== 合并 ===================== #
-
+# ===================== merge ===================== #
 def merge(*sources):
-
     out = {}
 
     for src in sources:
         for k, v in src.items():
-
             if k not in out:
                 out[k] = v
             else:
@@ -93,26 +75,28 @@ def merge(*sources):
 
 
 # ===================== index ===================== #
-
 def build_index(epg_map):
-
     index = {}
 
     for epgid, epg in epg_map.items():
-
         for name in epg["names"]:
-
-            if not name:
-                continue
-
             index[norm(name)] = epgid
             index[name] = epgid
 
     return index
 
 
-# ===================== 主流程 ===================== #
+# ===================== alias ===================== #
+def build_alias(epg_map):
+    alias = {}
 
+    for epgid, epg in epg_map.items():
+        alias[epgid] = list(epg["names"])
+
+    return alias
+
+
+# ===================== main ===================== #
 def main():
 
     sources = load_sources()
@@ -120,32 +104,33 @@ def main():
     all_epg = []
 
     for url in sources:
-
         try:
             data = fetch(url)
             epg = parse_xml(data)
             all_epg.append(epg)
-
         except Exception as e:
             print("❌", url, e)
 
     epg_map = merge(*all_epg)
 
-    # set → list（关键！结构固定）
+    # set → list
     for k in epg_map:
         epg_map[k]["names"] = list(epg_map[k]["names"])
 
     index = build_index(epg_map)
+    alias = build_alias(epg_map)
 
-    # ===================== 输出（固定结构） ===================== #
-
-    with open(OUT_ENTITY, "w", encoding="utf-8") as f:
+    # ===================== output ===================== #
+    with open(OUT_ENTITIES, "w", encoding="utf-8") as f:
         json.dump(epg_map, f, ensure_ascii=False, indent=2)
 
     with open(OUT_INDEX, "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, indent=2)
 
-    print("✅ entities:", len(epg_map))
+    with open(OUT_ALIAS, "w", encoding="utf-8") as f:
+        json.dump(alias, f, ensure_ascii=False, indent=2)
+
+    print("✅ epg:", len(epg_map))
     print("✅ index:", len(index))
 
 
