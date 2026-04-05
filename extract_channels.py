@@ -69,8 +69,6 @@ def main():
         if not cid:
             continue
 
-        print("\n👉 当前CID:", cid)
-
         # ===== 读取 display-name ===== #
         names = []
         for n in ch.findall("display-name"):
@@ -80,18 +78,14 @@ def main():
         if not names:
             names = [cid]
 
-        print("原始names:", names)
-
-        # ⭐ 用 normalize 做 key（核心）
+        # ⭐ 用 normalize 做 key
         key = normalize(names[0])
-
-        print("归一key:", key)
 
         # ===== 初始化 ===== #
         if key not in channels:
             channels[key] = {
                 "epgid": cid,
-                "names": [],
+                "names": [],   # ⚠️ 必须是 list
                 "logo": ""
             }
 
@@ -100,14 +94,13 @@ def main():
             if n not in channels[key]["names"]:
                 channels[key]["names"].append(n)
 
-        # ===== ⭐ alias 扩展 ===== #
+        # ===== alias 扩展 ===== #
         if cid in alias_map:
-            print("🔥 命中alias:", cid)
             for a in alias_map[cid]:
                 if a not in channels[key]["names"]:
                     channels[key]["names"].append(a)
 
-        # ===== ⭐ 去重（normalize去重） ===== #
+        # ===== 去重（normalize级别） ===== #
         seen = set()
         final_names = []
 
@@ -119,17 +112,21 @@ def main():
 
         channels[key]["names"] = final_names
 
-        print("最终names:", channels[key]["names"])
-
         # ===== logo匹配 ===== #
-        logo = ""
         for n in channels[key]["names"]:
             if n in icon_map:
-                logo = icon_map[n]
+                channels[key]["logo"] = icon_map[n]
                 break
 
-        if logo:
-            channels[key]["logo"] = logo
+    # ===================== 转换成 name 字符串 ===================== #
+    for key in channels:
+        names = channels[key]["names"]
+
+        # 👉 拼接成一行
+        channels[key]["name"] = ",".join(names)
+
+        # 👉 删除原names字段
+        del channels[key]["names"]
 
     # ===================== 输出 ===================== #
     print("\n📤 输出路径:", os.path.abspath(OUTPUT_FILE))
