@@ -68,7 +68,7 @@ def main():
         # ⭐ 初始化
         if key not in channels:
             channels[key] = {
-                "epg_id": key,
+                "epgid": key,
                 "names": [],
                 "logo": ""
             }
