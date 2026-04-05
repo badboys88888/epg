@@ -2,7 +2,9 @@
   "SUPERFREE": {
     "epgid": "CWIN",
     "names": [
-      "SUPER FREE"
+      "SUPER FREE",
+      "华娱台",
+      "華娛台"
     ],
     "logo": ""
   },
@@ -716,7 +718,8 @@
   "CCTV1": {
     "epgid": "1",
     "names": [
-      "CCTV1"
+      "CCTV1",
+      "CCTV综合"
     ],
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV1.png"
   },
