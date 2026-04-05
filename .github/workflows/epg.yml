@@ -3,7 +3,7 @@ name: EPG Auto Build
 on:
   schedule:
     - cron: "0 */6 * * *"   # 每6小时执行一次
-  workflow_dispatch:        # 手动触发
+  workflow_dispatch:
 
 jobs:
   build:
@@ -25,17 +25,22 @@ jobs:
         run: |
           pip install requests
 
-      # 4️⃣ 生成 EPG（第一步）
+      # 4️⃣ 生成 EPG
       - name: Generate EPG
         run: |
           python merge_epg.py
 
-      # 5️⃣ 提取频道（第二步，依赖EPG）
+      # 5️⃣ 提取频道
       - name: Extract channels
         run: |
           python extract_channels.py
 
-      # 6️⃣ 提交结果回仓库
+      # 6️⃣ ⭐ 新增：匹配 logo（关键步骤）
+      - name: Merge channel logos
+        run: |
+          python build_channels.py
+
+      # 7️⃣ 提交结果回仓库
       - name: Commit results
         run: |
           git config --global user.name "github-actions"
