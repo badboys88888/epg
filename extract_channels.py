@@ -1,6 +1,7 @@
 import gzip
 import xml.etree.ElementTree as ET
 import json
+import os
 
 INPUT_FILE = "epg.xml.gz"
 OUTPUT_FILE = "channels.json"
@@ -10,6 +11,7 @@ ALIAS_FILE = "alias_map.json"
 
 # ===================== 读取EPG ===================== #
 def load_epg():
+    print("📦 EPG路径:", os.path.abspath(INPUT_FILE))
     with gzip.open(INPUT_FILE, "rb") as f:
         return ET.parse(f).getroot()
 
@@ -18,8 +20,11 @@ def load_epg():
 def load_icon_map():
     try:
         with open(ICON_MAP_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except:
+            data = json.load(f)
+            print("🖼️ logo_map加载:", len(data))
+            return data
+    except Exception as e:
+        print("❌ logo_map加载失败:", e)
         return {}
 
 
@@ -27,12 +32,15 @@ def load_icon_map():
 def load_alias():
     try:
         with open(ALIAS_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except:
+            data = json.load(f)
+            print("✅ alias加载成功:", len(data))
+            return data
+    except Exception as e:
+        print("❌ alias加载失败:", e)
         return {}
 
 
-# ===================== 统一名称（核心） ===================== #
+# ===================== 统一名称 ===================== #
 def normalize(name):
     return (
         name.upper()
@@ -51,6 +59,8 @@ def main():
     icon_map = load_icon_map()
     alias_map = load_alias()
 
+    print("📊 alias_map内容:", alias_map)
+
     channels = {}
 
     for ch in root.findall("channel"):
@@ -58,6 +68,8 @@ def main():
         cid = ch.attrib.get("id")
         if not cid:
             continue
+
+        print("\n👉 当前CID:", cid)
 
         # ===== 读取 display-name ===== #
         names = []
@@ -68,8 +80,12 @@ def main():
         if not names:
             names = [cid]
 
-        # ⭐ 核心：统一key（不会再乱）
+        print("原始names:", names)
+
+        # ⭐ 用 normalize 做 key（核心）
         key = normalize(names[0])
+
+        print("归一key:", key)
 
         # ===== 初始化 ===== #
         if key not in channels:
@@ -84,13 +100,14 @@ def main():
             if n not in channels[key]["names"]:
                 channels[key]["names"].append(n)
 
-        # ===== ⭐ alias 补充（用 cid） ===== #
+        # ===== ⭐ alias 扩展 ===== #
         if cid in alias_map:
+            print("🔥 命中alias:", cid)
             for a in alias_map[cid]:
                 if a not in channels[key]["names"]:
                     channels[key]["names"].append(a)
 
-        # ===== ⭐ 去重（防重复） ===== #
+        # ===== ⭐ 去重（normalize去重） ===== #
         seen = set()
         final_names = []
 
@@ -102,7 +119,9 @@ def main():
 
         channels[key]["names"] = final_names
 
-        # ===== ⭐ logo匹配 ===== #
+        print("最终names:", channels[key]["names"])
+
+        # ===== logo匹配 ===== #
         logo = ""
         for n in channels[key]["names"]:
             if n in icon_map:
@@ -113,6 +132,8 @@ def main():
             channels[key]["logo"] = logo
 
     # ===================== 输出 ===================== #
+    print("\n📤 输出路径:", os.path.abspath(OUTPUT_FILE))
+
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(channels, f, ensure_ascii=False, indent=2)
 
