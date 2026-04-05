@@ -1,109 +1,121 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import requests
 import gzip
 import xml.etree.ElementTree as ET
 from io import BytesIO
+import json
+from collections import defaultdict
 
-SOURCE_FILE = "epg_sources.txt"
-OUTPUT_FILE = "epg.xml.gz"
+# ===================== 配置 ===================== #
+EPG_SOURCES_FILE = "epg_sources.txt"
+OUTPUT_XML_GZ = "epg.xml.gz"
+OUTPUT_CHANNELS_JSON = "channels.json"
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0"
-}
+# ===================== 下载EPG ===================== #
+def fetch_epg(url):
+    print(f"[FETCH] {url}")
+    r = requests.get(url, timeout=30)
+    r.raise_for_status()
+    return r.content
 
+# ===================== 解析EPG ===================== #
+def parse_epg(content):
+    if content[:2] == b'\x1f\x8b':  # gzip
+        content = gzip.decompress(content)
 
-# ===================== 读取源 ===================== #
-def load_sources():
-    with open(SOURCE_FILE, "r", encoding="utf-8") as f:
-        return [x.strip() for x in f if x.strip()]
+    return ET.fromstring(content)
 
-
-# ===================== 下载 ===================== #
-def download(url):
-    r = requests.get(url, timeout=30, headers=HEADERS)
-    data = r.content
-
-    # gz处理（安全版）
-    if url.endswith(".gz"):
-        try:
-            data = gzip.decompress(data)
-        except:
-            pass
-
-    return data
-
-
-# ===================== XML安全解析 ===================== #
-def parse_xml(data):
-    try:
-        # 防止HTML
-        if b"<tv" not in data:
-            return None
-        return ET.fromstring(data)
-    except:
-        return None
-
-
-# ===================== 主逻辑 ===================== #
-def main():
-
-    sources = load_sources()
-
+# ===================== 合并数据 ===================== #
+def merge_roots(roots):
     tv = ET.Element("tv")
 
-    seen = set()
+    channel_map = {}
+    programme_seen = set()
 
-    print("📡 sources:", len(sources))
+    # ========== 1. 合并 channel ==========
+    for root in roots:
+        for ch in root.findall("channel"):
+            cid = ch.attrib.get("id")
+            name_node = ch.find("display-name")
 
-    for url in sources:
+            if cid and name_node is not None and name_node.text:
+                name = name_node.text.strip()
 
-        try:
-            data = download(url)
-            root = parse_xml(data)
+                if cid not in channel_map:
+                    channel_map[cid] = name
 
-            if root is None:
-                print("❌ skip invalid:", url)
+    # 写入 channel
+    for cid, name in channel_map.items():
+        ch = ET.SubElement(tv, "channel", {"id": cid})
+        dn = ET.SubElement(ch, "display-name")
+        dn.text = name
+
+    # ========== 2. 合并 programme ==========
+    for root in roots:
+        for prog in root.findall("programme"):
+            cid = prog.attrib.get("channel")
+            start = prog.attrib.get("start")
+            stop = prog.attrib.get("stop")
+
+            key = (cid, start, stop)
+            if key in programme_seen:
                 continue
+            programme_seen.add(key)
 
-            print("✅ OK:", url)
+            new_prog = ET.SubElement(tv, "programme", prog.attrib)
 
-            for prog in root.findall("programme"):
+            for child in prog:
+                new_child = ET.SubElement(new_prog, child.tag)
+                new_child.text = child.text
 
-                ch = prog.attrib.get("channel", "")
-                start = prog.attrib.get("start", "")
-                stop = prog.attrib.get("stop", "")
+    return tv, channel_map
 
-                title_node = prog.find("title")
-                title = title_node.text.strip() if title_node is not None and title_node.text else ""
+# ===================== 写 XML.gz ===================== #
+def write_gz_xml(root):
+    xml_str = ET.tostring(root, encoding="utf-8")
 
-                if not ch or not start:
-                    continue
+    with gzip.open(OUTPUT_XML_GZ, "wb") as f:
+        f.write(xml_str)
 
-                key = ch + start + title
-                if key in seen:
-                    continue
-                seen.add(key)
+    print(f"[OK] XML saved -> {OUTPUT_XML_GZ}")
 
-                p = ET.SubElement(tv, "programme", {
-                    "channel": ch,
-                    "start": start,
-                    "stop": stop
-                })
+# ===================== 写 channels.json ===================== #
+def write_channels_json(channel_map):
+    data = {}
 
-                t = ET.SubElement(p, "title")
-                t.text = title
+    for cid, name in channel_map.items():
+        data[cid] = {
+            "epg_id": cid,
+            "names": [name],
+            "logo": ""
+        }
 
+    with open(OUTPUT_CHANNELS_JSON, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    print(f"[OK] channels.json saved -> {OUTPUT_CHANNELS_JSON}")
+
+# ===================== 主流程 ===================== #
+def main():
+    roots = []
+
+    with open(EPG_SOURCES_FILE, "r", encoding="utf-8") as f:
+        urls = [x.strip() for x in f if x.strip()]
+
+    for url in urls:
+        try:
+            content = fetch_epg(url)
+            root = parse_epg(content)
+            roots.append(root)
         except Exception as e:
-            print("❌ FAIL:", url, e)
+            print(f"[ERROR] {url} -> {e}")
 
-    # ===================== 输出 ===================== #
-    xml = ET.tostring(tv, encoding="utf-8")
+    tv, channel_map = merge_roots(roots)
 
-    with gzip.open(OUTPUT_FILE, "wb") as f:
-        f.write(xml)
-
-    print("🎉 DONE →", OUTPUT_FILE)
-    print("📦 total programs:", len(seen))
-
+    write_gz_xml(tv)
+    write_channels_json(channel_map)
 
 if __name__ == "__main__":
     main()
