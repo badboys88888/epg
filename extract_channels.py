@@ -5,6 +5,7 @@ import json
 INPUT_FILE = "epg.xml.gz"
 OUTPUT_FILE = "channels.json"
 ICON_MAP_FILE = "icon_map.json"
+ALIAS_MAP_FILE = "alias_map.json"
 
 
 # ===================== 读取EPG ===================== #
@@ -17,6 +18,15 @@ def load_epg():
 def load_icon_map():
     try:
         with open(ICON_MAP_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except:
+        return {}
+
+
+# ===================== 读取别名映射 ===================== #
+def load_alias_map():
+    try:
+        with open(ALIAS_MAP_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
     except:
         return {}
@@ -37,6 +47,7 @@ def main():
 
     root = load_epg()
     icon_map = load_icon_map()
+    alias_map = load_alias_map()
 
     channels = {}
 
@@ -47,6 +58,7 @@ def main():
             continue
 
         names = []
+
         for n in ch.findall("display-name"):
             if n.text:
                 names.append(n.text.strip())
@@ -54,10 +66,16 @@ def main():
         if not names:
             names = [cid]
 
-        # ⭐ 用 names 生成唯一 key（核心变化）
+        # ⭐ alias 扩展（核心新增）
+        if cid in alias_map:
+            for a in alias_map[cid]:
+                if a not in names:
+                    names.append(a)
+
+        # ⭐ epgid（统一用 normalize 后的key）
         key = normalize(names[0])
 
-        # ⭐ 查logo
+        # ⭐ logo 匹配
         logo = ""
         for n in names:
             nk = normalize(n)
@@ -73,7 +91,7 @@ def main():
                 "logo": ""
             }
 
-        # ⭐ 合并 names（防重复）
+        # ⭐ names 去重（原样）
         for n in names:
             if n not in channels[key]["names"]:
                 channels[key]["names"].append(n)
