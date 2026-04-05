@@ -8,16 +8,21 @@ XML_OUTPUT = "e.xml.gz"
 JSON_OUTPUT = "epg_data.json"
 ICON_BASE = "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/"
 
+# ========== 读取EPG源 ==========
 def load_sources():
     with open(SOURCE_FILE, "r", encoding="utf-8") as f:
         return [x.strip() for x in f if x.strip()]
 
+# ========== 自动识别 XML / GZ ==========
 def load_xml(url):
     headers = {"User-Agent": "Mozilla/5.0"}
+
     r = requests.get(url, headers=headers, timeout=30)
     r.raise_for_status()
 
     content = r.content
+
+    # gzip 自动识别（关键）
     if content[:2] == b'\x1f\x8b':
         content = gzip.decompress(content)
 
@@ -27,16 +32,18 @@ channels = {}
 programmes = []
 seen = set()
 
-# ================== 合并 EPG ================== #
+# ========== 合并EPG ==========
 for url in load_sources():
     try:
         root = load_xml(url)
 
+        # channel 去重
         for ch in root.findall("channel"):
             cid = ch.get("id")
             if cid and cid not in channels:
                 channels[cid] = ch
 
+        # programme 去重
         for p in root.findall("programme"):
             key = (p.get("channel"), p.get("start"), p.get("stop"))
             if key not in seen:
@@ -48,7 +55,7 @@ for url in load_sources():
     except Exception as e:
         print("FAIL:", url, e)
 
-# ================== 输出 e.xml ================== #
+# ========== 输出 e.xml.gz ==========
 tv = ET.Element("tv")
 
 for ch in channels.values():
@@ -57,11 +64,14 @@ for ch in channels.values():
 for p in programmes:
     tv.append(p)
 
-ET.ElementTree(tv).write(XML_OUTPUT, encoding="utf-8", xml_declaration=True)
+tree = ET.ElementTree(tv)
+
+with gzip.open(XML_OUTPUT, "wt", encoding="utf-8") as f:
+    tree.write(f, encoding="unicode", xml_declaration=True)
 
 print("DONE XML ->", XML_OUTPUT)
 
-# ================== 生成 epg_data.json ================== #
+# ========== 输出 epg_data.json ==========
 epg_list = []
 
 for cid in channels.keys():
