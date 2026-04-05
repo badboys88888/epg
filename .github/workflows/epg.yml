@@ -1,8 +1,8 @@
-name: Build EPG System
+name: EPG Build
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # 每6小时更新
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,49 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ===================== 拉代码 ===================== #
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      # ===================== Python环境 ===================== #
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # ===================== 安装依赖 ===================== #
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+      - run: pip install requests opencc-python-reimplemented
 
-      # ===================== 运行EPG合并核心 ===================== #
-      - name: Run merge_epg.py
-        run: |
-          python merge_epg.py
+      - run: python merge_epg.py
 
-      # ===================== 运行matcher测试 ===================== #
-      - name: Run matcher test
-        run: |
-          python matcher.py
-
-      # ===================== 检查生成文件 ===================== #
-      - name: Check output files
-        run: |
-          ls -lah
-          echo "==== epg_entities.json size ===="
-          wc -c epg_entities.json || true
-          echo "==== index.json size ===="
-          wc -c index.json || true
-
-      # ===================== 提交更新 ===================== #
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-
-          git add epg_entities.json index.json
-
-          git commit -m "auto update epg index" || echo "no changes"
-
-          git push
+      - run: python matcher.py
