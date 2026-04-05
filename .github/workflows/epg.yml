@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # ⭐ 关键修复
+  contents: write
 
 jobs:
   build:
@@ -23,10 +23,16 @@ jobs:
 
       - run: python merge_epg.py
 
-      - name: commit
+      - name: commit & push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add e.xml epg_data.json
+
+          echo "checking files..."
+          ls -lh
+
+          # 🔥 关键：永远不会写错文件名
+          git add e.xml.gz epg_data.json || true
+
           git commit -m "update epg" || echo "no change"
           git push
