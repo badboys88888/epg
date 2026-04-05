@@ -1,9 +1,9 @@
-name: IPTV EPG Build
+name: IPTV EPG Engine v3
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # 每6小时跑一次
-  workflow_dispatch:
+    - cron: "0 */6 * * *"   # 每6小时自动运行
+  workflow_dispatch:        # 手动触发
 
 permissions:
   contents: write
@@ -13,38 +13,54 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ===================== 1. 拉代码 =====================
-      - name: Checkout repo
+      # ===================== 拉取代码 ===================== #
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ===================== 2. Python环境 =====================
+      # ===================== Python环境 ===================== #
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # ===================== 3. 升级pip =====================
-      - name: Upgrade pip
-        run: |
-          python -m pip install --upgrade pip
+      # ===================== 缓存pip（加速） ===================== #
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
-      # ===================== 4. 安装依赖（关键） =====================
+      # ===================== 安装依赖 ===================== #
       - name: Install dependencies
         run: |
-          pip install --no-cache-dir -r requirements.txt
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      # ===================== 5. 运行脚本 =====================
-      - name: Run merge_epg
+      # ===================== 运行EPG引擎 ===================== #
+      - name: Run merge_epg engine
         run: |
           python merge_epg.py
 
-      # ===================== 6. 提交结果 =====================
+      # ===================== 检查输出 ===================== #
+      - name: Verify output files
+        run: |
+          echo "===== FILE LIST ====="
+          ls -lah
+          echo "====================="
+          test -f output.m3u || echo "⚠️ output.m3u missing"
+          test -f epg_data.json || echo "⚠️ epg_data.json missing"
+          test -f e.xml.gz || echo "⚠️ e.xml.gz missing"
+
+      # ===================== 提交结果 ===================== #
       - name: Commit results
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add e.xml.gz epg_data.json index.json || true
+          git add output.m3u epg_data.json e.xml.gz || true
 
-          git commit -m "auto update epg" || exit 0
-          git push
+          git commit -m "🚀 auto update epg $(date '+%Y-%m-%d %H:%M')" || echo "no changes"
+
+          git push || echo "push skipped"
