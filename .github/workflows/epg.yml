@@ -1,8 +1,8 @@
-name: Auto Build EPG
+name: IPTV EPG Build
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # 每6小时更新一次
+    - cron: "0 */6 * * *"   # 每6小时跑一次
   workflow_dispatch:
 
 permissions:
@@ -13,34 +13,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ 拉代码
-      - name: Checkout
+      # ===================== 1. 拉代码 =====================
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      # 2️⃣ Python环境
+      # ===================== 2. Python环境 =====================
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # 3️⃣ 安装依赖
-      - name: Install deps
+      # ===================== 3. 升级pip =====================
+      - name: Upgrade pip
         run: |
-          pip install requests
+          python -m pip install --upgrade pip
 
-      # 4️⃣ 运行脚本
-      - name: Run script
+      # ===================== 4. 安装依赖（关键） =====================
+      - name: Install dependencies
+        run: |
+          pip install --no-cache-dir -r requirements.txt
+
+      # ===================== 5. 运行脚本 =====================
+      - name: Run merge_epg
         run: |
           python merge_epg.py
 
-      # 5️⃣ 提交文件（关键）
-      - name: Commit & Push
+      # ===================== 6. 提交结果 =====================
+      - name: Commit results
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
 
-          git add e.xml.gz epg_data.json index.json
+          git add e.xml.gz epg_data.json index.json || true
 
-          git commit -m "update epg" || echo "no changes"
-
+          git commit -m "auto update epg" || exit 0
           git push
