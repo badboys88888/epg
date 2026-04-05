@@ -51,7 +51,7 @@ def build_channel_map(root, icon_map):
 
         # 3️⃣ 写入结构
         channels[cid] = {
-            "epg_id": cid,
+            "epgid": cid,
             "names": names,
             "logo": logo
         }
