@@ -1,101 +1,122 @@
-import xml.etree.ElementTree as ET
 import gzip
+import xml.etree.ElementTree as ET
 import json
-import os
 
-EPG_FILE = "epg.xml.gz"
-ICON_MAP_FILE = "icon_map.json"
+INPUT_FILE = "epg.xml.gz"
 OUTPUT_FILE = "channels.json"
+ICON_MAP_FILE = "icon_map.json"
+ALIAS_FILE = "alias_map.json"
 
 
 # ===================== 读取EPG ===================== #
-def load_epg(path):
-    with gzip.open(path, "rb") as f:
+def load_epg():
+    with gzip.open(INPUT_FILE, "rb") as f:
         return ET.parse(f).getroot()
 
 
-# ===================== 读取icon ===================== #
-def load_icons():
-    if not os.path.exists(ICON_MAP_FILE):
+# ===================== 读取logo ===================== #
+def load_icon_map():
+    try:
+        with open(ICON_MAP_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except:
         return {}
-    with open(ICON_MAP_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
 
 
-# ===================== 核心：正确解析频道 ===================== #
-def build_channel_map(root, icon_map):
+# ===================== 读取alias ===================== #
+def load_alias():
+    try:
+        with open(ALIAS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except:
+        return {}
+
+
+# ===================== 统一规则 ===================== #
+def normalize(name):
+    return (
+        name.upper()
+        .replace(" ", "")
+        .replace("-", "")
+        .replace("_", "")
+    )
+
+
+# ===================== 主逻辑 ===================== #
+def main():
+
+    root = load_epg()
+    icon_map = load_icon_map()
+    alias_map = load_alias()
+
     channels = {}
 
     for ch in root.findall("channel"):
+
         cid = ch.attrib.get("id")
         if not cid:
             continue
 
-        # 1️⃣ 收集所有名字（关键修复点）
+        # ===== display-name ===== #
         names = []
         for n in ch.findall("display-name"):
             if n.text:
-                name = n.text.strip()
-                names.append(name)
+                names.append(n.text.strip())
 
-        # 没有名字就用id兜底
         if not names:
             names = [cid]
 
-        # 2️⃣ logo匹配（用所有名字去匹配）
-        logo = ""
+        # ⭐ 自动归类 key
+        key = normalize(names[0])
+
+        # ===== 初始化 ===== #
+        if key not in channels:
+            channels[key] = {
+                "epgid": cid,
+                "names": [],
+                "logo": ""
+            }
+
+        # ===== 合并EPG names ===== #
         for n in names:
+            if n not in channels[key]["names"]:
+                channels[key]["names"].append(n)
+
+        # ===== ⭐ alias 手动补充（关键） ===== #
+        # 支持 CCTV1 / CGTN 等补充
+        if cid in alias_map:
+            for a in alias_map[cid]:
+                if a not in channels[key]["names"]:
+                    channels[key]["names"].append(a)
+
+        # ===== ⭐ 再做一次去重（防重复） ===== #
+        seen = set()
+        final_names = []
+
+        for n in channels[key]["names"]:
+            nn = normalize(n)
+            if nn not in seen:
+                final_names.append(n)
+                seen.add(nn)
+
+        channels[key]["names"] = final_names
+
+        # ===== logo匹配 ===== #
+        logo = ""
+        for n in channels[key]["names"]:
             if n in icon_map:
                 logo = icon_map[n]
                 break
 
-        # 3️⃣ 写入结构
-        channels[cid] = {
-            "epgid": cid,
-            "names": names,
-            "logo": logo
-        }
+        if logo:
+            channels[key]["logo"] = logo
 
-    return channels
-
-
-# ===================== 合并旧数据（防覆盖） ===================== #
-def merge_old(new_data):
-    if os.path.exists(OUTPUT_FILE):
-        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-            try:
-                old = json.load(f)
-            except:
-                old = {}
-    else:
-        old = {}
-
-    for k, v in new_data.items():
-        if k in old:
-            # 合并 names
-            old_names = set(old[k].get("names", []))
-            new_names = set(v.get("names", []))
-
-            old[k]["names"] = list(old_names | new_names)
-
-            # logo 优先用新的
-            if v.get("logo"):
-                old[k]["logo"] = v["logo"]
-        else:
-            old[k] = v
-
-    return old
-
-
-# ===================== 主流程 ===================== #
-if __name__ == "__main__":
-    root = load_epg(EPG_FILE)
-    icon_map = load_icons()
-
-    new_channels = build_channel_map(root, icon_map)
-    final_data = merge_old(new_channels)
-
+    # ===================== 输出 ===================== #
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(final_data, f, ensure_ascii=False, indent=2)
+        json.dump(channels, f, ensure_ascii=False, indent=2)
 
-    print(f"done -> {OUTPUT_FILE}")
+    print("DONE:", len(channels))
+
+
+if __name__ == "__main__":
+    main()
