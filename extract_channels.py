@@ -14,21 +14,20 @@ OUTPUT_FILE = "channels.json"
 ICON_MAP_FILE = "icon_map.json"
 ALIAS_FILE = "alias_map.json"
 
-# 👉 你刚那个远程索引（关键增强）
 EPG_INDEX_URL = "https://raw.githubusercontent.com/taksssss/tv/refs/heads/main/ku9/epg_data.json"
 
 
-# ===================== EPGLoad（增强容错） ===================== #
+# ===================== EPG ===================== #
 def load_epg():
     try:
         with gzip.open(INPUT_FILE, "rb") as f:
             return ET.parse(f).getroot()
     except Exception as e:
-        print("[WARN] local epg.xml.gz failed:", e)
+        print("[WARN] EPG加载失败:", e)
         return None
 
 
-# ===================== 远程EPG索引 ===================== #
+# ===================== 远程索引 ===================== #
 def load_remote_index():
     try:
         r = requests.get(EPG_INDEX_URL, timeout=20)
@@ -37,27 +36,23 @@ def load_remote_index():
         index = {}
 
         for item in data.get("epgs", []):
-            epgid = item.get("epgid", "")
             logo = item.get("logo", "")
             names = item.get("name", "").split(",")
 
             for n in names:
                 n = n.strip()
                 if n:
-                    index[normalize(n)] = {
-                        "epgid": epgid,
-                        "logo": logo
-                    }
+                    index[normalize(n)] = logo
 
-        print(f"[OK] remote index loaded: {len(index)}")
+        print("[OK] 远程索引:", len(index))
         return index
 
     except Exception as e:
-        print("[WARN] remote index failed:", e)
+        print("[WARN] 远程索引失败:", e)
         return {}
 
 
-# ===================== icon map ===================== #
+# ===================== ICON ===================== #
 def load_icon_map():
     try:
         with open(ICON_MAP_FILE, "r", encoding="utf-8") as f:
@@ -66,7 +61,7 @@ def load_icon_map():
         return {}
 
 
-# ===================== alias ===================== #
+# ===================== ALIAS ===================== #
 def load_alias():
     try:
         with open(ALIAS_FILE, "r", encoding="utf-8") as f:
@@ -75,21 +70,19 @@ def load_alias():
         return {"exact": {}}
 
 
-# ===================== normalize（增强版） ===================== #
+# ===================== normalize ===================== #
 def normalize(name):
     if not name:
         return ""
 
     name = unicodedata.normalize("NFKC", name)
     name = name.upper()
-
-    # 去掉各种符号
     name = re.sub(r"[\s\-\_\(\)（）·\.／\/]", "", name)
 
     return name
 
 
-# ===================== 主流程 ===================== #
+# ===================== 主逻辑 ===================== #
 def main():
 
     root = load_epg()
@@ -102,10 +95,10 @@ def main():
 
     channels = {}
 
-    # ❗ 如果本地EPG挂了，也不中断
     if root is None:
         root = ET.Element("tv")
 
+    # ===================== 解析频道 ===================== #
     for ch in root.findall("channel"):
 
         cid = ch.attrib.get("id")
@@ -119,23 +112,22 @@ def main():
 
         if cid not in channels:
             channels[cid] = {
-                "epgid": cid,
                 "names": [],
                 "logo": ""
             }
 
-        # ========== EPG name ==========
+        # ===== EPG原始名 ===== #
         for n in names:
             if n not in channels[cid]["names"]:
                 channels[cid]["names"].append(n)
 
-        # ========== alias ==========
+        # ===== alias补充 ===== #
         if cid in alias_exact:
             for a in alias_exact[cid]:
                 if a not in channels[cid]["names"]:
                     channels[cid]["names"].append(a)
 
-        # ========== 去重 ==========
+        # ===== 去重 ===== #
         seen = set()
         clean = []
 
@@ -147,38 +139,31 @@ def main():
 
         channels[cid]["names"] = clean
 
-        # ========== logo匹配（本地优先） ==========
+        # ===== logo匹配 ===== #
         logo = ""
 
         for n in clean:
             nn = normalize(n)
 
+            # 本地优先
             if nn in norm_icon_map:
                 logo = norm_icon_map[nn]
                 break
 
-            # ========== remote index fallback ==========
+            # 远程兜底
             if nn in remote_index:
-                logo = remote_index[nn]["logo"]
+                logo = remote_index[nn]
                 break
 
-    # ===================== OUTPUT ===================== #
+        channels[cid]["logo"] = logo
+
+    # ===================== 输出 ===================== #
     final = {}
 
     for cid, data in channels.items():
 
-        # epgid fallback逻辑（关键）
-        epgid = cid
-
-        # 如果 remote index 能匹配到更标准 epgid
-        for n in data["names"]:
-            nn = normalize(n)
-            if nn in remote_index:
-                epgid = remote_index[nn]["epgid"]
-                break
-
         final[cid] = {
-            "epgid": epgid,
+            "epgid": cid,  # ✅ 永远用cid（核心修复）
             "name": ",".join(data["names"]),
             "logo": data["logo"]
         }
