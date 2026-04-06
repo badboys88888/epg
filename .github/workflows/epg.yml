@@ -10,44 +10,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ 拉代码
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # 3️⃣ 依赖
       - name: Install dependencies
         run: |
           pip install requests beautifulsoup4
 
-      # 4️⃣ 生成 EPG
       - name: Generate EPG
         run: python merge_epg.py
 
-      # 5️⃣ 抓取 logo
       - name: Fetch logo map
         run: python fetch_logo_map.py
 
-      # 6️⃣ ⭐生成 alias（新增）
+      # ⭐ 只生成参考 alias（不自动写入）
+      - name: Generate Alias TXT (reference)
+        run: python auto_alias.py
+
       - name: Generate Alias Map
         run: python gen_alias.py
 
-      # 7️⃣ 生成频道
-      - name: Build Channels (All-in-One)
+      - name: Build Channels
         run: python extract_channels.py
 
-      # 8️⃣ 提交结果
       - name: Commit results
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
 
-          git add epg.xml.gz channels.json icon_map.json alias_map.json || true
+          git add epg.xml.gz channels.json icon_map.json alias_map.json alias_auto.txt || true
 
           git commit -m "auto: update epg & channels & logo & alias" || echo "no changes"
 
