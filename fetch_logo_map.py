@@ -4,7 +4,7 @@ import json
 import os
 import re
 
-# ===================== 多地区 ===================== #
+# ===================== 页面 ===================== #
 URLS = [
     "https://epg.pw/areas/tw.html?lang=zh-hans",
     "https://epg.pw/areas/hk.html?lang=zh-hans",
@@ -15,20 +15,7 @@ URLS = [
 OUTPUT = "icon_map.json"
 
 
-# ===================== 清洗（仅显示用，不影响key） ===================== #
-def clean_name(name):
-    if not name:
-        return ""
-
-    name = re.sub(r"^\d+\.", "", name)
-    name = re.sub(r"(HD|高清|標清|1080P|720P|4K)", "", name, flags=re.I)
-    name = name.replace("频道", "").replace("頻道", "")
-    name = name.replace("-", "").replace("_", "")
-
-    return name.strip()
-
-
-# ===================== key统一（关键：稳定） ===================== #
+# ===================== key统一 ===================== #
 def normalize(name):
     return (
         name.upper()
@@ -38,21 +25,20 @@ def normalize(name):
     )
 
 
-# ===================== 读取旧数据 ===================== #
+# ===================== 旧数据 ===================== #
 def load_old():
     if os.path.exists(OUTPUT):
         try:
             with open(OUTPUT, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                print("📦 旧数据:", len(data))
-                return data
+                return json.load(f)
         except:
             return {}
     return {}
 
 
-# ===================== 抓单个页面 ===================== #
+# ===================== 抓取单页（核心） ===================== #
 def fetch_one(url):
+
     print(f"\n🌐 抓取: {url}")
 
     headers = {
@@ -61,7 +47,7 @@ def fetch_one(url):
     }
 
     try:
-        html = requests.get(url, headers=headers, timeout=10).text
+        html = requests.get(url, headers=headers, timeout=15).text
     except Exception as e:
         print("❌ 请求失败:", e)
         return {}
@@ -72,85 +58,86 @@ def fetch_one(url):
 
     for row in soup.find_all("tr"):
 
-        tds = row.find_all("td")
-        if len(tds) < 5:
+        cols = row.find_all("td")
+        if len(cols) < 4:
             continue
 
-        # ✅ 正确列
-        raw_name = tds[0].get_text(strip=True)   # 原始频道名（关键）
-        img = tds[3].find("img")                 # logo
-        cid = tds[4].get_text(strip=True)        # Hot = cid
-
-        if not raw_name or not img:
+        # ===================== 频道名 ===================== #
+        name = cols[0].get_text(strip=True)
+        if not name:
             continue
 
-        logo = img.get("src")
+        # ===================== logo（多兜底） ===================== #
+        logo = ""
+
+        img = cols[3].find("img") if len(cols) > 3 else None
+
+        if img:
+            logo = (
+                img.get("src")
+                or img.get("data-src")
+                or img.get("data-original")
+                or ""
+            )
+
+        # 兜底：background-image
         if not logo:
-            continue
+            style = row.get("style", "")
+            m = re.search(r'url\(["\']?(.*?)["\']?\)', style)
+            if m:
+                logo = m.group(1)
 
-        # 补全URL
-        if logo.startswith("/"):
+        # 补全 URL
+        if logo and logo.startswith("/"):
             logo = "https://epg.pw" + logo
 
-        # 防止 .png.png
-        if not logo.endswith(".png") and not logo.endswith(".jpg"):
-            logo = logo + ".png"
+        # 防重复后缀
+        if logo and not logo.endswith(".png") and not logo.endswith(".jpg"):
+            logo += ".png"
 
-        # ⭐ key 用原始名称（稳定核心）
-        key = normalize(raw_name)
+        # ===================== key ===================== #
+        key = normalize(name)
 
-        # ⭐ 显示名单独处理
-        display_name = clean_name(raw_name)
+        # ===================== 存储 ===================== #
+        if logo:
+            result[key] = logo
 
-        # ⭐ 只在本轮中去重
-        if key not in result:
-            result[key] = {
-                "cid": cid,
-                "name": display_name,
-                "logo": logo
-            }
+        print("✔", name)
 
-        print("✔", raw_name, "->", display_name)
-
-    print(f"📊 获取: {len(result)}")
+    print(f"📊 本页数量: {len(result)}")
     return result
 
 
-# ===================== 主逻辑 ===================== #
+# ===================== 主程序 ===================== #
 def main():
 
-    print("🚀 开始抓取 logo...")
+    print("🚀 开始抓取 icon_map...")
 
-    old_map = load_old()
-    before = len(old_map)
-
-    new_data = {}
+    old = load_old()
+    new = {}
 
     for url in URLS:
         data = fetch_one(url)
-
         for k, v in data.items():
-            # ⭐ 新数据先收集
-            if k not in new_data:
-                new_data[k] = v
+            new[k] = v
 
-    # ===================== 合并（关键：旧优先） ===================== #
-    final_map = old_map.copy()
+    # ===================== 合并（旧优先） ===================== #
+    final = old.copy()
 
     added = 0
 
-    for k, v in new_data.items():
-        if k not in final_map:
-            final_map[k] = v
+    for k, v in new.items():
+        if k not in final:
+            final[k] = v
             added += 1
 
     # ===================== 保存 ===================== #
     with open(OUTPUT, "w", encoding="utf-8") as f:
-        json.dump(final_map, f, ensure_ascii=False, indent=2)
+        json.dump(final, f, ensure_ascii=False, indent=2)
 
     print("\n==============================")
     print("🆕 新增:", added)
-    print("📦 总数:", len(final_map))
+    print("📦 总量:", len(final))
 
 
 if __name__ == "__main__":
