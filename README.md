@@ -47,6 +47,8 @@ alias.txt
 370143=華視|华视|CTS|华视HD
 370139=民視|民视
 4️⃣ 生成 alias_map.json
+
 python gen_alias.py
+
 5️⃣ 抓取台标
 
