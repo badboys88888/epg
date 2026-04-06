@@ -42,7 +42,7 @@ def load_alias():
         return {}
 
 
-# ===================== 🔥 统一规范化（关键修复） ===================== #
+# ===================== normalize（核心统一规则） ===================== #
 def normalize(name):
     if not name:
         return ""
@@ -62,11 +62,23 @@ def main():
 
     root = load_epg()
     icon_map = load_icon_map()
-    alias_map = load_alias()
+    alias_raw = load_alias()
 
-    print("📊 alias_map内容:", alias_map)
+    # ===================== alias 解析（关键新增） ===================== #
+    alias_exact = {}
+    alias_regex = []
 
-    # 🔥 关键：先把 icon_map 全部 normalize 一遍（性能+命中率提升）
+    for k, v in alias_raw.items():
+        if k.startswith("~"):
+            # regex alias
+            alias_regex.append((k[1:], v))
+        else:
+            alias_exact[k] = v
+
+    print("📊 alias_exact:", len(alias_exact))
+    print("📊 alias_regex:", len(alias_regex))
+
+    # ===================== icon map normalize ===================== #
     norm_icon_map = {normalize(k): v for k, v in icon_map.items()}
 
     channels = {}
@@ -77,6 +89,7 @@ def main():
         if not cid:
             continue
 
+        # ===================== channel names ===================== #
         names = []
         for n in ch.findall("display-name"):
             if n.text:
@@ -94,18 +107,35 @@ def main():
                 "logo": ""
             }
 
-        # ===== 合并EPG names ===== #
+        # ===================== 合并EPG names ===================== #
         for n in names:
             if n not in channels[key]["names"]:
                 channels[key]["names"].append(n)
 
-        # ===== alias ===== #
-        if cid in alias_map:
-            for a in alias_map[cid]:
+        # ===================== alias 精确匹配 ===================== #
+        if cid in alias_exact:
+            for a in alias_exact[cid]:
                 if a not in channels[key]["names"]:
                     channels[key]["names"].append(a)
 
-        # ===== 去重（normalize级） ===== #
+        # ===================== alias 正则匹配 ===================== #
+        matched_patterns = set()
+
+        for pattern, values in alias_regex:
+            if pattern in matched_patterns:
+                continue
+
+            for n in channels[key]["names"]:
+                if re.search(pattern, n, re.IGNORECASE):
+                    matched_patterns.add(pattern)
+
+                    for v in values:
+                        if v not in channels[key]["names"]:
+                            channels[key]["names"].append(v)
+
+                    break
+
+        # ===================== 去重（normalize级） ===================== #
         seen = set()
         final_names = []
 
@@ -117,26 +147,21 @@ def main():
 
         channels[key]["names"] = final_names
 
-        # ===================== 🔥 LOGO匹配（核心修复） ===================== #
+        # ===================== logo匹配 ===================== #
         logo = ""
 
         for n in channels[key]["names"]:
-
-            # ✔ 关键：必须 normalize 后再匹配
             nn = normalize(n)
-
             if nn in norm_icon_map:
                 logo = norm_icon_map[nn]
                 break
 
         channels[key]["logo"] = logo
 
-
     # ===================== 输出结构 ===================== #
     for key in channels:
         channels[key]["name"] = ",".join(channels[key]["names"])
         del channels[key]["names"]
-
 
     print("\n📤 输出路径:", os.path.abspath(OUTPUT_FILE))
 
