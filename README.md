@@ -37,17 +37,21 @@
 python merge_epg.py
 生成：
 epg.xml.gz
+
 2️⃣ 自动提取频道别名
 python auto_alias.py
+
 生成:
 alias_auto.txt
+
 3️⃣ 手动维护 alias（关键）
 alias.txt
+
 示例:
 370143=華視|华视|CTS|华视HD
 370139=民視|民视
-4️⃣ 生成 alias_map.json
 
+4️⃣ 生成 alias_map.json
 python gen_alias.py
 
 5️⃣ 抓取台标
