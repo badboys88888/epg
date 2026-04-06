@@ -1,13 +1,10 @@
 import json
-import re
 
 INPUT = "alias.txt"
 OUTPUT = "alias_map.json"
 
-
-def load_txt():
-    exact = {}
-    regex = []
+def main():
+    data = {}
 
     with open(INPUT, "r", encoding="utf-8") as f:
         for line in f:
@@ -19,34 +16,15 @@ def load_txt():
             if "=" not in line:
                 continue
 
-            key, values = line.split("=", 1)
-            aliases = [v.strip() for v in values.split("|") if v.strip()]
+            k, v = line.split("=", 1)
+            aliases = [x.strip() for x in v.split("|") if x.strip()]
 
-            if key.startswith("~"):
-                pattern = key[1:]
-                regex.append((pattern, aliases))
-            else:
-                exact[key] = aliases
-
-    return exact, regex
-
-
-def main():
-    exact, regex = load_txt()
-
-    # 直接输出 JSON（结构化）
-    data = {
-        "exact": exact,
-        "regex": [
-            {"pattern": p, "aliases": a}
-            for p, a in regex
-        ]
-    }
+            data[k.strip()] = aliases
 
     with open(OUTPUT, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump({"exact": data, "regex": []}, f, ensure_ascii=False, indent=2)
 
-    print("✅ alias生成完成")
+    print("✅ alias生成完成:", len(data))
 
 
 if __name__ == "__main__":
