@@ -6,53 +6,65 @@ import gzip
 import xml.etree.ElementTree as ET
 from io import BytesIO
 import json
-from collections import defaultdict
 
-# ===================== 配置 ===================== #
 EPG_SOURCES_FILE = "epg_sources.txt"
 OUTPUT_XML_GZ = "epg.xml.gz"
 OUTPUT_CHANNELS_JSON = "channels.json"
 
-# ===================== 下载EPG ===================== #
+# ===================== 下载 ===================== #
 def fetch_epg(url):
     print(f"[FETCH] {url}")
-    r = requests.get(url, timeout=30)
+
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    }
+
+    r = requests.get(url, headers=headers, timeout=30)
     r.raise_for_status()
     return r.content
 
-# ===================== 解析EPG ===================== #
+
+# ===================== 解析 ===================== #
 def parse_epg(content):
-    if content[:2] == b'\x1f\x8b':  # gzip
+    if content[:2] == b'\x1f\x8b':
         content = gzip.decompress(content)
 
     return ET.fromstring(content)
 
-# ===================== 合并数据 ===================== #
+
+# ===================== merge ===================== #
 def merge_roots(roots):
     tv = ET.Element("tv")
 
     channel_map = {}
-    programme_seen = set()
 
-    # ========== 1. 合并 channel ==========
+    seen_prog = set()
+
+    # ===================== CHANNEL ===================== #
     for root in roots:
         for ch in root.findall("channel"):
             cid = ch.attrib.get("id")
-            name_node = ch.find("display-name")
+            if not cid:
+                continue
 
-            if cid and name_node is not None and name_node.text:
-                name = name_node.text.strip()
+            if cid not in channel_map:
+                channel_map[cid] = []
 
-                if cid not in channel_map:
-                    channel_map[cid] = name
+            for dn in ch.findall("display-name"):
+                if dn.text:
+                    name = dn.text.strip()
+                    if name not in channel_map[cid]:
+                        channel_map[cid].append(name)
 
-    # 写入 channel
-    for cid, name in channel_map.items():
+    # 写 channel
+    for cid, names in channel_map.items():
         ch = ET.SubElement(tv, "channel", {"id": cid})
-        dn = ET.SubElement(ch, "display-name")
-        dn.text = name
 
-    # ========== 2. 合并 programme ==========
+        for n in names:
+            dn = ET.SubElement(ch, "display-name")
+            dn.text = n
+
+    # ===================== PROGRAMME ===================== #
     for root in roots:
         for prog in root.findall("programme"):
             cid = prog.attrib.get("channel")
@@ -60,9 +72,9 @@ def merge_roots(roots):
             stop = prog.attrib.get("stop")
 
             key = (cid, start, stop)
-            if key in programme_seen:
+            if key in seen_prog:
                 continue
-            programme_seen.add(key)
+            seen_prog.add(key)
 
             new_prog = ET.SubElement(tv, "programme", prog.attrib)
 
@@ -72,32 +84,38 @@ def merge_roots(roots):
 
     return tv, channel_map
 
-# ===================== 写 XML.gz ===================== #
+
+# ===================== 输出 XML ===================== #
 def write_gz_xml(root):
     xml_str = ET.tostring(root, encoding="utf-8")
 
     with gzip.open(OUTPUT_XML_GZ, "wb") as f:
         f.write(xml_str)
 
-    print(f"[OK] XML saved -> {OUTPUT_XML_GZ}")
+    print("[OK] epg.xml.gz saved")
 
-# ===================== 写 channels.json ===================== #
+
+# ===================== 输出 JSON ===================== #
 def write_channels_json(channel_map):
     data = {}
 
-    for cid, name in channel_map.items():
+    for cid, names in channel_map.items():
+        if not names:
+            continue
+
         data[cid] = {
-            "epg_id": cid,
-            "names": [name],
-            "logo": ""
+            "epgid": cid,
+            "logo": "",
+            "name": ",".join(names)
         }
 
     with open(OUTPUT_CHANNELS_JSON, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"[OK] channels.json saved -> {OUTPUT_CHANNELS_JSON}")
+    print("[OK] channels.json saved")
 
-# ===================== 主流程 ===================== #
+
+# ===================== main ===================== #
 def main():
     roots = []
 
@@ -110,12 +128,13 @@ def main():
             root = parse_epg(content)
             roots.append(root)
         except Exception as e:
-            print(f"[ERROR] {url} -> {e}")
+            print("[ERROR]", url, e)
 
     tv, channel_map = merge_roots(roots)
 
     write_gz_xml(tv)
     write_channels_json(channel_map)
+
 
 if __name__ == "__main__":
     main()
