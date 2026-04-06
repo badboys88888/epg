@@ -2,6 +2,8 @@ import gzip
 import xml.etree.ElementTree as ET
 import json
 import os
+import re
+import unicodedata
 
 INPUT_FILE = "epg.xml.gz"
 OUTPUT_FILE = "channels.json"
@@ -40,14 +42,17 @@ def load_alias():
         return {}
 
 
-# ===================== 统一名称 ===================== #
+# ===================== 🔥 统一规范化（关键修复） ===================== #
 def normalize(name):
-    return (
-        name.upper()
-        .replace(" ", "")
-        .replace("-", "")
-        .replace("_", "")
-    )
+    if not name:
+        return ""
+
+    name = unicodedata.normalize("NFKC", name)
+    name = name.upper()
+    name = re.sub(r"\s+", "", name)
+    name = re.sub(r"[-_()（）·\.]", "", name)
+
+    return name
 
 
 # ===================== 主逻辑 ===================== #
@@ -61,6 +66,9 @@ def main():
 
     print("📊 alias_map内容:", alias_map)
 
+    # 🔥 关键：先把 icon_map 全部 normalize 一遍（性能+命中率提升）
+    norm_icon_map = {normalize(k): v for k, v in icon_map.items()}
+
     channels = {}
 
     for ch in root.findall("channel"):
@@ -69,7 +77,6 @@ def main():
         if not cid:
             continue
 
-        # ===== 读取 display-name ===== #
         names = []
         for n in ch.findall("display-name"):
             if n.text:
@@ -78,14 +85,12 @@ def main():
         if not names:
             names = [cid]
 
-        # ⭐ 用 normalize 做 key
         key = normalize(names[0])
 
-        # ===== 初始化 ===== #
         if key not in channels:
             channels[key] = {
                 "epgid": cid,
-                "names": [],   # ⚠️ 必须是 list
+                "names": [],
                 "logo": ""
             }
 
@@ -94,13 +99,13 @@ def main():
             if n not in channels[key]["names"]:
                 channels[key]["names"].append(n)
 
-        # ===== alias 扩展 ===== #
+        # ===== alias ===== #
         if cid in alias_map:
             for a in alias_map[cid]:
                 if a not in channels[key]["names"]:
                     channels[key]["names"].append(a)
 
-        # ===== 去重（normalize级别） ===== #
+        # ===== 去重（normalize级） ===== #
         seen = set()
         final_names = []
 
@@ -112,23 +117,27 @@ def main():
 
         channels[key]["names"] = final_names
 
-        # ===== logo匹配 ===== #
+        # ===================== 🔥 LOGO匹配（核心修复） ===================== #
+        logo = ""
+
         for n in channels[key]["names"]:
-            if n in icon_map:
-                channels[key]["logo"] = icon_map[n]
+
+            # ✔ 关键：必须 normalize 后再匹配
+            nn = normalize(n)
+
+            if nn in norm_icon_map:
+                logo = norm_icon_map[nn]
                 break
 
-    # ===================== 转换成 name 字符串 ===================== #
+        channels[key]["logo"] = logo
+
+
+    # ===================== 输出结构 ===================== #
     for key in channels:
-        names = channels[key]["names"]
-
-        # 👉 拼接成一行
-        channels[key]["name"] = ",".join(names)
-
-        # 👉 删除原names字段
+        channels[key]["name"] = ",".join(channels[key]["names"])
         del channels[key]["names"]
 
-    # ===================== 输出 ===================== #
+
     print("\n📤 输出路径:", os.path.abspath(OUTPUT_FILE))
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
