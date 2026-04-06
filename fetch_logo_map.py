@@ -21,17 +21,17 @@ def clean_name(name):
     if not name:
         return ""
 
-    # 去掉编号：76.xxx
+    # 去编号：76.xxx
     name = re.sub(r"^\d+\.", "", name)
 
-    # 去掉常见垃圾词
-    remove_words = [
-        "HD", "高清", "標清", "频道", "頻道",
-        "1080P", "720P", "4K"
-    ]
+    # 去清晰度/杂质
+    name = re.sub(r"(HD|高清|標清|1080P|720P|4K)", "", name, flags=re.I)
 
-    for w in remove_words:
-        name = name.replace(w, "")
+    # 去“频道”
+    name = name.replace("频道", "").replace("頻道", "")
+
+    # 去多余符号
+    name = name.replace("-", "").replace("_", "")
 
     return name.strip()
 
@@ -63,8 +63,15 @@ def load_old():
 def fetch_one(url):
     print(f"\n🌐 抓取: {url}")
 
+    headers = {
+    "User-Agent": "Mozilla/5.0",
+    "Referer": "https://epg.pw/",
+    "Accept": "text/html,application/xhtml+xml",
+    "Accept-Language": "zh-CN,zh;q=0.9"
+}
+
     try:
-        html = requests.get(url, timeout=10).text
+        html = requests.get(url, headers=headers, timeout=10).text
     except Exception as e:
         print("❌ 请求失败:", e)
         return {}
@@ -87,14 +94,18 @@ def fetch_one(url):
         if logo.startswith("/"):
             logo = "https://epg.pw" + logo
 
-        # 获取整行文本
-        text = row.get_text(" ", strip=True)
+        # ⭐ 强制加后缀（关键）
+        logo = logo + ".png"
 
-        if not text:
-            continue
+        # ===== 精准拿频道名 ===== #
+        tds = row.find_all("td")
 
-        # 取第一个字段作为频道名
-        name = text.split()[0]
+        if len(tds) >= 2:
+            name = tds[1].get_text(strip=True)
+        else:
+            # fallback
+            text = row.get_text(" ", strip=True)
+            name = text.split()[0]
 
         name = clean_name(name)
 
@@ -105,7 +116,7 @@ def fetch_one(url):
 
         result[key] = logo
 
-        print("✔", name)
+        print("✔", name, "->", logo)
 
     print(f"📊 获取: {len(result)}")
     return result
