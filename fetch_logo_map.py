@@ -6,7 +6,9 @@ import os
 URLS = [
     "https://epg.pw/areas/tw.html?lang=zh-hans",
     "https://epg.pw/areas/hk.html?lang=zh-hans",
-    "https://epg.pw/areas/cn.html?lang=zh-hans"
+    "https://epg.pw/areas/sg.html?lang=zh-hans"
+    "https://epg.pw/areas/sg.html?lang=zh-hans"
+    "https://epg.pw/areas/my.html?lang=zh-hans"
 ]
 
 OUTPUT = "icon_map.json"
