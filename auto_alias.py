@@ -1,8 +1,19 @@
 import gzip
 import xml.etree.ElementTree as ET
+import re
 
 INPUT = "epg.xml.gz"
 OUTPUT = "alias_auto.txt"
+
+
+# ===================== 清洗名字 ===================== #
+def clean_name(name):
+    name = name.strip()
+
+    # 去掉常见垃圾词（可自己加）
+    name = re.sub(r"(高清|HD|频道|電視台|电视台)$", "", name, flags=re.I)
+
+    return name.strip()
 
 
 def main():
@@ -21,15 +32,16 @@ def main():
 
         for n in ch.findall("display-name"):
             if n.text:
-                name = n.text.strip()
-                if name:
+                name = clean_name(n.text)
+
+                if name and name not in names:
                     names.append(name)
 
         if not names:
             continue
 
-        # 去重
-        names = list(dict.fromkeys(names))
+        # 🔥 排序（短的优先=主名）
+        names = sorted(names, key=len)
 
         result[cid] = names
 
