@@ -11,8 +11,8 @@
   },
   "民視": {
     "epgid": "370139",
-    "logo": "",
-    "name": "民視"
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/民视.png",
+    "name": "民視,民视"
   },
   "大愛電視": {
     "epgid": "370140",
@@ -21,23 +21,23 @@
   },
   "中視": {
     "epgid": "370141",
-    "logo": "",
-    "name": "中視"
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/中视.png",
+    "name": "中視,中视"
   },
   "華視": {
     "epgid": "370143",
-    "logo": "",
-    "name": "華視"
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/华视.png",
+    "name": "華視,华视"
   },
   "三立綜合台": {
     "epgid": "370144",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/三立.png",
-    "name": "三立綜合台"
+    "name": "三立綜合台,三立综合,三立综合台"
   },
   "客家電視台": {
     "epgid": "370145",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/客家.png",
-    "name": "客家電視台"
+    "name": "客家電視台,客家电视,客家电视台"
   },
   "八大綜藝台": {
     "epgid": "370146",
@@ -8789,11 +8789,6 @@
     "logo": "",
     "name": "MILB - Salt Lake Bees"
   },
-  "MLBCHICAGOCUBS": {
-    "epgid": "465534",
-    "logo": "",
-    "name": "MLB - Chicago Cubs"
-  },
   "NBANEWORLEANSPELICANS": {
     "epgid": "465535",
     "logo": "",
@@ -8898,11 +8893,6 @@
     "epgid": "465557",
     "logo": "",
     "name": "WNBA - Connecticut Sun"
-  },
-  "MLBCLEVELANDGUARDIANS": {
-    "epgid": "465558",
-    "logo": "",
-    "name": "MLB - Cleveland Guardians"
   },
   "NHLSANJOSESHARKS": {
     "epgid": "465561",
@@ -9228,6 +9218,11 @@
     "epgid": "465632",
     "logo": "",
     "name": "NHL - Los Angeles Kings"
+  },
+  "MLBMILWAUKEEBREWERS": {
+    "epgid": "465633",
+    "logo": "",
+    "name": "MLB - Milwaukee Brewers"
   },
   "NHLCHICAGOBLACKHAWKS": {
     "epgid": "465634",
@@ -9634,6 +9629,11 @@
     "logo": "",
     "name": "NHL - Colorado Avalanche"
   },
+  "MLBKANSASCITYROYALS": {
+    "epgid": "465731",
+    "logo": "",
+    "name": "MLB - Kansas City Royals"
+  },
   "MLBBALTIMOREORIOLES": {
     "epgid": "465732",
     "logo": "",
@@ -9943,6 +9943,666 @@
     "epgid": "465803",
     "logo": "",
     "name": "NBA - Brooklyn Nets"
+  },
+  "DABLNETWORKLLC": {
+    "epgid": "471425",
+    "logo": "",
+    "name": "Dabl Network LLC"
+  },
+  "DABLNETWORKLLCPACIFIC": {
+    "epgid": "471426",
+    "logo": "",
+    "name": "Dabl Network LLC Pacific"
+  },
+  "DABL": {
+    "epgid": "471427",
+    "logo": "",
+    "name": "Dabl"
+  },
+  "WESTTV": {
+    "epgid": "471657",
+    "logo": "",
+    "name": "West TV"
+  },
+  "MERITTV": {
+    "epgid": "472381",
+    "logo": "",
+    "name": "Merit TV"
+  },
+  "WORLDCHANNEL": {
+    "epgid": "472382",
+    "logo": "",
+    "name": "WORLD Channel"
+  },
+  "NOSEY": {
+    "epgid": "472383",
+    "logo": "",
+    "name": "Nosey"
+  },
+  "FNXFIRSTNATIONSEXPERIENCE": {
+    "epgid": "472385",
+    "logo": "",
+    "name": "FNX First Nations Experience"
+  },
+  "NOSEYONPEACOCK": {
+    "epgid": "472386",
+    "logo": "",
+    "name": "Nosey on Peacock"
+  },
+  "AMERICANCRIMES": {
+    "epgid": "473069",
+    "logo": "",
+    "name": "American Crimes"
+  },
+  "BUZZRSTREAM": {
+    "epgid": "473210",
+    "logo": "",
+    "name": "BUZZR Stream"
+  },
+  "[TFC]THEFILIPINOCHANNELHD": {
+    "epgid": "474984",
+    "logo": "",
+    "name": "[TFC] The Filipino Channel HD"
+  },
+  "SUMTVLATINO": {
+    "epgid": "475508",
+    "logo": "",
+    "name": "SUMtv Latino"
+  },
+  "SUMTV": {
+    "epgid": "475509",
+    "logo": "",
+    "name": "SUMtv"
+  },
+  "UNIVERSALMOVIES": {
+    "epgid": "477700",
+    "logo": "",
+    "name": "Universal Movies"
+  },
+  "MILBSALEMRIDGEYAKS": {
+    "epgid": "478233",
+    "logo": "",
+    "name": "MILB - Salem RidgeYaks"
+  },
+  "MILBWILSONWARBIRDS": {
+    "epgid": "479450",
+    "logo": "",
+    "name": "MILB - Wilson Warbirds"
+  },
+  "CINEMAXCLASSICS": {
+    "epgid": "480607",
+    "logo": "",
+    "name": "Cinemax Classics"
+  },
+  "CINEMAXACTION": {
+    "epgid": "480608",
+    "logo": "",
+    "name": "Cinemax Action"
+  },
+  "HBOMOVIES": {
+    "epgid": "480609",
+    "logo": "",
+    "name": "HBO Movies"
+  },
+  "SHADESOFBLACK": {
+    "epgid": "481953",
+    "logo": "",
+    "name": "Shades of Black"
+  },
+  "HAUNTTV": {
+    "epgid": "481954",
+    "logo": "",
+    "name": "Haunt TV"
+  },
+  "RYZSPORTSNETWORK": {
+    "epgid": "483389",
+    "logo": "",
+    "name": "Ryz Sports Network"
+  },
+  "OUTDOORAMERICAFIELDANDSTREAM": {
+    "epgid": "483390",
+    "logo": "",
+    "name": "Outdoor America Field and Stream"
+  },
+  "GULFCOASTSPORTSANDENTERTAINMENTNETWORK": {
+    "epgid": "483391",
+    "logo": "",
+    "name": "Gulf Coast Sports and Entertainment Network"
+  },
+  "STELLARTV": {
+    "epgid": "483393",
+    "logo": "",
+    "name": "STELLAR TV"
+  },
+  "ALTITUDESPORTS2HD": {
+    "epgid": "483394",
+    "logo": "",
+    "name": "Altitude Sports 2 HD"
+  },
+  "CHSNPLUS": {
+    "epgid": "483395",
+    "logo": "",
+    "name": "CHSN Plus"
+  },
+  "HBCUGOSPORTS": {
+    "epgid": "483396",
+    "logo": "",
+    "name": "HBCUGO SPORTS"
+  },
+  "3ABNRADIONETWORK": {
+    "epgid": "484436",
+    "logo": "",
+    "name": "3ABN Radio Network"
+  },
+  "80SSITCOMS": {
+    "epgid": "484875",
+    "logo": "",
+    "name": "80s Sitcoms"
+  },
+  "NASCARCHANNEL": {
+    "epgid": "484876",
+    "logo": "",
+    "name": "NASCAR Channel"
+  },
+  "TASTEMADEFOODANDMORE": {
+    "epgid": "484877",
+    "logo": "",
+    "name": "Tastemade Food and More"
+  },
+  "ESPN8THEOCHO": {
+    "epgid": "484878",
+    "logo": "",
+    "name": "ESPN8 The Ocho"
+  },
+  "MSGSPORTSNETZONE3(MSGWNY)": {
+    "epgid": "484879",
+    "logo": "",
+    "name": "MSG Sportsnet Zone 3 (MSG WNY)"
+  },
+  "MGMPRESENTSACTION": {
+    "epgid": "484880",
+    "logo": "",
+    "name": "MGM Presents Action"
+  },
+  "BONAPPÉTITTV": {
+    "epgid": "484881",
+    "logo": "",
+    "name": "Bon Appétit TV"
+  },
+  "PUREFLIXTV": {
+    "epgid": "484882",
+    "logo": "",
+    "name": "Pure Flix TV"
+  },
+  "CINEVAULTCLASSICS": {
+    "epgid": "484883",
+    "logo": "",
+    "name": "Cinevault Classics"
+  },
+  "LIVINGWITHEVIL": {
+    "epgid": "484884",
+    "logo": "",
+    "name": "Living With Evil"
+  },
+  "FILMRISEMYSTERIES": {
+    "epgid": "484885",
+    "logo": "",
+    "name": "Filmrise Mysteries"
+  },
+  "90SSITCOMS": {
+    "epgid": "484886",
+    "logo": "",
+    "name": "90s Sitcoms"
+  },
+  "MGMPRESENTS": {
+    "epgid": "484887",
+    "logo": "",
+    "name": "MGM Presents"
+  },
+  "FMFUSEMUSIC": {
+    "epgid": "484888",
+    "logo": "",
+    "name": "FM Fuse Music"
+  },
+  "NBCSPORTSNOW": {
+    "epgid": "485735",
+    "logo": "",
+    "name": "NBC Sports Now"
+  },
+  "MILBFREDERICKKEYS": {
+    "epgid": "486314",
+    "logo": "",
+    "name": "MILB - Frederick Keys"
+  },
+  "BBCDINOS24/7": {
+    "epgid": "487333",
+    "logo": "",
+    "name": "BBC Dinos 24/7"
+  },
+  "SPORTSGRID": {
+    "epgid": "489130",
+    "logo": "",
+    "name": "SportsGrid"
+  },
+  "HORRORMACHINE": {
+    "epgid": "490837",
+    "logo": "",
+    "name": "Horror Machine"
+  },
+  "SPECTRUMNEWSCENTRALFLORIDA": {
+    "epgid": "491422",
+    "logo": "",
+    "name": "Spectrum News - Central Florida"
+  },
+  "UFLDALLASRENEGADES": {
+    "epgid": "492683",
+    "logo": "",
+    "name": "UFL - Dallas RENEGADES"
+  },
+  "UFLHOUSTONGAMBLERS": {
+    "epgid": "492684",
+    "logo": "",
+    "name": "UFL - Houston GAMBLERS"
+  },
+  "NBCCOMEDYVAULT": {
+    "epgid": "492940",
+    "logo": "",
+    "name": "NBC Comedy Vault"
+  },
+  "UNIVERSALMONSTERS": {
+    "epgid": "492941",
+    "logo": "",
+    "name": "Universal Monsters"
+  },
+  "IONMYSTERY": {
+    "epgid": "492942",
+    "logo": "",
+    "name": "ION Mystery"
+  },
+  "UNIVERSALCRIME": {
+    "epgid": "492943",
+    "logo": "",
+    "name": "Universal Crime"
+  },
+  "UNIVERSALACTION": {
+    "epgid": "492944",
+    "logo": "",
+    "name": "Universal Action"
+  },
+  "FAWESOME": {
+    "epgid": "494591",
+    "logo": "",
+    "name": "Fawesome"
+  },
+  "BOWLINGTV": {
+    "epgid": "494592",
+    "logo": "",
+    "name": "Bowling TV"
+  },
+  "LOVEKILLS": {
+    "epgid": "495109",
+    "logo": "",
+    "name": "Love Kills"
+  },
+  "PLUSMOVIES": {
+    "epgid": "496440",
+    "logo": "",
+    "name": "Plus Movies"
+  },
+  "YTAYOUTOOAMERICA": {
+    "epgid": "496594",
+    "logo": "",
+    "name": "YTA Youtoo America"
+  },
+  "YESNETWORKOVERFLOW": {
+    "epgid": "496596",
+    "logo": "",
+    "name": "Yes Network Overflow"
+  },
+  "MYNETWORK": {
+    "epgid": "496597",
+    "logo": "",
+    "name": "My Network"
+  },
+  "RIGHTNOWTV": {
+    "epgid": "496599",
+    "logo": "",
+    "name": "Right Now TV"
+  },
+  "ACTIONCHANNEL": {
+    "epgid": "496600",
+    "logo": "",
+    "name": "Action Channel"
+  },
+  "ATNCRICKETPLUS": {
+    "epgid": "496601",
+    "logo": "",
+    "name": "ATN Cricket Plus"
+  },
+  "THENEST": {
+    "epgid": "496602",
+    "logo": "",
+    "name": "The Nest"
+  },
+  "REVN": {
+    "epgid": "496603",
+    "logo": "",
+    "name": "RevN"
+  },
+  "REWINDTV": {
+    "epgid": "496605",
+    "logo": "",
+    "name": "Rewind TV"
+  },
+  "ANDTV": {
+    "epgid": "496606",
+    "logo": "",
+    "name": "and TV"
+  },
+  "YESNETWORK": {
+    "epgid": "496607",
+    "logo": "",
+    "name": "Yes Network"
+  },
+  "BIZTV": {
+    "epgid": "496609",
+    "logo": "",
+    "name": "Biz TV"
+  },
+  "BLAZETV": {
+    "epgid": "496610",
+    "logo": "",
+    "name": "Blaze TV"
+  },
+  "NECNNEWENGLANDCABLENEWS": {
+    "epgid": "496612",
+    "logo": "",
+    "name": "NECN New England Cable News"
+  },
+  "ANTENNATV": {
+    "epgid": "496613",
+    "logo": "",
+    "name": "Antenna TV"
+  },
+  "LAFF": {
+    "epgid": "496614",
+    "logo": "",
+    "name": "Laff"
+  },
+  "DEFYTV": {
+    "epgid": "496615",
+    "logo": "",
+    "name": "Defy TV"
+  },
+  "CATCHYCOMEDY": {
+    "epgid": "496616",
+    "logo": "",
+    "name": "Catchy Comedy"
+  },
+  "CREATE": {
+    "epgid": "496617",
+    "logo": "",
+    "name": "Create"
+  },
+  "QUEST": {
+    "epgid": "496618",
+    "logo": "",
+    "name": "Quest"
+  },
+  "CW": {
+    "epgid": "496619",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/BBCWORLDNEWS.png",
+    "name": "CW"
+  },
+  "NBCSPORTSPHILADELPHIAPLUS": {
+    "epgid": "496620",
+    "logo": "",
+    "name": "NBC Sports Philadelphia Plus"
+  },
+  "THEFAMILYCHANNEL": {
+    "epgid": "496623",
+    "logo": "",
+    "name": "The Family Channel"
+  },
+  "NESN+NEWENGLANDSPORTSNETWORKPLUS": {
+    "epgid": "496625",
+    "logo": "",
+    "name": "NESN+ New England Sports Network Plus"
+  },
+  "AFNFAMILY/AFNPULSE": {
+    "epgid": "496759",
+    "logo": "",
+    "name": "AFN family/AFN pulse"
+  },
+  "AFNPRIMEPACIFIC": {
+    "epgid": "496760",
+    "logo": "",
+    "name": "AFN prime Pacific"
+  },
+  "AFNPRIMEATLANTIC": {
+    "epgid": "496761",
+    "logo": "",
+    "name": "AFN prime Atlantic"
+  },
+  "AFNNEWS": {
+    "epgid": "496762",
+    "logo": "",
+    "name": "AFN news"
+  },
+  "AFNSPECTRUM": {
+    "epgid": "496763",
+    "logo": "",
+    "name": "AFN spectrum"
+  },
+  "AFNSPORTS": {
+    "epgid": "496764",
+    "logo": "",
+    "name": "AFN sports"
+  },
+  "AFNSPORTS2": {
+    "epgid": "496765",
+    "logo": "",
+    "name": "AFN sports2"
+  },
+  "AFNMOVIE": {
+    "epgid": "496766",
+    "logo": "",
+    "name": "AFN movie"
+  },
+  "VEVOROCK": {
+    "epgid": "497969",
+    "logo": "",
+    "name": "Vevo Rock"
+  },
+  "VEVORANDB": {
+    "epgid": "497970",
+    "logo": "",
+    "name": "Vevo R and B"
+  },
+  "VEVOPOP": {
+    "epgid": "497971",
+    "logo": "",
+    "name": "Vevo Pop"
+  },
+  "VEVO70S": {
+    "epgid": "497972",
+    "logo": "",
+    "name": "Vevo 70s"
+  },
+  "INSIGHTTV": {
+    "epgid": "497973",
+    "logo": "",
+    "name": "Insight TV"
+  },
+  "VEVOHOLIDAY": {
+    "epgid": "497974",
+    "logo": "",
+    "name": "Vevo Holiday"
+  },
+  "VEVOTRUESCHOOLHIPHOP": {
+    "epgid": "497975",
+    "logo": "",
+    "name": "Vevo True School Hip-Hop"
+  },
+  "VEVO90S": {
+    "epgid": "497976",
+    "logo": "",
+    "name": "Vevo 90s"
+  },
+  "VEVO2K": {
+    "epgid": "497977",
+    "logo": "",
+    "name": "Vevo 2K"
+  },
+  "VEVOÍCONOSLATINOS": {
+    "epgid": "497978",
+    "logo": "",
+    "name": "Vevo Íconos Latinos"
+  },
+  "VEVOCOUNTRY": {
+    "epgid": "497979",
+    "logo": "",
+    "name": "Vevo Country"
+  },
+  "VEVO80S": {
+    "epgid": "497980",
+    "logo": "",
+    "name": "Vevo 80s"
+  },
+  "VEVOLATINO": {
+    "epgid": "497981",
+    "logo": "",
+    "name": "Vevo Latino"
+  },
+  "VEVOHIPHOP": {
+    "epgid": "497982",
+    "logo": "",
+    "name": "Vevo Hip-Hop"
+  },
+  "VEVOREGGAETONANDTRAP": {
+    "epgid": "497983",
+    "logo": "",
+    "name": "Vevo Reggaeton and Trap"
+  },
+  "VEVOREGIONALMEXICANO": {
+    "epgid": "497985",
+    "logo": "",
+    "name": "Vevo Regional Mexicano"
+  },
+  "SALEMNEWSCHANNEL": {
+    "epgid": "501743",
+    "logo": "",
+    "name": "Salem News Channel"
+  },
+  "CINEVAULT": {
+    "epgid": "501744",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CI.png",
+    "name": "CINEVAULT"
+  },
+  "NBCCHICAGO(LIVESTREAM)": {
+    "epgid": "501747",
+    "logo": "",
+    "name": "NBC Chicago (Live Stream)"
+  },
+  "MILBHILLCITYHOWLERS": {
+    "epgid": "509187",
+    "logo": "",
+    "name": "MILB - Hill City Howlers"
+  },
+  "WNBAPORTLANDFIRE": {
+    "epgid": "513149",
+    "logo": "",
+    "name": "WNBA - Portland Fire"
+  },
+  "WNBATORONTOTEMPO": {
+    "epgid": "513150",
+    "logo": "",
+    "name": "WNBA - Toronto Tempo"
+  },
+  "MOVIES!": {
+    "epgid": "516449",
+    "logo": "",
+    "name": "Movies!"
+  },
+  "DISCOVERYTURBOTV": {
+    "epgid": "516450",
+    "logo": "",
+    "name": "Discovery Turbo TV"
+  },
+  "ASYLUMMOVIE": {
+    "epgid": "520489",
+    "logo": "",
+    "name": "Asylum Movie"
+  },
+  "BUSTEDTV": {
+    "epgid": "521096",
+    "logo": "",
+    "name": "Busted TV"
+  },
+  "UFLDCDEFENDERS": {
+    "epgid": "522430",
+    "logo": "",
+    "name": "UFL - DC DEFENDERS"
+  },
+  "NBCTRUECRMZ": {
+    "epgid": "524796",
+    "logo": "",
+    "name": "NBC True CRMZ"
+  },
+  "NEWS12NEWJERSEY": {
+    "epgid": "524797",
+    "logo": "",
+    "name": "News 12 New Jersey"
+  },
+  "WILLOWXTRA": {
+    "epgid": "526674",
+    "logo": "",
+    "name": "Willow Xtra"
+  },
+  "UFLCOLUMBUSAVIATORS": {
+    "epgid": "527866",
+    "logo": "",
+    "name": "UFL - Columbus Aviators"
+  },
+  "UFLLOUISVILLEKINGS": {
+    "epgid": "527867",
+    "logo": "",
+    "name": "UFL - Louisville Kings"
+  },
+  "UFLORLANDOSTORM": {
+    "epgid": "527868",
+    "logo": "",
+    "name": "UFL - Orlando Storm"
+  },
+  "FOXSOUL": {
+    "epgid": "529205",
+    "logo": "",
+    "name": "FOX SOUL"
+  },
+  "STORIESBYAMC": {
+    "epgid": "530870",
+    "logo": "",
+    "name": "Stories by AMC"
+  },
+  "BLACKVOICES": {
+    "epgid": "530871",
+    "logo": "",
+    "name": "Black Voices"
+  },
+  "WWENETWORK": {
+    "epgid": "531475",
+    "logo": "",
+    "name": "WWE Network"
+  },
+  "MLBCHICAGOCUBS": {
+    "epgid": "465534",
+    "logo": "",
+    "name": "MLB - Chicago Cubs"
+  },
+  "MLBCLEVELANDGUARDIANS": {
+    "epgid": "465558",
+    "logo": "",
+    "name": "MLB - Cleveland Guardians"
   },
   "K40GHD": {
     "epgid": "465817",
@@ -31754,30 +32414,10 @@
     "logo": "",
     "name": "WRCX-LD"
   },
-  "DABLNETWORKLLC": {
-    "epgid": "471425",
-    "logo": "",
-    "name": "Dabl Network LLC"
-  },
-  "DABLNETWORKLLCPACIFIC": {
-    "epgid": "471426",
-    "logo": "",
-    "name": "Dabl Network LLC Pacific"
-  },
-  "DABL": {
-    "epgid": "471427",
-    "logo": "",
-    "name": "Dabl"
-  },
   "WFSUDT2": {
     "epgid": "471430",
     "logo": "",
     "name": "WFSU-DT2"
-  },
-  "WESTTV": {
-    "epgid": "471657",
-    "logo": "",
-    "name": "West TV"
   },
   "KGANDT2": {
     "epgid": "471811",
@@ -31859,150 +32499,25 @@
     "logo": "",
     "name": "KESQ-DT"
   },
-  "MERITTV": {
-    "epgid": "472381",
-    "logo": "",
-    "name": "Merit TV"
-  },
-  "WORLDCHANNEL": {
-    "epgid": "472382",
-    "logo": "",
-    "name": "WORLD Channel"
-  },
-  "NOSEY": {
-    "epgid": "472383",
-    "logo": "",
-    "name": "Nosey"
-  },
-  "FNXFIRSTNATIONSEXPERIENCE": {
-    "epgid": "472385",
-    "logo": "",
-    "name": "FNX First Nations Experience"
-  },
-  "NOSEYONPEACOCK": {
-    "epgid": "472386",
-    "logo": "",
-    "name": "Nosey on Peacock"
-  },
-  "AMERICANCRIMES": {
-    "epgid": "473069",
-    "logo": "",
-    "name": "American Crimes"
-  },
-  "BUZZRSTREAM": {
-    "epgid": "473210",
-    "logo": "",
-    "name": "BUZZR Stream"
-  },
   "KHONDT2": {
     "epgid": "474536",
     "logo": "",
     "name": "KHON-DT2"
-  },
-  "[TFC]THEFILIPINOCHANNELHD": {
-    "epgid": "474984",
-    "logo": "",
-    "name": "[TFC] The Filipino Channel HD"
-  },
-  "SUMTVLATINO": {
-    "epgid": "475508",
-    "logo": "",
-    "name": "SUMtv Latino"
-  },
-  "SUMTV": {
-    "epgid": "475509",
-    "logo": "",
-    "name": "SUMtv"
-  },
-  "UNIVERSALMOVIES": {
-    "epgid": "477700",
-    "logo": "",
-    "name": "Universal Movies"
-  },
-  "MILBSALEMRIDGEYAKS": {
-    "epgid": "478233",
-    "logo": "",
-    "name": "MILB - Salem RidgeYaks"
   },
   "WJHLDT2": {
     "epgid": "478724",
     "logo": "",
     "name": "WJHL-DT2"
   },
-  "MILBWILSONWARBIRDS": {
-    "epgid": "479450",
-    "logo": "",
-    "name": "MILB - Wilson Warbirds"
-  },
   "WVUEDT3": {
     "epgid": "479912",
     "logo": "",
     "name": "WVUE-DT3"
   },
-  "CINEMAXCLASSICS": {
-    "epgid": "480607",
-    "logo": "",
-    "name": "Cinemax Classics"
-  },
-  "CINEMAXACTION": {
-    "epgid": "480608",
-    "logo": "",
-    "name": "Cinemax Action"
-  },
-  "HBOMOVIES": {
-    "epgid": "480609",
-    "logo": "",
-    "name": "HBO Movies"
-  },
-  "SHADESOFBLACK": {
-    "epgid": "481953",
-    "logo": "",
-    "name": "Shades of Black"
-  },
-  "HAUNTTV": {
-    "epgid": "481954",
-    "logo": "",
-    "name": "Haunt TV"
-  },
   "WEVVDT2": {
     "epgid": "483233",
     "logo": "",
     "name": "WEVV-DT2"
-  },
-  "RYZSPORTSNETWORK": {
-    "epgid": "483389",
-    "logo": "",
-    "name": "Ryz Sports Network"
-  },
-  "OUTDOORAMERICAFIELDANDSTREAM": {
-    "epgid": "483390",
-    "logo": "",
-    "name": "Outdoor America Field and Stream"
-  },
-  "GULFCOASTSPORTSANDENTERTAINMENTNETWORK": {
-    "epgid": "483391",
-    "logo": "",
-    "name": "Gulf Coast Sports and Entertainment Network"
-  },
-  "STELLARTV": {
-    "epgid": "483393",
-    "logo": "",
-    "name": "STELLAR TV"
-  },
-  "ALTITUDESPORTS2HD": {
-    "epgid": "483394",
-    "logo": "",
-    "name": "Altitude Sports 2 HD"
-  },
-  "CHSNPLUS": {
-    "epgid": "483395",
-    "logo": "",
-    "name": "CHSN Plus"
-  },
-  "HBCUGOSPORTS": {
-    "epgid": "483396",
-    "logo": "",
-    "name": "HBCUGO SPORTS"
   },
   "WJARDT2": {
     "epgid": "483403",
@@ -32024,11 +32539,6 @@
     "logo": "",
     "name": "KVHP-DT2"
   },
-  "3ABNRADIONETWORK": {
-    "epgid": "484436",
-    "logo": "",
-    "name": "3ABN Radio Network"
-  },
   "WISDT2": {
     "epgid": "484600",
     "logo": "",
@@ -32044,76 +32554,6 @@
     "logo": "",
     "name": "WWAY-DT3"
   },
-  "80SSITCOMS": {
-    "epgid": "484875",
-    "logo": "",
-    "name": "80s Sitcoms"
-  },
-  "NASCARCHANNEL": {
-    "epgid": "484876",
-    "logo": "",
-    "name": "NASCAR Channel"
-  },
-  "TASTEMADEFOODANDMORE": {
-    "epgid": "484877",
-    "logo": "",
-    "name": "Tastemade Food and More"
-  },
-  "ESPN8THEOCHO": {
-    "epgid": "484878",
-    "logo": "",
-    "name": "ESPN8 The Ocho"
-  },
-  "MSGSPORTSNETZONE3(MSGWNY)": {
-    "epgid": "484879",
-    "logo": "",
-    "name": "MSG Sportsnet Zone 3 (MSG WNY)"
-  },
-  "MGMPRESENTSACTION": {
-    "epgid": "484880",
-    "logo": "",
-    "name": "MGM Presents Action"
-  },
-  "BONAPPÉTITTV": {
-    "epgid": "484881",
-    "logo": "",
-    "name": "Bon Appétit TV"
-  },
-  "PUREFLIXTV": {
-    "epgid": "484882",
-    "logo": "",
-    "name": "Pure Flix TV"
-  },
-  "CINEVAULTCLASSICS": {
-    "epgid": "484883",
-    "logo": "",
-    "name": "Cinevault Classics"
-  },
-  "LIVINGWITHEVIL": {
-    "epgid": "484884",
-    "logo": "",
-    "name": "Living With Evil"
-  },
-  "FILMRISEMYSTERIES": {
-    "epgid": "484885",
-    "logo": "",
-    "name": "Filmrise Mysteries"
-  },
-  "90SSITCOMS": {
-    "epgid": "484886",
-    "logo": "",
-    "name": "90s Sitcoms"
-  },
-  "MGMPRESENTS": {
-    "epgid": "484887",
-    "logo": "",
-    "name": "MGM Presents"
-  },
-  "FMFUSEMUSIC": {
-    "epgid": "484888",
-    "logo": "",
-    "name": "FM Fuse Music"
-  },
   "KYOUDT4": {
     "epgid": "485031",
     "logo": "",
@@ -32123,21 +32563,6 @@
     "epgid": "485032",
     "logo": "",
     "name": "KYOU-DT2"
-  },
-  "NBCSPORTSNOW": {
-    "epgid": "485735",
-    "logo": "",
-    "name": "NBC Sports Now"
-  },
-  "MILBFREDERICKKEYS": {
-    "epgid": "486314",
-    "logo": "",
-    "name": "MILB - Frederick Keys"
-  },
-  "BBCDINOS24/7": {
-    "epgid": "487333",
-    "logo": "",
-    "name": "BBC Dinos 24/7"
   },
   "WTWCDT2": {
     "epgid": "487334",
@@ -32214,21 +32639,6 @@
     "logo": "",
     "name": "KRCR-DT2"
   },
-  "SPORTSGRID": {
-    "epgid": "489130",
-    "logo": "",
-    "name": "SportsGrid"
-  },
-  "HORRORMACHINE": {
-    "epgid": "490837",
-    "logo": "",
-    "name": "Horror Machine"
-  },
-  "SPECTRUMNEWSCENTRALFLORIDA": {
-    "epgid": "491422",
-    "logo": "",
-    "name": "Spectrum News - Central Florida"
-  },
   "KHQADT2": {
     "epgid": "492314",
     "logo": "",
@@ -32248,41 +32658,6 @@
     "epgid": "492325",
     "logo": "",
     "name": "KECY-DT2"
-  },
-  "UFLDALLASRENEGADES": {
-    "epgid": "492683",
-    "logo": "",
-    "name": "UFL - Dallas RENEGADES"
-  },
-  "UFLHOUSTONGAMBLERS": {
-    "epgid": "492684",
-    "logo": "",
-    "name": "UFL - Houston GAMBLERS"
-  },
-  "NBCCOMEDYVAULT": {
-    "epgid": "492940",
-    "logo": "",
-    "name": "NBC Comedy Vault"
-  },
-  "UNIVERSALMONSTERS": {
-    "epgid": "492941",
-    "logo": "",
-    "name": "Universal Monsters"
-  },
-  "IONMYSTERY": {
-    "epgid": "492942",
-    "logo": "",
-    "name": "ION Mystery"
-  },
-  "UNIVERSALCRIME": {
-    "epgid": "492943",
-    "logo": "",
-    "name": "Universal Crime"
-  },
-  "UNIVERSALACTION": {
-    "epgid": "492944",
-    "logo": "",
-    "name": "Universal Action"
   },
   "WPTADT2": {
     "epgid": "493403",
@@ -32394,395 +32769,20 @@
     "logo": "",
     "name": "KVII-DT2"
   },
-  "FAWESOME": {
-    "epgid": "494591",
-    "logo": "",
-    "name": "Fawesome"
-  },
-  "BOWLINGTV": {
-    "epgid": "494592",
-    "logo": "",
-    "name": "Bowling TV"
-  },
-  "LOVEKILLS": {
-    "epgid": "495109",
-    "logo": "",
-    "name": "Love Kills"
-  },
   "KMTRDT2": {
     "epgid": "496296",
     "logo": "",
     "name": "KMTR-DT2"
-  },
-  "PLUSMOVIES": {
-    "epgid": "496440",
-    "logo": "",
-    "name": "Plus Movies"
   },
   "KESQDT3": {
     "epgid": "496443",
     "logo": "",
     "name": "KESQ-DT3"
   },
-  "YTAYOUTOOAMERICA": {
-    "epgid": "496594",
-    "logo": "",
-    "name": "YTA Youtoo America"
-  },
-  "YESNETWORKOVERFLOW": {
-    "epgid": "496596",
-    "logo": "",
-    "name": "Yes Network Overflow"
-  },
-  "MYNETWORK": {
-    "epgid": "496597",
-    "logo": "",
-    "name": "My Network"
-  },
-  "RIGHTNOWTV": {
-    "epgid": "496599",
-    "logo": "",
-    "name": "Right Now TV"
-  },
-  "ACTIONCHANNEL": {
-    "epgid": "496600",
-    "logo": "",
-    "name": "Action Channel"
-  },
-  "ATNCRICKETPLUS": {
-    "epgid": "496601",
-    "logo": "",
-    "name": "ATN Cricket Plus"
-  },
-  "THENEST": {
-    "epgid": "496602",
-    "logo": "",
-    "name": "The Nest"
-  },
-  "REVN": {
-    "epgid": "496603",
-    "logo": "",
-    "name": "RevN"
-  },
-  "REWINDTV": {
-    "epgid": "496605",
-    "logo": "",
-    "name": "Rewind TV"
-  },
-  "ANDTV": {
-    "epgid": "496606",
-    "logo": "",
-    "name": "and TV"
-  },
-  "YESNETWORK": {
-    "epgid": "496607",
-    "logo": "",
-    "name": "Yes Network"
-  },
-  "BIZTV": {
-    "epgid": "496609",
-    "logo": "",
-    "name": "Biz TV"
-  },
-  "BLAZETV": {
-    "epgid": "496610",
-    "logo": "",
-    "name": "Blaze TV"
-  },
-  "NECNNEWENGLANDCABLENEWS": {
-    "epgid": "496612",
-    "logo": "",
-    "name": "NECN New England Cable News"
-  },
-  "ANTENNATV": {
-    "epgid": "496613",
-    "logo": "",
-    "name": "Antenna TV"
-  },
-  "LAFF": {
-    "epgid": "496614",
-    "logo": "",
-    "name": "Laff"
-  },
-  "DEFYTV": {
-    "epgid": "496615",
-    "logo": "",
-    "name": "Defy TV"
-  },
-  "CATCHYCOMEDY": {
-    "epgid": "496616",
-    "logo": "",
-    "name": "Catchy Comedy"
-  },
-  "CREATE": {
-    "epgid": "496617",
-    "logo": "",
-    "name": "Create"
-  },
-  "QUEST": {
-    "epgid": "496618",
-    "logo": "",
-    "name": "Quest"
-  },
-  "CW": {
-    "epgid": "496619",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/BBCWORLDNEWS.png",
-    "name": "CW"
-  },
-  "NBCSPORTSPHILADELPHIAPLUS": {
-    "epgid": "496620",
-    "logo": "",
-    "name": "NBC Sports Philadelphia Plus"
-  },
-  "THEFAMILYCHANNEL": {
-    "epgid": "496623",
-    "logo": "",
-    "name": "The Family Channel"
-  },
-  "NESN+NEWENGLANDSPORTSNETWORKPLUS": {
-    "epgid": "496625",
-    "logo": "",
-    "name": "NESN+ New England Sports Network Plus"
-  },
-  "AFNFAMILY/AFNPULSE": {
-    "epgid": "496759",
-    "logo": "",
-    "name": "AFN family/AFN pulse"
-  },
-  "AFNPRIMEPACIFIC": {
-    "epgid": "496760",
-    "logo": "",
-    "name": "AFN prime Pacific"
-  },
-  "AFNPRIMEATLANTIC": {
-    "epgid": "496761",
-    "logo": "",
-    "name": "AFN prime Atlantic"
-  },
-  "AFNNEWS": {
-    "epgid": "496762",
-    "logo": "",
-    "name": "AFN news"
-  },
-  "AFNSPECTRUM": {
-    "epgid": "496763",
-    "logo": "",
-    "name": "AFN spectrum"
-  },
-  "AFNSPORTS": {
-    "epgid": "496764",
-    "logo": "",
-    "name": "AFN sports"
-  },
-  "AFNSPORTS2": {
-    "epgid": "496765",
-    "logo": "",
-    "name": "AFN sports2"
-  },
-  "AFNMOVIE": {
-    "epgid": "496766",
-    "logo": "",
-    "name": "AFN movie"
-  },
-  "VEVOROCK": {
-    "epgid": "497969",
-    "logo": "",
-    "name": "Vevo Rock"
-  },
-  "VEVORANDB": {
-    "epgid": "497970",
-    "logo": "",
-    "name": "Vevo R and B"
-  },
-  "VEVOPOP": {
-    "epgid": "497971",
-    "logo": "",
-    "name": "Vevo Pop"
-  },
-  "VEVO70S": {
-    "epgid": "497972",
-    "logo": "",
-    "name": "Vevo 70s"
-  },
-  "INSIGHTTV": {
-    "epgid": "497973",
-    "logo": "",
-    "name": "Insight TV"
-  },
-  "VEVOHOLIDAY": {
-    "epgid": "497974",
-    "logo": "",
-    "name": "Vevo Holiday"
-  },
-  "VEVOTRUESCHOOLHIPHOP": {
-    "epgid": "497975",
-    "logo": "",
-    "name": "Vevo True School Hip-Hop"
-  },
-  "VEVO90S": {
-    "epgid": "497976",
-    "logo": "",
-    "name": "Vevo 90s"
-  },
-  "VEVO2K": {
-    "epgid": "497977",
-    "logo": "",
-    "name": "Vevo 2K"
-  },
-  "VEVOÍCONOSLATINOS": {
-    "epgid": "497978",
-    "logo": "",
-    "name": "Vevo Íconos Latinos"
-  },
-  "VEVOCOUNTRY": {
-    "epgid": "497979",
-    "logo": "",
-    "name": "Vevo Country"
-  },
-  "VEVO80S": {
-    "epgid": "497980",
-    "logo": "",
-    "name": "Vevo 80s"
-  },
-  "VEVOLATINO": {
-    "epgid": "497981",
-    "logo": "",
-    "name": "Vevo Latino"
-  },
-  "VEVOHIPHOP": {
-    "epgid": "497982",
-    "logo": "",
-    "name": "Vevo Hip-Hop"
-  },
-  "VEVOREGGAETONANDTRAP": {
-    "epgid": "497983",
-    "logo": "",
-    "name": "Vevo Reggaeton and Trap"
-  },
-  "VEVOREGIONALMEXICANO": {
-    "epgid": "497985",
-    "logo": "",
-    "name": "Vevo Regional Mexicano"
-  },
-  "SALEMNEWSCHANNEL": {
-    "epgid": "501743",
-    "logo": "",
-    "name": "Salem News Channel"
-  },
-  "CINEVAULT": {
-    "epgid": "501744",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CI.png",
-    "name": "CINEVAULT"
-  },
-  "NBCCHICAGO(LIVESTREAM)": {
-    "epgid": "501747",
-    "logo": "",
-    "name": "NBC Chicago (Live Stream)"
-  },
-  "MILBHILLCITYHOWLERS": {
-    "epgid": "509187",
-    "logo": "",
-    "name": "MILB - Hill City Howlers"
-  },
-  "WNBAPORTLANDFIRE": {
-    "epgid": "513149",
-    "logo": "",
-    "name": "WNBA - Portland Fire"
-  },
-  "WNBATORONTOTEMPO": {
-    "epgid": "513150",
-    "logo": "",
-    "name": "WNBA - Toronto Tempo"
-  },
-  "MOVIES!": {
-    "epgid": "516449",
-    "logo": "",
-    "name": "Movies!"
-  },
-  "DISCOVERYTURBOTV": {
-    "epgid": "516450",
-    "logo": "",
-    "name": "Discovery Turbo TV"
-  },
-  "ASYLUMMOVIE": {
-    "epgid": "520489",
-    "logo": "",
-    "name": "Asylum Movie"
-  },
-  "BUSTEDTV": {
-    "epgid": "521096",
-    "logo": "",
-    "name": "Busted TV"
-  },
-  "UFLDCDEFENDERS": {
-    "epgid": "522430",
-    "logo": "",
-    "name": "UFL - DC DEFENDERS"
-  },
   "WZTVDT2": {
     "epgid": "524205",
     "logo": "",
     "name": "WZTV-DT2"
-  },
-  "NBCTRUECRMZ": {
-    "epgid": "524796",
-    "logo": "",
-    "name": "NBC True CRMZ"
-  },
-  "NEWS12NEWJERSEY": {
-    "epgid": "524797",
-    "logo": "",
-    "name": "News 12 New Jersey"
-  },
-  "WILLOWXTRA": {
-    "epgid": "526674",
-    "logo": "",
-    "name": "Willow Xtra"
-  },
-  "UFLCOLUMBUSAVIATORS": {
-    "epgid": "527866",
-    "logo": "",
-    "name": "UFL - Columbus Aviators"
-  },
-  "UFLLOUISVILLEKINGS": {
-    "epgid": "527867",
-    "logo": "",
-    "name": "UFL - Louisville Kings"
-  },
-  "UFLORLANDOSTORM": {
-    "epgid": "527868",
-    "logo": "",
-    "name": "UFL - Orlando Storm"
-  },
-  "FOXSOUL": {
-    "epgid": "529205",
-    "logo": "",
-    "name": "FOX SOUL"
-  },
-  "STORIESBYAMC": {
-    "epgid": "530870",
-    "logo": "",
-    "name": "Stories by AMC"
-  },
-  "BLACKVOICES": {
-    "epgid": "530871",
-    "logo": "",
-    "name": "Black Voices"
-  },
-  "WWENETWORK": {
-    "epgid": "531475",
-    "logo": "",
-    "name": "WWE Network"
-  },
-  "MLBKANSASCITYROYALS": {
-    "epgid": "465731",
-    "logo": "",
-    "name": "MLB - Kansas City Royals"
-  },
-  "MLBMILWAUKEEBREWERS": {
-    "epgid": "465633",
-    "logo": "",
-    "name": "MLB - Milwaukee Brewers"
   },
   "KANSHITV": {
     "epgid": "9121",
