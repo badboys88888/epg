@@ -16,3 +16,21 @@
 ⸻
 
 📂 项目结构
+.
+├── epg_sources.txt        # EPG源列表
+├── merge_epg.py          # 合并多个EPG
+├── epg.xml.gz            # 输出EPG
+
+├── auto_alias.py         # 自动提取频道别名（生成alias_auto.txt）
+├── alias_auto.txt        # 自动生成的别名（参考用）
+├── alias.txt             # 手动维护别名（核心）
+├── gen_alias.py          # 生成 alias_map.json
+├── alias_map.json        # 别名映射JSON
+
+├── fetch_logo_map.py     # 抓取台标
+├── icon_map.json         # 台标映射
+
+├── extract_channels.py   # 生成 channels.json
+├── channels.json         # 最终频道数据
+
+├── requirements.txt      # 依赖
