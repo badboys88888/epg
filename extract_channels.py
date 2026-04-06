@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import gzip
 import xml.etree.ElementTree as ET
 import json
@@ -58,30 +61,28 @@ def normalize(name):
 # ===================== MAIN ===================== #
 def main():
 
-    print("🚀 RUNNING extract_channels FINAL (CID VERSION)")
+    print("🚀 RUNNING extract_channels FINAL (KEY=DISPLAY NAME)")
 
     root = load_epg()
     icon_map = load_icon_map()
     alias_raw = load_alias()
 
-    # ✔ 只用 exact（完全禁用 regex）
     alias_exact = alias_raw.get("exact", {})
 
     print("📊 alias_exact:", len(alias_exact))
 
-    # ===================== logo normalize ===================== #
     norm_icon_map = {normalize(k): v for k, v in icon_map.items()}
 
+    # ===================== STEP 1: CID 聚合 ===================== #
     channels = {}
 
-    # ===================== PARSE CHANNELS ===================== #
     for ch in root.findall("channel"):
 
         cid = ch.attrib.get("id")
         if not cid:
             continue
 
-        # ---------------- names ---------------- #
+        # display-name
         names = []
         for n in ch.findall("display-name"):
             if n.text:
@@ -90,7 +91,7 @@ def main():
         if not names:
             names = [cid]
 
-        # ===================== CID 主键（核心） ===================== #
+        # 初始化 CID bucket
         if cid not in channels:
             channels[cid] = {
                 "epgid": cid,
@@ -98,18 +99,18 @@ def main():
                 "logo": ""
             }
 
-        # ===================== 合并EPG names ===================== #
+        # 合并 EPG 名字
         for n in names:
             if n not in channels[cid]["names"]:
                 channels[cid]["names"].append(n)
 
-        # ===================== alias 精确匹配 ===================== #
+        # alias 追加（不覆盖）
         if cid in alias_exact:
             for a in alias_exact[cid]:
                 if a not in channels[cid]["names"]:
                     channels[cid]["names"].append(a)
 
-        # ===================== 去重（normalize级） ===================== #
+        # 去重（normalize级）
         seen = set()
         final_names = []
 
@@ -121,9 +122,8 @@ def main():
 
         channels[cid]["names"] = final_names
 
-        # ===================== logo匹配 ===================== #
+        # logo匹配
         logo = ""
-
         for n in channels[cid]["names"]:
             nn = normalize(n)
             if nn in norm_icon_map:
@@ -132,17 +132,30 @@ def main():
 
         channels[cid]["logo"] = logo
 
-    # ===================== 输出结构 ===================== #
-    for cid in channels:
-        channels[cid]["name"] = ",".join(channels[cid]["names"])
-        del channels[cid]["names"]
+    # ===================== STEP 2: 输出结构转换 ===================== #
+    final_channels = {}
 
+    for cid, data in channels.items():
+
+        if not data["names"]:
+            continue
+
+        # ✔ 第一个 display-name 作为 key（你要的）
+        primary_name = data["names"][0].strip()
+
+        final_channels[primary_name] = {
+            "epgid": cid,
+            "logo": data["logo"],
+            "name": ",".join(data["names"])
+        }
+
+    # ===================== WRITE ===================== #
     print("\n📤 输出路径:", os.path.abspath(OUTPUT_FILE))
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(channels, f, ensure_ascii=False, indent=2)
+        json.dump(final_channels, f, ensure_ascii=False, indent=2)
 
-    print("✅ DONE:", len(channels))
+    print("✅ DONE:", len(final_channels))
 
 
 if __name__ == "__main__":
