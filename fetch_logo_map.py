@@ -1,8 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+import os
 
-URL = "https://epg.pw/areas/tw.html?lang=zh-hans"
+URLS = [
+    "https://epg.pw/areas/tw.html?lang=zh-hans",
+    "https://epg.pw/areas/hk.html?lang=zh-hans",
+    "https://epg.pw/areas/cn.html?lang=zh-hans"
+]
+
 OUTPUT = "icon_map.json"
 
 
@@ -15,15 +21,25 @@ def normalize(name):
     )
 
 
-def main():
-    print("🚀 抓取页面...")
+def load_old():
+    if os.path.exists(OUTPUT):
+        try:
+            with open(OUTPUT, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                print("📦 旧icon_map:", len(data))
+                return data
+        except:
+            return {}
+    return {}
 
-    html = requests.get(URL, timeout=10).text
+
+def fetch_one(url):
+    print(f"🌐 抓取: {url}")
+    html = requests.get(url, timeout=10).text
     soup = BeautifulSoup(html, "html.parser")
 
-    icon_map = {}
+    result = {}
 
-    # 👉 找所有频道行
     rows = soup.select("table tr")
 
     for row in rows:
@@ -31,10 +47,8 @@ def main():
         if len(tds) < 2:
             continue
 
-        # 👉 频道名
         name = tds[1].get_text(strip=True)
 
-        # 👉 logo
         img = row.find("img")
         if not img:
             continue
@@ -43,18 +57,38 @@ def main():
         if not logo:
             continue
 
-        # 👉 规范key
+        if logo.startswith("/"):
+            logo = "https://epg.pw" + logo
+
         key = normalize(name)
 
-        icon_map[key] = logo
+        result[key] = logo
 
-        print("✔", name, "->", logo)
+    print(f"✔ 获取: {len(result)}")
+    return result
 
-    # 保存
+
+def main():
+    # ✅ 读取旧数据（关键）
+    final_map = load_old()
+
+    before = len(final_map)
+
+    for url in URLS:
+        data = fetch_one(url)
+
+        for k, v in data.items():
+            # ⭐ 不覆盖已有（保护你原来的）
+            if k not in final_map:
+                final_map[k] = v
+
+    after = len(final_map)
+
     with open(OUTPUT, "w", encoding="utf-8") as f:
-        json.dump(icon_map, f, ensure_ascii=False, indent=2)
+        json.dump(final_map, f, ensure_ascii=False, indent=2)
 
-    print("✅ DONE:", len(icon_map))
+    print("✅ 新增:", after - before)
+    print("📊 总数:", after)
 
 
 if __name__ == "__main__":
