@@ -12,7 +12,7 @@
   "民視": {
     "epgid": "370139",
     "logo": "https://epg.pw/media/images/epg/2026/02/04/20260204045549184360_19.png",
-    "name": "民視,民视"
+    "name": "民視"
   },
   "大愛電視": {
     "epgid": "370140",
@@ -22,12 +22,12 @@
   "中視": {
     "epgid": "370141",
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031118563901_35.png",
-    "name": "中視,中视"
+    "name": "中視"
   },
   "華視": {
     "epgid": "370143",
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031155788805_32.png",
-    "name": "華視,华视"
+    "name": "華視"
   },
   "三立綜合台": {
     "epgid": "370144",
@@ -4077,7 +4077,7 @@
   "SUPERFREE": {
     "epgid": "CWIN",
     "logo": "",
-    "name": "SUPER FREE,华娱台,華娛台"
+    "name": "SUPER FREE"
   },
   "SUPER獎門人": {
     "epgid": "SVAR",
@@ -4142,7 +4142,7 @@
   "翡翠台": {
     "epgid": "J",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/翡翠.png",
-    "name": "翡翠台,翡翠台(超高清),翡翠台4K"
+    "name": "翡翠台"
   },
   "TVBPLUS": {
     "epgid": "B",
@@ -4497,7 +4497,7 @@
   "CCTV1": {
     "epgid": "1",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV1.png",
-    "name": "CCTV1,CCTV综合"
+    "name": "CCTV1"
   },
   "CCTV2": {
     "epgid": "2",
