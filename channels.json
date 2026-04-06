@@ -2244,6 +2244,2056 @@
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/博斯高球.png",
     "name": "博斯高球台"
   },
+  "ERAFM": {
+    "epgid": "491",
+    "logo": "",
+    "name": "ERA FM"
+  },
+  "MYFM": {
+    "epgid": "492",
+    "logo": "",
+    "name": "MY FM"
+  },
+  "OPUS": {
+    "epgid": "493",
+    "logo": "",
+    "name": "OPUS"
+  },
+  "HITZFM": {
+    "epgid": "494",
+    "logo": "",
+    "name": "HITZ FM"
+  },
+  "MIXFM": {
+    "epgid": "495",
+    "logo": "",
+    "name": "MIX FM"
+  },
+  "LITEFM": {
+    "epgid": "531",
+    "logo": "",
+    "name": "LITE FM"
+  },
+  "CLASSICROCK": {
+    "epgid": "532",
+    "logo": "",
+    "name": "CLASSIC ROCK"
+  },
+  "GOLD": {
+    "epgid": "533",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/华诚影视GOLD.png",
+    "name": "GOLD"
+  },
+  "THRGEGAR": {
+    "epgid": "556",
+    "logo": "",
+    "name": "THR GEGAR"
+  },
+  "INDIABEAT": {
+    "epgid": "601",
+    "logo": "",
+    "name": "INDIA BEAT"
+  },
+  "JAZZ": {
+    "epgid": "643",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/Z.png",
+    "name": "JAZZ"
+  },
+  "SINARFM": {
+    "epgid": "702",
+    "logo": "",
+    "name": "SINAR FM"
+  },
+  "OSAI": {
+    "epgid": "733",
+    "logo": "",
+    "name": "OSAI"
+  },
+  "MELODYFM": {
+    "epgid": "771",
+    "logo": "",
+    "name": "MELODY FM"
+  },
+  "THRRAAGA": {
+    "epgid": "848",
+    "logo": "",
+    "name": "THR RAAGA"
+  },
+  "BAYU": {
+    "epgid": "854",
+    "logo": "",
+    "name": "BAYU"
+  },
+  "KENYALANG": {
+    "epgid": "863",
+    "logo": "",
+    "name": "KENYALANG"
+  },
+  "PHOENIXINFONEWSHD": {
+    "epgid": "878",
+    "logo": "",
+    "name": "Phoenix Info News HD"
+  },
+  "TV9": {
+    "epgid": "902",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV9.png",
+    "name": "TV9"
+  },
+  "ADITHYA": {
+    "epgid": "946",
+    "logo": "",
+    "name": "Adithya"
+  },
+  "ASIANFOODNETWORKHD": {
+    "epgid": "997",
+    "logo": "",
+    "name": "Asian Food Network HD"
+  },
+  "NTV7": {
+    "epgid": "1029",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/LNTV7.png",
+    "name": "NTV7"
+  },
+  "TV3": {
+    "epgid": "1072",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ITV3.png",
+    "name": "TV3"
+  },
+  "8TV": {
+    "epgid": "1122",
+    "logo": "",
+    "name": "8TV"
+  },
+  "AXNHD": {
+    "epgid": "1205",
+    "logo": "",
+    "name": "AXN HD"
+  },
+  "ONEHD": {
+    "epgid": "1242",
+    "logo": "",
+    "name": "ONE HD"
+  },
+  "CELESTIALMOVIESHD": {
+    "epgid": "1298",
+    "logo": "",
+    "name": "Celestial Movies HD"
+  },
+  "HISTORYHD": {
+    "epgid": "1477",
+    "logo": "",
+    "name": "History HD"
+  },
+  "ALHIJRAH": {
+    "epgid": "1584",
+    "logo": "",
+    "name": "Al-Hijrah"
+  },
+  "ASTROQUANJIAHD": {
+    "epgid": "1781",
+    "logo": "",
+    "name": "Astro Quan Jia HD"
+  },
+  "BERNAMA": {
+    "epgid": "1835",
+    "logo": "",
+    "name": "BERNAMA"
+  },
+  "KBSWORLDHD": {
+    "epgid": "1889",
+    "logo": "",
+    "name": "KBS World HD"
+  },
+  "ASTROHUAHEEDAIHD": {
+    "epgid": "1951",
+    "logo": "",
+    "name": "Astro Hua Hee Dai HD"
+  },
+  "ASTROVINMEENHD": {
+    "epgid": "2058",
+    "logo": "",
+    "name": "Astro Vinmeen HD"
+  },
+  "ASTROAOD311": {
+    "epgid": "2124",
+    "logo": "",
+    "name": "Astro AOD 311"
+  },
+  "ABOMOVIESTHANGATHIRAIHD": {
+    "epgid": "2181",
+    "logo": "",
+    "name": "ABO Movies Thangathirai HD"
+  },
+  "ASTROAECHD": {
+    "epgid": "2226",
+    "logo": "",
+    "name": "Astro AEC HD"
+  },
+  "CELESTIALCLASSICMOVIES": {
+    "epgid": "2280",
+    "logo": "",
+    "name": "Celestial Classic Movies"
+  },
+  "GOLFCHANNELHD": {
+    "epgid": "2300",
+    "logo": "",
+    "name": "Golf Channel HD"
+  },
+  "ASTRORIAHD": {
+    "epgid": "2384",
+    "logo": "",
+    "name": "Astro Ria HD"
+  },
+  "HGTVHD": {
+    "epgid": "2473",
+    "logo": "",
+    "name": "HGTV HD"
+  },
+  "TVBJADE": {
+    "epgid": "2524",
+    "logo": "",
+    "name": "TVB Jade"
+  },
+  "ASTROARENAHD": {
+    "epgid": "2552",
+    "logo": "",
+    "name": "Astro Arena HD"
+  },
+  "BEINSPORTSHD": {
+    "epgid": "2580",
+    "logo": "",
+    "name": "beIN Sports HD"
+  },
+  "BOOHD": {
+    "epgid": "2636",
+    "logo": "",
+    "name": "BOO HD"
+  },
+  "KPLUSHD": {
+    "epgid": "2652",
+    "logo": "",
+    "name": "K-Plus HD"
+  },
+  "TVNMOVIESHD": {
+    "epgid": "2726",
+    "logo": "",
+    "name": "tvN Movies HD"
+  },
+  "DWENGLISH": {
+    "epgid": "2756",
+    "logo": "",
+    "name": "DW English"
+  },
+  "FRANCE24": {
+    "epgid": "2781",
+    "logo": "",
+    "name": "France24"
+  },
+  "ZAYAN": {
+    "epgid": "2801",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/Z.png",
+    "name": "ZAYAN"
+  },
+  "GOXUAN": {
+    "epgid": "2830",
+    "logo": "",
+    "name": "GOXUAN"
+  },
+  "CNAHD": {
+    "epgid": "2852",
+    "logo": "",
+    "name": "CNA HD"
+  },
+  "ZEETAMILHD": {
+    "epgid": "2885",
+    "logo": "",
+    "name": "Zee Tamil HD"
+  },
+  "COLORSTAMILHD": {
+    "epgid": "2917",
+    "logo": "",
+    "name": "Colors Tamil HD"
+  },
+  "ASTROCITRAHD": {
+    "epgid": "2937",
+    "logo": "",
+    "name": "Astro Citra HD"
+  },
+  "ASTROSUPERSPORTUHD1": {
+    "epgid": "3018",
+    "logo": "",
+    "name": "Astro SuperSport UHD 1"
+  },
+  "BEINSPORTS3": {
+    "epgid": "3118",
+    "logo": "",
+    "name": "beIN Sports 3"
+  },
+  "ASTROOASISHD": {
+    "epgid": "3145",
+    "logo": "",
+    "name": "Astro Oasis HD"
+  },
+  "ASTROPRIMAHD": {
+    "epgid": "3158",
+    "logo": "",
+    "name": "Astro Prima HD"
+  },
+  "CNNHD": {
+    "epgid": "3179",
+    "logo": "",
+    "name": "CNN HD"
+  },
+  "TLCHD": {
+    "epgid": "3234",
+    "logo": "",
+    "name": "TLC HD"
+  },
+  "IQIYIHD": {
+    "epgid": "3290",
+    "logo": "",
+    "name": "iQIYI HD"
+  },
+  "STARVIJAYHD": {
+    "epgid": "3308",
+    "logo": "",
+    "name": "Star Vijay HD"
+  },
+  "SUNTVHD": {
+    "epgid": "3313",
+    "logo": "",
+    "name": "SUN TV HD"
+  },
+  "COLORSHINDIHD": {
+    "epgid": "3325",
+    "logo": "",
+    "name": "Colors Hindi HD"
+  },
+  "CRIME&INVESTIGATIONHD": {
+    "epgid": "3362",
+    "logo": "",
+    "name": "Crime & Investigation HD"
+  },
+  "NICKELODEONHD": {
+    "epgid": "3385",
+    "logo": "",
+    "name": "Nickelodeon HD"
+  },
+  "CARTOONNETWORKHD": {
+    "epgid": "3403",
+    "logo": "",
+    "name": "Cartoon Network HD"
+  },
+  "ALJAZEERAENGLISHHD": {
+    "epgid": "3416",
+    "logo": "",
+    "name": "Al Jazeera English HD"
+  },
+  "DISCOVERYCHANNELHD": {
+    "epgid": "3437",
+    "logo": "",
+    "name": "Discovery Channel HD"
+  },
+  "PHOENIXCHINESECHANNELHD": {
+    "epgid": "3478",
+    "logo": "",
+    "name": "Phoenix Chinese Channel HD"
+  },
+  "TVBXINGHEHD": {
+    "epgid": "3493",
+    "logo": "",
+    "name": "TVB Xing He HD"
+  },
+  "TVBSASIAHD": {
+    "epgid": "3509",
+    "logo": "",
+    "name": "TVBS Asia HD"
+  },
+  "CCTV4HD": {
+    "epgid": "3518",
+    "logo": "",
+    "name": "CCTV4  HD"
+  },
+  "ASTROCERIAHD": {
+    "epgid": "3533",
+    "logo": "",
+    "name": "Astro Ceria HD"
+  },
+  "HITSMOVIESHD": {
+    "epgid": "3575",
+    "logo": "",
+    "name": "HITS Movies HD"
+  },
+  "PREMIERSPORTS": {
+    "epgid": "3625",
+    "logo": "",
+    "name": "Premier Sports"
+  },
+  "TV1HD": {
+    "epgid": "3683",
+    "logo": "",
+    "name": "TV1 HD"
+  },
+  "TV2HD": {
+    "epgid": "3711",
+    "logo": "",
+    "name": "TV2 HD"
+  },
+  "ASTROVAANAVILHD": {
+    "epgid": "3735",
+    "logo": "",
+    "name": "Astro Vaanavil HD"
+  },
+  "ASTROVELLITHIRAIHD": {
+    "epgid": "3760",
+    "logo": "",
+    "name": "Astro Vellithirai HD"
+  },
+  "ASTROAURAHD": {
+    "epgid": "3770",
+    "logo": "",
+    "name": "Astro Aura HD"
+  },
+  "ASTRORANIAHD": {
+    "epgid": "3784",
+    "logo": "",
+    "name": "Astro Rania HD"
+  },
+  "ASTROTUTORTVSMKHD": {
+    "epgid": "3809",
+    "logo": "",
+    "name": "Astro Tutor TV SMK HD"
+  },
+  "SUNMUSICHD": {
+    "epgid": "3835",
+    "logo": "",
+    "name": "Sun Music HD"
+  },
+  "BLOOMBERGTVHD": {
+    "epgid": "3858",
+    "logo": "",
+    "name": "Bloomberg TV HD"
+  },
+  "CNBCASIAHD": {
+    "epgid": "3873",
+    "logo": "",
+    "name": "CNBC Asia HD"
+  },
+  "CTIASIAHD": {
+    "epgid": "3885",
+    "logo": "",
+    "name": "CTI Asia HD"
+  },
+  "TVBCLASSICHD": {
+    "epgid": "3895",
+    "logo": "",
+    "name": "TVB Classic HD"
+  },
+  "CGTNHD": {
+    "epgid": "3906",
+    "logo": "",
+    "name": "CGTN HD"
+  },
+  "TVBENTERTAINMENTNEWSHD": {
+    "epgid": "3920",
+    "logo": "",
+    "name": "TVB Entertainment News HD"
+  },
+  "NHKWORLDPREMIUM": {
+    "epgid": "3929",
+    "logo": "",
+    "name": "NHK World Premium"
+  },
+  "TVS": {
+    "epgid": "3942",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/GDTVSHAO.png",
+    "name": "TVS"
+  },
+  "ASTROAWANIHD": {
+    "epgid": "3958",
+    "logo": "",
+    "name": "Astro Awani HD"
+  },
+  "SHOWCASEMOVIES": {
+    "epgid": "4057",
+    "logo": "",
+    "name": "SHOWCASE MOVIES"
+  },
+  "ASTROARENA2HD": {
+    "epgid": "4100",
+    "logo": "",
+    "name": "Astro Arena 2 HD"
+  },
+  "ABCAUSTRALIAHD": {
+    "epgid": "4130",
+    "logo": "",
+    "name": "ABC Australia HD"
+  },
+  "MOONBUG": {
+    "epgid": "4136",
+    "logo": "",
+    "name": "Moonbug"
+  },
+  "BEINSPORTS2": {
+    "epgid": "4146",
+    "logo": "",
+    "name": "beIN Sports 2"
+  },
+  "TVOKEYHD": {
+    "epgid": "4160",
+    "logo": "",
+    "name": "TV Okey HD"
+  },
+  "SUNLIFE": {
+    "epgid": "4181",
+    "logo": "",
+    "name": "Sun Life"
+  },
+  "KTV": {
+    "epgid": "4183",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TVN.png",
+    "name": "KTV"
+  },
+  "SUNNEWS": {
+    "epgid": "4185",
+    "logo": "",
+    "name": "Sun News"
+  },
+  "ARENABOLA": {
+    "epgid": "4209",
+    "logo": "",
+    "name": "Arena Bola"
+  },
+  "ARENABOLA2": {
+    "epgid": "4215",
+    "logo": "",
+    "name": "Arena Bola 2"
+  },
+  "ZEECINEMA": {
+    "epgid": "4221",
+    "logo": "",
+    "name": "Zee Cinema"
+  },
+  "WSPORT": {
+    "epgid": "48630",
+    "logo": "",
+    "name": "W-Sport"
+  },
+  "HITSNOW": {
+    "epgid": "186250",
+    "logo": "",
+    "name": "HITS NOW"
+  },
+  "TV6": {
+    "epgid": "370131",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/QTV6.png",
+    "name": "TV6"
+  },
+  "BERITARTM": {
+    "epgid": "370132",
+    "logo": "",
+    "name": "Berita RTM"
+  },
+  "SUKANRTM": {
+    "epgid": "370133",
+    "logo": "",
+    "name": "Sukan RTM"
+  },
+  "OKEY": {
+    "epgid": "370134",
+    "logo": "",
+    "name": "Okey"
+  },
+  "TV2": {
+    "epgid": "370135",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ITV2.png",
+    "name": "TV2"
+  },
+  "TV1": {
+    "epgid": "370136",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FTV1.png",
+    "name": "TV1"
+  },
+  "ASTROPREMIERLEAGUE": {
+    "epgid": "397396",
+    "logo": "",
+    "name": "Astro Premier League"
+  },
+  "ASTROPREMIERLEAGUE2": {
+    "epgid": "397397",
+    "logo": "",
+    "name": "Astro Premier League 2"
+  },
+  "ASTROFOOTBALL": {
+    "epgid": "397399",
+    "logo": "",
+    "name": "Astro Football"
+  },
+  "ASTROBADMINTON": {
+    "epgid": "397400",
+    "logo": "",
+    "name": "Astro Badminton"
+  },
+  "ASTROSPORTSPLUS": {
+    "epgid": "397402",
+    "logo": "",
+    "name": "Astro Sports Plus"
+  },
+  "ASTROGRANDSTAND": {
+    "epgid": "397403",
+    "logo": "",
+    "name": "Astro Grandstand"
+  },
+  "BEINSPORTS1": {
+    "epgid": "399482",
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129190019981131_56.png",
+    "name": "beIN SPORTS 1"
+  },
+  "SHOWCASE": {
+    "epgid": "399483",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png",
+    "name": "SHOWCASE"
+  },
+  "GOLFCHANNEL": {
+    "epgid": "399489",
+    "logo": "",
+    "name": "Golf Channel"
+  },
+  "ASTROTUTORTV": {
+    "epgid": "399500",
+    "logo": "",
+    "name": "Astro Tutor TV"
+  },
+  "PREMIERSPORTSRUGBY": {
+    "epgid": "399506",
+    "logo": "",
+    "name": "Premier Sports Rugby"
+  },
+  "TVSARAWAK": {
+    "epgid": "399509",
+    "logo": "",
+    "name": "TV Sarawak"
+  },
+  "ASTROSPORTSUHD": {
+    "epgid": "399518",
+    "logo": "",
+    "name": "Astro Sports UHD"
+  },
+  "ASTROQJ": {
+    "epgid": "399519",
+    "logo": "",
+    "name": "Astro QJ"
+  },
+  "ASTROARENA": {
+    "epgid": "399521",
+    "logo": "",
+    "name": "Astro Arena"
+  },
+  "BLIPPI&FRIENDS": {
+    "epgid": "400446",
+    "logo": "",
+    "name": "Blippi & Friends"
+  },
+  "WAIFMIBAN": {
+    "epgid": "411231",
+    "logo": "",
+    "name": "Wai FM Iban"
+  },
+  "BINTULUFM": {
+    "epgid": "411236",
+    "logo": "",
+    "name": "Bintulu FM"
+  },
+  "REDFM": {
+    "epgid": "411240",
+    "logo": "",
+    "name": "Red FM"
+  },
+  "WAIFM": {
+    "epgid": "411241",
+    "logo": "",
+    "name": "Wai FM"
+  },
+  "KLFM": {
+    "epgid": "411251",
+    "logo": "",
+    "name": "KL FM"
+  },
+  "LABUANFM": {
+    "epgid": "411253",
+    "logo": "",
+    "name": "Labuan FM"
+  },
+  "SABAHVFM": {
+    "epgid": "411255",
+    "logo": "",
+    "name": "SabahV FM"
+  },
+  "SELANGORFM": {
+    "epgid": "411256",
+    "logo": "",
+    "name": "Selangor FM"
+  },
+  "ASYIKFM": {
+    "epgid": "411257",
+    "logo": "",
+    "name": "Asyik FM"
+  },
+  "TRAXXFM": {
+    "epgid": "411308",
+    "logo": "",
+    "name": "TRAXXfm"
+  },
+  "PERAKFM": {
+    "epgid": "428785",
+    "logo": "",
+    "name": "Perak FM"
+  },
+  "CGTNDOCUMENTARY": {
+    "epgid": "461591",
+    "logo": "",
+    "name": "CGTN Documentary"
+  },
+  "FITRAH": {
+    "epgid": "479449",
+    "logo": "",
+    "name": "Fitrah"
+  },
+  "AURA": {
+    "epgid": "479618",
+    "logo": "",
+    "name": "Aura"
+  },
+  "APETITO": {
+    "epgid": "479619",
+    "logo": "",
+    "name": "Apetito"
+  },
+  "KENINGAUFM": {
+    "epgid": "491618",
+    "logo": "",
+    "name": "Keningau FM"
+  },
+  "MIRIFM": {
+    "epgid": "491619",
+    "logo": "",
+    "name": "Miri FM"
+  },
+  "JR.": {
+    "epgid": "502308",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NICKJR..png",
+    "name": "JR."
+  },
+  "SANDAKANFM": {
+    "epgid": "510886",
+    "logo": "",
+    "name": "Sandakan FM"
+  },
+  "ASTROSHOWTIME": {
+    "epgid": "517641",
+    "logo": "",
+    "name": "Astro Showtime"
+  },
+  "ROCKXSTREAM": {
+    "epgid": "517642",
+    "logo": "",
+    "name": "Rock X Stream"
+  },
+  "ASTROFIRSTHD": {
+    "epgid": "519419",
+    "logo": "",
+    "name": "Astro First HD"
+  },
+  "ROLL": {
+    "epgid": "521957",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ROLLER.png",
+    "name": "ROLL"
+  },
+  "CRICBUZZ": {
+    "epgid": "523496",
+    "logo": "",
+    "name": "CricBuzz"
+  },
+  "ASTROSPORTSPLUS2": {
+    "epgid": "524198",
+    "logo": "",
+    "name": "Astro Sports Plus 2"
+  },
+  "ASTROFAMTIME": {
+    "epgid": "535446",
+    "logo": "",
+    "name": "Astro FAM Time"
+  },
+  "ASTROPREMIERLEAGUE3": {
+    "epgid": "535942",
+    "logo": "",
+    "name": "Astro Premier League 3"
+  },
+  "RTMASEAN": {
+    "epgid": "535993",
+    "logo": "",
+    "name": "RTM Asean"
+  },
+  "RTMWORLD": {
+    "epgid": "535994",
+    "logo": "",
+    "name": "RTM World"
+  },
+  "AIFM": {
+    "epgid": "535996",
+    "logo": "",
+    "name": "AIfm"
+  },
+  "ASTROARENA2": {
+    "epgid": "399508",
+    "logo": "",
+    "name": "Astro Arena 2"
+  },
+  "SALURAN 1": {
+    "epgid": "535995",
+    "logo": "",
+    "name": "Saluran 1"
+  },
+  "ASTROSPORTSPLUS3": {
+    "epgid": "535447",
+    "logo": "",
+    "name": "Astro Sports Plus 3"
+  },
+  "FOXNEWSCHANNEL": {
+    "epgid": "369713",
+    "logo": "",
+    "name": "FOX News Channel"
+  },
+  "AXN(HD)": {
+    "epgid": "369716",
+    "logo": "",
+    "name": "AXN (HD)"
+  },
+  "MIOSPORTS2(HD)": {
+    "epgid": "369717",
+    "logo": "",
+    "name": "mio Sports 2 (HD)"
+  },
+  "ROCKENTERTAINMENT(HD)": {
+    "epgid": "369719",
+    "logo": "",
+    "name": "ROCK Entertainment (HD)"
+  },
+  "TLC(HD)": {
+    "epgid": "369720",
+    "logo": "",
+    "name": "TLC (HD)"
+  },
+  "ASIANETMOVIES": {
+    "epgid": "369723",
+    "logo": "",
+    "name": "Asianet Movies"
+  },
+  "FRANCE24(ENGLISH)": {
+    "epgid": "369726",
+    "logo": "",
+    "name": "France 24 (English)"
+  },
+  "ROCKACTION(HD)": {
+    "epgid": "369727",
+    "logo": "",
+    "name": "ROCK Action (HD)"
+  },
+  "ONEHD(MANDARIN)": {
+    "epgid": "369728",
+    "logo": "",
+    "name": "ONE HD (Mandarin)"
+  },
+  "CELESTIALMOVIES(HD)": {
+    "epgid": "369730",
+    "logo": "",
+    "name": "Celestial Movies (HD)"
+  },
+  "KBSWORLD(MANDARIN)(HD)": {
+    "epgid": "369734",
+    "logo": "",
+    "name": "KBS World (Mandarin) (HD)"
+  },
+  "TRACESPORTSSTARSHD": {
+    "epgid": "369737",
+    "logo": "",
+    "name": "TRACE Sports Stars HD"
+  },
+  "HITSNOW(HD)": {
+    "epgid": "369740",
+    "logo": "",
+    "name": "HITS NOW (HD)"
+  },
+  "BEINSPORTS2(HD)": {
+    "epgid": "369741",
+    "logo": "",
+    "name": "beIN SPORTS 2 (HD)"
+  },
+  "CITRADRAMA(HD)": {
+    "epgid": "369742",
+    "logo": "",
+    "name": "Citra Drama (HD)"
+  },
+  "DISCOVERYCHANNEL(HD)": {
+    "epgid": "369744",
+    "logo": "",
+    "name": "Discovery Channel (HD)"
+  },
+  "CRIME+INVESTIGATION™(HD)": {
+    "epgid": "369745",
+    "logo": "",
+    "name": "Crime + Investigation™ (HD)"
+  },
+  "SET(HINDI)": {
+    "epgid": "369746",
+    "logo": "",
+    "name": "SET (HINDI)"
+  },
+  "CM+": {
+    "epgid": "369748",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/天映.png",
+    "name": "CM+"
+  },
+  "BEINSPORTS(HD)": {
+    "epgid": "369750",
+    "logo": "",
+    "name": "beIN SPORTS (HD)"
+  },
+  "ONEHD(MALAY)": {
+    "epgid": "369752",
+    "logo": "",
+    "name": "ONE HD (Malay)"
+  },
+  "TVNHD(MALAY)": {
+    "epgid": "369754",
+    "logo": "",
+    "name": "tvN HD (Malay)"
+  },
+  "SKYNEWSHD": {
+    "epgid": "369757",
+    "logo": "",
+    "name": "Sky News HD"
+  },
+  "HBOSIGNATURE(HD)": {
+    "epgid": "369758",
+    "logo": "",
+    "name": "HBO Signature (HD)"
+  },
+  "AFN(HD)": {
+    "epgid": "369760",
+    "logo": "",
+    "name": "AFN (HD)"
+  },
+  "HISTORY™(HD)": {
+    "epgid": "369765",
+    "logo": "",
+    "name": "HISTORY™ (HD)"
+  },
+  "DEUTSCHEWELLE(ENGLISH)": {
+    "epgid": "369766",
+    "logo": "",
+    "name": "Deutsche Welle (English)"
+  },
+  "KBSWORLD(HD)": {
+    "epgid": "369767",
+    "logo": "",
+    "name": "KBS World (HD)"
+  },
+  "BLOOMBERGTELEVISION(HD)": {
+    "epgid": "369771",
+    "logo": "",
+    "name": "Bloomberg Television (HD)"
+  },
+  "COLORS": {
+    "epgid": "369772",
+    "logo": "",
+    "name": "Colors"
+  },
+  "MIOSPORTS(HD)": {
+    "epgid": "369773",
+    "logo": "",
+    "name": "mio Sports (HD)"
+  },
+  "JIALECHANNEL(HD)": {
+    "epgid": "369774",
+    "logo": "",
+    "name": "Jia Le Channel (HD)"
+  },
+  "HUBPREMIER4": {
+    "epgid": "369775",
+    "logo": "",
+    "name": "Hub Premier 4"
+  },
+  "HGTV(HD)": {
+    "epgid": "369779",
+    "logo": "",
+    "name": "HGTV (HD)"
+  },
+  "CARTOONNETWORK(HD)": {
+    "epgid": "369780",
+    "logo": "",
+    "name": "Cartoon Network (HD)"
+  },
+  "PHOENIXINFONEWS": {
+    "epgid": "369783",
+    "logo": "",
+    "name": "Phoenix InfoNews"
+  },
+  "HUBPREMIER1": {
+    "epgid": "369784",
+    "logo": "",
+    "name": "Hub Premier 1"
+  },
+  "ANIMALPLANET(HD)": {
+    "epgid": "369785",
+    "logo": "",
+    "name": "Animal Planet (HD)"
+  },
+  "HBOFAMILY(HD)": {
+    "epgid": "369786",
+    "logo": "",
+    "name": "HBO Family (HD)"
+  },
+  "CTIASIA(HD)": {
+    "epgid": "369789",
+    "logo": "",
+    "name": "CTI Asia (HD)"
+  },
+  "HUBPREMIER3": {
+    "epgid": "369793",
+    "logo": "",
+    "name": "Hub Premier 3"
+  },
+  "CINEMAX(HD)": {
+    "epgid": "369795",
+    "logo": "",
+    "name": "CINEMAX (HD)"
+  },
+  "TVBXINGHE(HD)": {
+    "epgid": "369796",
+    "logo": "",
+    "name": "TVB Xing He (HD)"
+  },
+  "MIOSPORTS3(HD)": {
+    "epgid": "369802",
+    "logo": "",
+    "name": "mio Sports 3 (HD)"
+  },
+  "MTVINDIA": {
+    "epgid": "369804",
+    "logo": "",
+    "name": "MTV India"
+  },
+  "TVBJADE(HD)": {
+    "epgid": "369805",
+    "logo": "",
+    "name": "TVB Jade (HD)"
+  },
+  "ELE(HD)": {
+    "epgid": "369806",
+    "logo": "",
+    "name": "e-Le (HD)"
+  },
+  "SONYYAY!": {
+    "epgid": "369811",
+    "logo": "",
+    "name": "Sony YAY!"
+  },
+  "STARBHARAT": {
+    "epgid": "369812",
+    "logo": "",
+    "name": "Star Bharat"
+  },
+  "STARGOLD": {
+    "epgid": "369814",
+    "logo": "",
+    "name": "STAR Gold"
+  },
+  "CBEEBIES(HD)": {
+    "epgid": "369816",
+    "logo": "",
+    "name": "CBeebies (HD)"
+  },
+  "BEINSPORTS3(HD)": {
+    "epgid": "369817",
+    "logo": "",
+    "name": "beIN SPORTS 3 (HD)"
+  },
+  "TVNHD(MANDARIN)": {
+    "epgid": "369818",
+    "logo": "",
+    "name": "tvN HD (Mandarin)"
+  },
+  "CCM": {
+    "epgid": "369819",
+    "logo": "",
+    "name": "CCM"
+  },
+  "HUBPREMIER2": {
+    "epgid": "369822",
+    "logo": "",
+    "name": "Hub Premier 2"
+  },
+  "DRAMACHANNEL": {
+    "epgid": "369824",
+    "logo": "",
+    "name": "Drama Channel"
+  },
+  "BBCLIFESTYLE(HD)": {
+    "epgid": "369826",
+    "logo": "",
+    "name": "BBC Lifestyle (HD)"
+  },
+  "FIGHTSPORTS(HD)": {
+    "epgid": "369827",
+    "logo": "",
+    "name": "Fight Sports (HD)"
+  },
+  "ZEETV": {
+    "epgid": "369828",
+    "logo": "",
+    "name": "ZEE TV"
+  },
+  "LIFETIME(HD)": {
+    "epgid": "369832",
+    "logo": "",
+    "name": "Lifetime (HD)"
+  },
+  "ABCAUSTRALIA": {
+    "epgid": "369833",
+    "logo": "",
+    "name": "ABC Australia"
+  },
+  "NHKWORLD–JAPAN(HD)": {
+    "epgid": "369836",
+    "logo": "",
+    "name": "NHK World – Japan (HD)"
+  },
+  "BBCEARTH(HD)": {
+    "epgid": "369837",
+    "logo": "",
+    "name": "BBC Earth (HD)"
+  },
+  "FRANCE24(FRENCH)": {
+    "epgid": "369839",
+    "logo": "",
+    "name": "France 24 (French)"
+  },
+  "HBOHITS(HD)": {
+    "epgid": "369840",
+    "logo": "",
+    "name": "HBO Hits (HD)"
+  },
+  "STARPLUS": {
+    "epgid": "369844",
+    "logo": "",
+    "name": "STAR Plus"
+  },
+  "SONYMAX": {
+    "epgid": "369846",
+    "logo": "",
+    "name": "SONY MAX"
+  },
+  "ANIMAX(HD)": {
+    "epgid": "369848",
+    "logo": "",
+    "name": "Animax (HD)"
+  },
+  "SABTV": {
+    "epgid": "369849",
+    "logo": "",
+    "name": "SAB TV"
+  },
+  "HITS(HD)": {
+    "epgid": "369851",
+    "logo": "",
+    "name": "HITS (HD)"
+  },
+  "BLOOMBERGTELEVISIONHD": {
+    "epgid": "412092",
+    "logo": "",
+    "name": "Bloomberg Television HD"
+  },
+  "HBOHITSHD": {
+    "epgid": "412093",
+    "logo": "",
+    "name": "HBO Hits HD"
+  },
+  "SUNMUSIC": {
+    "epgid": "412094",
+    "logo": "",
+    "name": "Sun Music"
+  },
+  "DREAMWORKSCHANNELHD": {
+    "epgid": "412095",
+    "logo": "",
+    "name": "DreamWorks Channel HD"
+  },
+  "CINEMAXHD": {
+    "epgid": "412096",
+    "logo": "",
+    "name": "Cinemax HD"
+  },
+  "VANNATHIRAI": {
+    "epgid": "412097",
+    "logo": "",
+    "name": "Vannathirai"
+  },
+  "BBCWORLDNEWSHD": {
+    "epgid": "412098",
+    "logo": "",
+    "name": "BBC World News HD"
+  },
+  "ONE(MALAY)": {
+    "epgid": "412102",
+    "logo": "",
+    "name": "ONE (Malay)"
+  },
+  "ASIANET": {
+    "epgid": "412103",
+    "logo": "",
+    "name": "Asianet"
+  },
+  "CITRAENTERTAINMENT": {
+    "epgid": "412104",
+    "logo": "",
+    "name": "Citra Entertainment"
+  },
+  "HUBSPORTS3HD": {
+    "epgid": "412105",
+    "logo": "",
+    "name": "Hub Sports 3 HD"
+  },
+  "TVBXINGHE": {
+    "epgid": "412106",
+    "logo": "",
+    "name": "TVB Xing He"
+  },
+  "CGTN": {
+    "epgid": "412109",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CGTN.png",
+    "name": "CGTN"
+  },
+  "HBOSIGNATUREHD": {
+    "epgid": "412112",
+    "logo": "",
+    "name": "HBO Signature HD"
+  },
+  "ASTROSENSASIHD": {
+    "epgid": "412113",
+    "logo": "",
+    "name": "Astro Sensasi HD"
+  },
+  "ZEETAMIL": {
+    "epgid": "412115",
+    "logo": "",
+    "name": "Zee Tamil"
+  },
+  "KALAIGNARTV": {
+    "epgid": "412116",
+    "logo": "",
+    "name": "Kalaignar TV"
+  },
+  "KARISMA": {
+    "epgid": "412117",
+    "logo": "",
+    "name": "Karisma"
+  },
+  "NICKELODEONASIAHD": {
+    "epgid": "412119",
+    "logo": "",
+    "name": "Nickelodeon Asia HD"
+  },
+  "TRAVELXPHD": {
+    "epgid": "412120",
+    "logo": "",
+    "name": "Travelxp HD"
+  },
+  "EURONEWSHD": {
+    "epgid": "412122",
+    "logo": "",
+    "name": "Euronews HD"
+  },
+  "ADITHYATV": {
+    "epgid": "412123",
+    "logo": "",
+    "name": "ADITHYA TV"
+  },
+  "CARTOONNETWORK": {
+    "epgid": "412124",
+    "logo": "",
+    "name": "Cartoon Network"
+  },
+  "CRIME+INVESTIGATIONHD": {
+    "epgid": "412125",
+    "logo": "",
+    "name": "Crime + Investigation HD"
+  },
+  "SUNTV": {
+    "epgid": "412128",
+    "logo": "",
+    "name": "Sun TV"
+  },
+  "BEINSPORTS2HD": {
+    "epgid": "412129",
+    "logo": "",
+    "name": "beIN Sports 2 HD"
+  },
+  "NHKWORLDPREMIUMHD": {
+    "epgid": "412130",
+    "logo": "",
+    "name": "NHK World Premium HD"
+  },
+  "TVBJADEHD": {
+    "epgid": "412135",
+    "logo": "",
+    "name": "TVB Jade HD"
+  },
+  "NICKJR": {
+    "epgid": "412136",
+    "logo": "",
+    "name": "Nick Jr"
+  },
+  "CCTV4": {
+    "epgid": "412139",
+    "logo": "",
+    "name": "CCTV-4"
+  },
+  "VIJAYTVHD": {
+    "epgid": "412141",
+    "logo": "",
+    "name": "Vijay TV HD"
+  },
+  "DRAGONTV": {
+    "epgid": "412142",
+    "logo": "",
+    "name": "Dragon TV"
+  },
+  "THEFILIPINOCHANNELHD": {
+    "epgid": "412143",
+    "logo": "",
+    "name": "The Filipino Channel HD"
+  },
+  "ANIMAXHD": {
+    "epgid": "412144",
+    "logo": "",
+    "name": "Animax HD"
+  },
+  "PHOENIXINFONEWSCHANNELHD": {
+    "epgid": "412145",
+    "logo": "",
+    "name": "Phoenix InfoNews Channel HD"
+  },
+  "PREVIEWCHANNEL": {
+    "epgid": "412148",
+    "logo": "",
+    "name": "Preview Channel"
+  },
+  "TVBSNEWS": {
+    "epgid": "412149",
+    "logo": "",
+    "name": "TVBS-NEWS"
+  },
+  "CNBCHD": {
+    "epgid": "412151",
+    "logo": "",
+    "name": "CNBC HD"
+  },
+  "HGTV": {
+    "epgid": "412153",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HGTV.png",
+    "name": "HGTV"
+  },
+  "HUBSPORTS2HD": {
+    "epgid": "412154",
+    "logo": "",
+    "name": "Hub Sports 2 HD"
+  },
+  "ASTROWARNAHD": {
+    "epgid": "412155",
+    "logo": "",
+    "name": "Astro Warna HD"
+  },
+  "HUBVVDRAMA": {
+    "epgid": "412156",
+    "logo": "",
+    "name": "Hub VVDrama"
+  },
+  "HUBSPORTS5HD": {
+    "epgid": "412160",
+    "logo": "",
+    "name": "Hub Sports 5 HD"
+  },
+  "DISCOVERYHD": {
+    "epgid": "412161",
+    "logo": "",
+    "name": "Discovery HD"
+  },
+  "HUBPREMIER2(HD)": {
+    "epgid": "412164",
+    "logo": "",
+    "name": "Hub Premier 2 (HD)"
+  },
+  "FIGHTSPORTSHD": {
+    "epgid": "412165",
+    "logo": "",
+    "name": "FIGHT SPORTS HD"
+  },
+  "ETTVASIAHD": {
+    "epgid": "412168",
+    "logo": "",
+    "name": "ETTV ASIA HD"
+  },
+  "HUBSPORTS1HD": {
+    "epgid": "412169",
+    "logo": "",
+    "name": "Hub Sports 1  HD"
+  },
+  "SONYENTERTAINMENTTELEVISION": {
+    "epgid": "412170",
+    "logo": "",
+    "name": "Sony Entertainment Television"
+  },
+  "CTITVHD": {
+    "epgid": "412176",
+    "logo": "",
+    "name": "CTI TV HD"
+  },
+  "DWENGLISHHD": {
+    "epgid": "412178",
+    "logo": "",
+    "name": "DW English HD"
+  },
+  "NHKWORLDJAPANHD": {
+    "epgid": "412179",
+    "logo": "",
+    "name": "NHK WORLD - JAPAN HD"
+  },
+  "SPOTV": {
+    "epgid": "412181",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ITV2.png",
+    "name": "SPOTV"
+  },
+  "HUBSPORTS6": {
+    "epgid": "412182",
+    "logo": "",
+    "name": "Hub Sports 6"
+  },
+  "TV5MONDEHD": {
+    "epgid": "412183",
+    "logo": "",
+    "name": "TV5MONDE HD"
+  },
+  "CINEMAONEGLOBAL": {
+    "epgid": "412186",
+    "logo": "",
+    "name": "Cinema One Global"
+  },
+  "SPOTV2": {
+    "epgid": "412187",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ITV2.png",
+    "name": "SPOTV2"
+  },
+  "HUBECITYHD": {
+    "epgid": "412191",
+    "logo": "",
+    "name": "Hub E City HD"
+  },
+  "ZEETHIRAI": {
+    "epgid": "412192",
+    "logo": "",
+    "name": "Zee Thirai"
+  },
+  "TVBSASIA": {
+    "epgid": "412193",
+    "logo": "",
+    "name": "TVBS Asia"
+  },
+  "HBOFAMILYHD": {
+    "epgid": "412195",
+    "logo": "",
+    "name": "HBO Family HD"
+  },
+  "HUBSPORTS4HD": {
+    "epgid": "412198",
+    "logo": "",
+    "name": "Hub Sports 4 HD"
+  },
+  "BLOOMBERGORIGINALS": {
+    "epgid": "412199",
+    "logo": "",
+    "name": "Bloomberg Originals"
+  },
+  "KTVHD": {
+    "epgid": "412203",
+    "logo": "",
+    "name": "KTV HD"
+  },
+  "TESTCHANNEL993": {
+    "epgid": "413372",
+    "logo": "",
+    "name": "TestChannel 993"
+  },
+  "PESONAHD": {
+    "epgid": "429564",
+    "logo": "",
+    "name": "Pesona HD"
+  },
+  "CRICBUZZ2": {
+    "epgid": "430760",
+    "logo": "",
+    "name": "Cricbuzz 2"
+  },
+  "HUBRUYI": {
+    "epgid": "447056",
+    "logo": "",
+    "name": "Hub Ruyi"
+  },
+  "HUBPREMIER8": {
+    "epgid": "450710",
+    "logo": "",
+    "name": "Hub Premier 8"
+  },
+  "STARMAA": {
+    "epgid": "451931",
+    "logo": "",
+    "name": "Star Maa"
+  },
+  "MAAMOVIES": {
+    "epgid": "451933",
+    "logo": "",
+    "name": "maa movies"
+  },
+  "HUBPREMIER5": {
+    "epgid": "452962",
+    "logo": "",
+    "name": "Hub Premier 5"
+  },
+  "HUBSPORTS7": {
+    "epgid": "455185",
+    "logo": "",
+    "name": "Hub Sports 7"
+  },
+  "HUBPREMIER6": {
+    "epgid": "455186",
+    "logo": "",
+    "name": "Hub Premier 6"
+  },
+  "HUBSPORTS8": {
+    "epgid": "455187",
+    "logo": "",
+    "name": "Hub Sports 8"
+  },
+  "THEFILIPINOCHANNEL": {
+    "epgid": "455314",
+    "logo": "",
+    "name": "The Filipino Channel"
+  },
+  "STARHUB": {
+    "epgid": "459681",
+    "logo": "",
+    "name": "StarHub"
+  },
+  "ANC": {
+    "epgid": "476879",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png",
+    "name": "ANC"
+  },
+  "HUBSPORTS7HD": {
+    "epgid": "482823",
+    "logo": "",
+    "name": "Hub Sports 7 HD"
+  },
+  "HUBSPORTS8HD": {
+    "epgid": "482824",
+    "logo": "",
+    "name": "Hub Sports 8 HD"
+  },
+  "HUBSPORTS6HD": {
+    "epgid": "482833",
+    "logo": "",
+    "name": "Hub Sports 6 HD"
+  },
+  "HUBPREMIER7": {
+    "epgid": "483423",
+    "logo": "",
+    "name": "Hub Premier 7"
+  },
+  "(HD)OUTDOORCHANNEL": {
+    "epgid": "484245",
+    "logo": "",
+    "name": "(HD) Outdoor Channel"
+  },
+  "ETTVASIA(HD)": {
+    "epgid": "491151",
+    "logo": "",
+    "name": "ETTV Asia (HD)"
+  },
+  "GMALIFETV": {
+    "epgid": "491154",
+    "logo": "",
+    "name": "GMA Life TV"
+  },
+  "CNNINTERNATIONAL(HD)": {
+    "epgid": "491157",
+    "logo": "",
+    "name": "CNN International (HD)"
+  },
+  "ANIPLUSHD": {
+    "epgid": "491159",
+    "logo": "",
+    "name": "ANIPLUS HD"
+  },
+  "GMANEWSTV": {
+    "epgid": "491164",
+    "logo": "",
+    "name": "GMA News TV"
+  },
+  "GMAPINOYTV": {
+    "epgid": "491168",
+    "logo": "",
+    "name": "GMA Pinoy TV"
+  },
+  "CHINAMOVIECHANNEL": {
+    "epgid": "491172",
+    "logo": "",
+    "name": "China Movie Channel"
+  },
+  "BEINSPORTS5HD": {
+    "epgid": "492707",
+    "logo": "",
+    "name": "beIN SPORTS 5 HD"
+  },
+  "BEINSPORTS4HD": {
+    "epgid": "492708",
+    "logo": "",
+    "name": "beIN SPORTS 4 HD"
+  },
+  "CHANNEL5": {
+    "epgid": "492816",
+    "logo": "",
+    "name": "Channel 5"
+  },
+  "VASANTHAM": {
+    "epgid": "492817",
+    "logo": "",
+    "name": "Vasantham"
+  },
+  "NICKJR.HD": {
+    "epgid": "492825",
+    "logo": "",
+    "name": "Nick Jr. HD"
+  },
+  "FIFA+": {
+    "epgid": "492830",
+    "logo": "",
+    "name": "FIFA+"
+  },
+  "FOXNEWSCHANNELHD": {
+    "epgid": "492833",
+    "logo": "",
+    "name": "Fox News Channel HD"
+  },
+  "HUBPREMIER10": {
+    "epgid": "492848",
+    "logo": "",
+    "name": "Hub Premier 10"
+  },
+  "HUBVVDRAMAHD": {
+    "epgid": "492851",
+    "logo": "",
+    "name": "Hub VV Drama HD"
+  },
+  "FOODON": {
+    "epgid": "492858",
+    "logo": "",
+    "name": "FoodON"
+  },
+  "SPLCH01": {
+    "epgid": "492860",
+    "logo": "",
+    "name": "SPL CH01"
+  },
+  "CHANNELU": {
+    "epgid": "492864",
+    "logo": "",
+    "name": "Channel U"
+  },
+  "HUBPREMIER11": {
+    "epgid": "492873",
+    "logo": "",
+    "name": "Hub Premier 11"
+  },
+  "CNA": {
+    "epgid": "492874",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CNA.png",
+    "name": "CNA"
+  },
+  "DREAMWORKSHD": {
+    "epgid": "492877",
+    "logo": "",
+    "name": "DreamWorks HD"
+  },
+  "TGJUNIOR": {
+    "epgid": "492878",
+    "logo": "",
+    "name": "TG Junior"
+  },
+  "HUBPREMIER9": {
+    "epgid": "492886",
+    "logo": "",
+    "name": "Hub Premier 9"
+  },
+  "CHANNEL8": {
+    "epgid": "492894",
+    "logo": "",
+    "name": "Channel 8"
+  },
+  "RIVERMONSTERS": {
+    "epgid": "492900",
+    "logo": "",
+    "name": "River Monsters"
+  },
+  "SURIA": {
+    "epgid": "492901",
+    "logo": "",
+    "name": "Suria"
+  },
+  "LIVE1": {
+    "epgid": "492905",
+    "logo": "",
+    "name": "LIVE 1"
+  },
+  "KARTOONCHANNEL!": {
+    "epgid": "492908",
+    "logo": "",
+    "name": "Kartoon Channel!"
+  },
+  "ACTIONHOLLYWOODMOVIES": {
+    "epgid": "492910",
+    "logo": "",
+    "name": "Action Hollywood Movies"
+  },
+  "TESTCHANNEL996": {
+    "epgid": "493279",
+    "logo": "",
+    "name": "TestChannel 996"
+  },
+  "FEARFACTOR": {
+    "epgid": "495472",
+    "logo": "",
+    "name": "Fear Factor"
+  },
+  "DEALORNODEAL": {
+    "epgid": "495473",
+    "logo": "",
+    "name": "Deal or No Deal"
+  },
+  "TESTCHANNEL2": {
+    "epgid": "495493",
+    "logo": "",
+    "name": "TestChannel2"
+  },
+  "BRTVINTERNATIONAL": {
+    "epgid": "501125",
+    "logo": "",
+    "name": "BRTV International"
+  },
+  "WION": {
+    "epgid": "501126",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DW.png",
+    "name": "WION"
+  },
+  "ABSCBNNEWSCHANNEL": {
+    "epgid": "501127",
+    "logo": "",
+    "name": "ABS-CBN News Channel"
+  },
+  "MASTERCHEF": {
+    "epgid": "507899",
+    "logo": "",
+    "name": "MasterChef"
+  },
+  "CCTVENTERTAINMENT": {
+    "epgid": "512067",
+    "logo": "",
+    "name": "CCTV Entertainment"
+  },
+  "NOWJELLI(HD)": {
+    "epgid": "512068",
+    "logo": "",
+    "name": "now Jelli (HD)"
+  },
+  "DRAGONTVINTL": {
+    "epgid": "512070",
+    "logo": "",
+    "name": "Dragon TV Intl"
+  },
+  "CH8(HD)": {
+    "epgid": "513276",
+    "logo": "",
+    "name": "Ch 8 (HD)"
+  },
+  "VASANTHAM(HD)": {
+    "epgid": "513278",
+    "logo": "",
+    "name": "Vasantham (HD)"
+  },
+  "CHU(HD)": {
+    "epgid": "513280",
+    "logo": "",
+    "name": "Ch U (HD)"
+  },
+  "CNA(HD)": {
+    "epgid": "513282",
+    "logo": "",
+    "name": "CNA (HD)"
+  },
+  "SURIA(HD)": {
+    "epgid": "513284",
+    "logo": "",
+    "name": "Suria (HD)"
+  },
+  "CH5(HD)": {
+    "epgid": "513286",
+    "logo": "",
+    "name": "Ch 5 (HD)"
+  },
+  "SPOTV(HD)": {
+    "epgid": "516576",
+    "logo": "",
+    "name": "SPOTV (HD)"
+  },
+  "SPOTV2(HD)": {
+    "epgid": "516577",
+    "logo": "",
+    "name": "SPOTV 2 (HD)"
+  },
+  "TECHSTORM(HD)": {
+    "epgid": "516581",
+    "logo": "",
+    "name": "TechStorm (HD)"
+  },
+  "VIJAY": {
+    "epgid": "522554",
+    "logo": "",
+    "name": "Vijay"
+  },
+  "TIMESNOW": {
+    "epgid": "522557",
+    "logo": "",
+    "name": "Times Now"
+  },
+  "ZOOMTV": {
+    "epgid": "522558",
+    "logo": "",
+    "name": "Zoom TV"
+  },
+  "CCTV4(HD)": {
+    "epgid": "522559",
+    "logo": "",
+    "name": "CCTV-4 (HD)"
+  },
+  "BEINSPORTS3HD": {
+    "epgid": "524985",
+    "logo": "",
+    "name": "beIN SPORTS 3 HD"
+  },
+  "VIJAYTAKKAR": {
+    "epgid": "530390",
+    "logo": "",
+    "name": "Vijay Takkar"
+  },
+  "LIVE2": {
+    "epgid": "535294",
+    "logo": "",
+    "name": "LIVE 2"
+  },
+  "THAT'S80S": {
+    "epgid": "535443",
+    "logo": "",
+    "name": "That's 80s"
+  },
+  "THAT'SROCK": {
+    "epgid": "535444",
+    "logo": "",
+    "name": "That's Rock"
+  },
+  "THAT'S70S": {
+    "epgid": "535445",
+    "logo": "",
+    "name": "That's 70s"
+  },
+  "HITSMOVIES(HD)": {
+    "epgid": "536331",
+    "logo": "",
+    "name": "HITS MOVIES (HD)"
+  },
+  "MOLASPORT(HD)": {
+    "epgid": "536339",
+    "logo": "",
+    "name": "MOLA Sport (HD)"
+  },
+  "EUROSPORT(HD)": {
+    "epgid": "536340",
+    "logo": "",
+    "name": "EUROSPORT (HD)"
+  },
+  "CARTOONITO(HD)": {
+    "epgid": "536344",
+    "logo": "",
+    "name": "Cartoonito (HD)"
+  },
+  "HUNANINTERNATIONAL": {
+    "epgid": "536348",
+    "logo": "",
+    "name": "Hunan International"
+  },
+  "CNBCASIA(HD)": {
+    "epgid": "536352",
+    "logo": "",
+    "name": "CNBC Asia (HD)"
+  },
+  "BLOOMBERGTV(HD)": {
+    "epgid": "536353",
+    "logo": "",
+    "name": "Bloomberg TV (HD)"
+  },
+  "THEFILIPINOCH(HD)": {
+    "epgid": "536364",
+    "logo": "",
+    "name": "The Filipino Ch (HD)"
+  },
+  "GMANEWSTVINTL": {
+    "epgid": "536365",
+    "logo": "",
+    "name": "GMA News TV Intl"
+  },
+  "SEATODAY": {
+    "epgid": "536366",
+    "logo": "",
+    "name": "SEA Today"
+  },
+  "FOODNETWORK(HD)": {
+    "epgid": "536367",
+    "logo": "",
+    "name": "Food Network (HD)"
+  },
+  "MTVLIVEHD": {
+    "epgid": "536385",
+    "logo": "",
+    "name": "MTV LIVE HD"
+  },
+  "MIOSPORTS": {
+    "epgid": "536396",
+    "logo": "",
+    "name": "mio Sports"
+  },
+  "MIOSPORTS2": {
+    "epgid": "536397",
+    "logo": "",
+    "name": "mio Sports 2"
+  },
+  "DISCOVERYCH(HD)": {
+    "epgid": "536401",
+    "logo": "",
+    "name": "Discovery Ch (HD)"
+  },
+  "DISCOVERYASIA(HD)": {
+    "epgid": "536402",
+    "logo": "",
+    "name": "Discovery Asia (HD)"
+  },
+  "C+I(HD)": {
+    "epgid": "536403",
+    "logo": "",
+    "name": "C+I (HD)"
+  },
+  "HISTORY(HD)": {
+    "epgid": "536404",
+    "logo": "",
+    "name": "HISTORY (HD)"
+  },
+  "CGTN(HD)": {
+    "epgid": "536412",
+    "logo": "",
+    "name": "CGTN (HD)"
+  },
+  "CNNINTERNATIONAL": {
+    "epgid": "536417",
+    "logo": "",
+    "name": "CNN International"
+  },
+  "ETTVASIANEWS(HD)": {
+    "epgid": "536418",
+    "logo": "",
+    "name": "ETTV Asia News (HD)"
+  },
+  "BEINSPORTS4(HD)": {
+    "epgid": "536419",
+    "logo": "",
+    "name": "beIN SPORTS 4 (HD)"
+  },
+  "BBCNEWS(HD)": {
+    "epgid": "536423",
+    "logo": "",
+    "name": "BBC News (HD)"
+  },
+  "NICKJR(HD)": {
+    "epgid": "536424",
+    "logo": "",
+    "name": "Nick Jr (HD)"
+  },
+  "DREAMWORKS(HD)": {
+    "epgid": "536425",
+    "logo": "",
+    "name": "DreamWorks (HD)"
+  },
+  "SONYYAY": {
+    "epgid": "536431",
+    "logo": "",
+    "name": "Sony YAY"
+  },
+  "TVNMOVIESONDEMAND": {
+    "epgid": "536432",
+    "logo": "",
+    "name": "tvN Movies On Demand"
+  },
+  "DW(ENGLISH)": {
+    "epgid": "536435",
+    "logo": "",
+    "name": "DW (English)"
+  },
+  "ROCKENT(HD)": {
+    "epgid": "536437",
+    "logo": "",
+    "name": "ROCK ENT (HD)"
+  },
+  "VIJAYTV(HD)": {
+    "epgid": "536443",
+    "logo": "",
+    "name": "Vijay TV (HD)"
+  },
+  "SPLCH02": {
+    "epgid": "535941",
+    "logo": "",
+    "name": "SPL CH02"
+  },
+  "NOW80S": {
+    "epgid": "492911",
+    "logo": "",
+    "name": "NOW 80s"
+  },
+  "NOW70S": {
+    "epgid": "492912",
+    "logo": "",
+    "name": "NOW 70s"
+  },
+  "NOWROCK": {
+    "epgid": "492913",
+    "logo": "",
+    "name": "NOW Rock"
+  },
   "SUPERFREE": {
     "epgid": "CWIN",
     "logo": "",
@@ -2374,11 +4424,6 @@
     "logo": "",
     "name": "Nickelodeon"
   },
-  "NICKJR": {
-    "epgid": "CNIJR",
-    "logo": "",
-    "name": "Nick Jr"
-  },
   "粵語片台": {
     "epgid": "CCLM",
     "logo": "",
@@ -2408,11 +4453,6 @@
     "epgid": "POPC",
     "logo": "",
     "name": "PopC"
-  },
-  "ACTIONHOLLYWOODMOVIES": {
-    "epgid": "ACTM",
-    "logo": "",
-    "name": "Action Hollywood Movies"
   },
   "RIALTOCLASSICMOVIES(RCM)": {
     "epgid": "RCM",
@@ -2564,21 +4604,6 @@
     "logo": "",
     "name": "深圳衛視國際頻道"
   },
-  "NOW70S": {
-    "epgid": "NOW7",
-    "logo": "",
-    "name": "NOW 70s"
-  },
-  "NOW80S": {
-    "epgid": "NOW8",
-    "logo": "",
-    "name": "NOW 80s"
-  },
-  "NOWROCK": {
-    "epgid": "NOWR",
-    "logo": "",
-    "name": "NOW ROCK"
-  },
   "NOW90S00S": {
     "epgid": "NOW9",
     "logo": "",
@@ -2603,11 +4628,6 @@
     "epgid": "CJAZ",
     "logo": "",
     "name": "半島電視台英語頻道"
-  },
-  "FRANCE24": {
-    "epgid": "CF24",
-    "logo": "",
-    "name": "France 24"
   },
   "DW": {
     "epgid": "CDW1",
@@ -2708,11 +4728,6 @@
     "epgid": "3",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV3.png",
     "name": "CCTV3"
-  },
-  "CCTV4": {
-    "epgid": "4",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV4.png",
-    "name": "CCTV4"
   },
   "CCTV5": {
     "epgid": "5",
@@ -3209,11 +5224,6 @@
     "logo": "",
     "name": "noepg"
   },
-  "CGTN": {
-    "epgid": "20",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CGTN.png",
-    "name": "CGTN"
-  },
   "卡酷动画": {
     "epgid": "67",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/卡酷动画.png",
@@ -3298,11 +5308,6 @@
     "epgid": "555",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/宁夏经济.png",
     "name": "宁夏经济"
-  },
-  "宁夏公共": {
-    "epgid": "556",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/宁夏公共.png",
-    "name": "宁夏公共"
   },
   "宁夏少儿": {
     "epgid": "557",
@@ -3778,11 +5783,6 @@
     "epgid": "1356",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/SCTV5.png",
     "name": "SCTV5"
-  },
-  "SCTV7": {
-    "epgid": "1358",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/SCTV7.png",
-    "name": "SCTV7"
   },
   "峨嵋电影": {
     "epgid": "1359",
@@ -4299,11 +6299,6 @@
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TFC.png",
     "name": "TFC"
   },
-  "CGTNDOCUMENTARY": {
-    "epgid": "296",
-    "logo": "",
-    "name": "CGTNDocumentary"
-  },
   "TRACESPORTS": {
     "epgid": "310",
     "logo": "",
@@ -4418,11 +6413,6 @@
     "epgid": "1476",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/中天综合.png",
     "name": "中天综合台"
-  },
-  "东风卫视": {
-    "epgid": "1477",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/东风卫视.png",
-    "name": "东风卫视"
   },
   "年代MUCH": {
     "epgid": "1478",
@@ -4789,16 +6779,6 @@
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/三立综合.png",
     "name": "三立综合台"
   },
-  "ABCAUSTRALIA": {
-    "epgid": "1736",
-    "logo": "",
-    "name": "ABCAustralia"
-  },
-  "NHKWORLDPREMIUM": {
-    "epgid": "1745",
-    "logo": "",
-    "name": "NHKWorldPremium"
-  },
   "龙华偶像": {
     "epgid": "1760",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/龙华偶像.png",
@@ -5019,11 +6999,6 @@
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/爱尔达体育3.png",
     "name": "爱尔达体育3"
   },
-  "EUROSPORT": {
-    "epgid": "1835",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/EUROSPORT.png",
-    "name": "EUROSPORT"
-  },
   "美食星球": {
     "epgid": "1836",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/美食星球.png",
@@ -5179,11 +7154,6 @@
     "logo": "",
     "name": "Bloomberg Television"
   },
-  "DW(ENGLISH)": {
-    "epgid": "410311",
-    "logo": "",
-    "name": "DW (English)"
-  },
   "RT": {
     "epgid": "410316",
     "logo": "",
@@ -5213,16 +7183,6 @@
     "epgid": "410346",
     "logo": "",
     "name": "Now報價台"
-  },
-  "CARTOONNETWORK": {
-    "epgid": "410359",
-    "logo": "",
-    "name": "Cartoon Network"
-  },
-  "MOONBUG": {
-    "epgid": "410362",
-    "logo": "",
-    "name": "Moonbug"
   },
   "DAVINCI": {
     "epgid": "410364",
@@ -5349,16 +7309,6 @@
     "logo": "",
     "name": "Now Sports 7"
   },
-  "BEINSPORTS1": {
-    "epgid": "410403",
-    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129190019981131_56.png",
-    "name": "beIN SPORTS 1"
-  },
-  "BEINSPORTS2": {
-    "epgid": "410404",
-    "logo": "",
-    "name": "beIN SPORTS 2"
-  },
   "曼聯電視頻道": {
     "epgid": "410405",
     "logo": "",
@@ -5373,11 +7323,6 @@
     "epgid": "410407",
     "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129193737395817_37.png",
     "name": "NBA TV"
-  },
-  "BEINSPORTS3": {
-    "epgid": "410408",
-    "logo": "",
-    "name": "beIN SPORTS 3"
   },
   "BEINSPORTS4": {
     "epgid": "410409",
@@ -5413,11 +7358,6 @@
     "epgid": "410417",
     "logo": "",
     "name": "Astro Cricket"
-  },
-  "PREMIERSPORTS": {
-    "epgid": "410418",
-    "logo": "",
-    "name": "Premier Sports"
   },
   "NOWSPORTSPLUS": {
     "epgid": "410419",
@@ -5509,75 +7449,25 @@
     "logo": "",
     "name": "Now Sports 618"
   },
-  "FRANCE24(FRENCH)": {
-    "epgid": "410425",
-    "logo": "",
-    "name": "France 24 (French)"
-  },
-  "GMAPINOYTV": {
-    "epgid": "410426",
-    "logo": "",
-    "name": "GMA Pinoy TV"
-  },
-  "GMALIFETV": {
-    "epgid": "410427",
-    "logo": "",
-    "name": "GMA Life TV"
-  },
-  "GMANEWSTV": {
-    "epgid": "410428",
-    "logo": "",
-    "name": "GMA News TV"
-  },
   "SONYTV(INDIA)": {
     "epgid": "410430",
     "logo": "",
     "name": "Sony TV (India)"
-  },
-  "SONYMAX": {
-    "epgid": "410431",
-    "logo": "",
-    "name": "Sony MAX"
   },
   "SONYSAB": {
     "epgid": "410432",
     "logo": "",
     "name": "Sony SAB"
   },
-  "MTVINDIA": {
-    "epgid": "410433",
-    "logo": "",
-    "name": "MTV India"
-  },
   "ZEECINEMAINTERNATIONAL": {
     "epgid": "410435",
     "logo": "",
     "name": "Zee Cinema International"
   },
-  "ZEETV": {
-    "epgid": "410436",
-    "logo": "",
-    "name": "Zee TV"
-  },
   "ZEENEWS": {
     "epgid": "410437",
     "logo": "",
     "name": "Zee News"
-  },
-  "STARGOLD": {
-    "epgid": "410438",
-    "logo": "",
-    "name": "Star Gold"
-  },
-  "STARPLUS": {
-    "epgid": "410439",
-    "logo": "",
-    "name": "STAR PLUS"
-  },
-  "STARBHARAT": {
-    "epgid": "410440",
-    "logo": "",
-    "name": "Star Bharat"
   },
   "冰火頻道": {
     "epgid": "410445",
@@ -5588,11 +7478,6 @@
     "epgid": "410450",
     "logo": "",
     "name": "成人極品台"
-  },
-  "COLORS": {
-    "epgid": "420293",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CI.png",
-    "name": "COLORS"
   },
   "HBOEAST": {
     "epgid": "464745",
@@ -5759,11 +7644,6 @@
     "logo": "",
     "name": "Univision Network HD"
   },
-  "GOLFCHANNELHD": {
-    "epgid": "464783",
-    "logo": "",
-    "name": "Golf Channel HD"
-  },
   "STARZENCOREWESTERNS(PACIFIC)": {
     "epgid": "464784",
     "logo": "",
@@ -5798,11 +7678,6 @@
     "epgid": "464790",
     "logo": "",
     "name": "The Travel Channel HD (Pacific)"
-  },
-  "CNBCHD": {
-    "epgid": "464791",
-    "logo": "",
-    "name": "CNBC HD"
   },
   "DTVARANG": {
     "epgid": "464792",
@@ -5948,11 +7823,6 @@
     "epgid": "464823",
     "logo": "",
     "name": "The Africa Channel"
-  },
-  "PHOENIXINFONEWS": {
-    "epgid": "464824",
-    "logo": "",
-    "name": "Phoenix Info News"
   },
   "MTVLIVE": {
     "epgid": "464825",
@@ -6103,11 +7973,6 @@
     "epgid": "464856",
     "logo": "",
     "name": "Marquee Sports Network Overflow"
-  },
-  "CNNHD": {
-    "epgid": "464857",
-    "logo": "",
-    "name": "CNN HD"
   },
   "3ABNLATINONETWORK": {
     "epgid": "464858",
@@ -6388,11 +8253,6 @@
     "epgid": "464916",
     "logo": "",
     "name": "Arizona Family Sports"
-  },
-  "CINEMAXHD": {
-    "epgid": "464917",
-    "logo": "",
-    "name": "Cinemax HD"
   },
   "UNIMASHD(PACIFIC)": {
     "epgid": "464918",
@@ -6883,11 +8743,6 @@
     "epgid": "465020",
     "logo": "",
     "name": "Pinoy Box Office"
-  },
-  "CNNINTERNATIONAL": {
-    "epgid": "465021",
-    "logo": "",
-    "name": "CNN International"
   },
   "SHORTSTV": {
     "epgid": "465024",
@@ -7524,11 +9379,6 @@
     "logo": "",
     "name": "EarthX"
   },
-  "ABSCBNNEWSCHANNEL": {
-    "epgid": "465161",
-    "logo": "",
-    "name": "ABS-CBN News Channel"
-  },
   "JBS": {
     "epgid": "465162",
     "logo": "",
@@ -7583,11 +9433,6 @@
     "epgid": "465175",
     "logo": "",
     "name": "Curiosity Channel HD"
-  },
-  "HISTORYHD": {
-    "epgid": "465176",
-    "logo": "",
-    "name": "History HD"
   },
   "CARTOONNETWORK(PACIFIC)": {
     "epgid": "465177",
@@ -7934,11 +9779,6 @@
     "logo": "",
     "name": "Spectrum News 1 - Green Bay/Appleton - STVA"
   },
-  "NICKELODEONHD": {
-    "epgid": "465251",
-    "logo": "",
-    "name": "Nickelodeon HD"
-  },
   "NBCWESTSTREAM": {
     "epgid": "465252",
     "logo": "",
@@ -8004,11 +9844,6 @@
     "logo": "",
     "name": "SEC Network HD"
   },
-  "CARTOONNETWORKHD": {
-    "epgid": "465267",
-    "logo": "",
-    "name": "Cartoon Network HD"
-  },
   "SHOWTIMENEXTHD": {
     "epgid": "465270",
     "logo": "",
@@ -8048,11 +9883,6 @@
     "epgid": "465278",
     "logo": "",
     "name": "Start TV Network"
-  },
-  "HBOSIGNATUREHD": {
-    "epgid": "465279",
-    "logo": "",
-    "name": "HBO Signature HD"
   },
   "FS2HD": {
     "epgid": "465280",
@@ -8444,11 +10274,6 @@
     "logo": "",
     "name": "Cleo TV HD"
   },
-  "DISCOVERYCHANNELHD": {
-    "epgid": "465364",
-    "logo": "",
-    "name": "Discovery Channel HD"
-  },
   "THEMOVIECHANNELHD": {
     "epgid": "465365",
     "logo": "",
@@ -8483,11 +10308,6 @@
     "epgid": "465371",
     "logo": "",
     "name": "Comedy Central HD (Pacific)"
-  },
-  "FOXNEWSCHANNELHD": {
-    "epgid": "465372",
-    "logo": "",
-    "name": "Fox News Channel HD"
   },
   "ESPN2HD": {
     "epgid": "465373",
@@ -33159,11 +34979,6 @@
     "logo": "",
     "name": "SkySp F1"
   },
-  "KTV": {
-    "epgid": "9377",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TVN.png",
-    "name": "KTV"
-  },
   "SKYHISTORY2HD": {
     "epgid": "9378",
     "logo": "",
@@ -33379,11 +35194,6 @@
     "logo": "",
     "name": "HUM EUROPE"
   },
-  "SKYNEWSHD": {
-    "epgid": "9504",
-    "logo": "",
-    "name": "Sky News HD"
-  },
   "QUESTRED+1": {
     "epgid": "9522",
     "logo": "",
@@ -33398,11 +35208,6 @@
     "epgid": "9531",
     "logo": "",
     "name": "Sky ScFi/HorHD"
-  },
-  "TLCHD": {
-    "epgid": "9532",
-    "logo": "",
-    "name": "TLC HD"
   },
   "SKYMEGAHITSHD": {
     "epgid": "9534",
@@ -33433,11 +35238,6 @@
     "epgid": "9547",
     "logo": "",
     "name": "Nat Geo Wild"
-  },
-  "ZEECINEMA": {
-    "epgid": "9552",
-    "logo": "",
-    "name": "Zee Cinema"
   },
   "SPIDERMANHD": {
     "epgid": "9553",
@@ -33514,11 +35314,6 @@
     "logo": "",
     "name": "Nat Geo+1"
   },
-  "DISCOVERYHD": {
-    "epgid": "9601",
-    "logo": "",
-    "name": "Discovery HD"
-  },
   "GODCHANNEL": {
     "epgid": "9604",
     "logo": "",
@@ -33573,11 +35368,6 @@
     "epgid": "9624",
     "logo": "",
     "name": "Islam Channel"
-  },
-  "GOLD": {
-    "epgid": "12021",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/华诚影视GOLD.png",
-    "name": "GOLD"
   },
   "ITV1+1": {
     "epgid": "12033",
@@ -33914,11 +35704,6 @@
     "logo": "",
     "name": "Sky Hits HD"
   },
-  "NICKJR.HD": {
-    "epgid": "12201",
-    "logo": "",
-    "name": "Nick Jr. HD"
-  },
   "LFCTVHD": {
     "epgid": "12202",
     "logo": "",
@@ -34183,11 +35968,6 @@
     "epgid": "12337",
     "logo": "",
     "name": "SkySp News"
-  },
-  "THAT'S70S": {
-    "epgid": "12338",
-    "logo": "",
-    "name": "That's 70s"
   },
   "GOLD+1": {
     "epgid": "12339",
