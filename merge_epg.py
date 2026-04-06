@@ -4,27 +4,60 @@
 import requests
 import gzip
 import xml.etree.ElementTree as ET
-from io import BytesIO
 import json
+import os
 
 EPG_SOURCES_FILE = "epg_sources.txt"
 OUTPUT_XML_GZ = "epg.xml.gz"
 OUTPUT_CHANNELS_JSON = "channels.json"
 
-# ===================== 下载 ===================== #
+
+# ===================== 下载EPG（核心增强版） ===================== #
 def fetch_epg(url):
     print(f"[FETCH] {url}")
 
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Accept": "*/*",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "Referer": "https://epg.iill.top/"
     }
 
-    r = requests.get(url, headers=headers, timeout=30)
-    r.raise_for_status()
-    return r.content
+    try:
+        r = requests.get(url, headers=headers, timeout=30)
+
+        # ❌ 403 自动 fallback curl
+        if r.status_code == 403:
+            print("[WARN] 403 detected, switching to curl...")
+
+            return fetch_with_curl(url)
+
+        r.raise_for_status()
+        return r.content
+
+    except Exception as e:
+        print("[ERROR requests]", e)
+        return fetch_with_curl(url)
 
 
-# ===================== 解析 ===================== #
+# ===================== curl fallback ===================== #
+def fetch_with_curl(url):
+    tmp_file = "temp_epg.gz"
+
+    cmd = f'curl -L -A "Mozilla/5.0" -e "https://epg.iill.top/" -o {tmp_file} "{url}"'
+    os.system(cmd)
+
+    if not os.path.exists(tmp_file):
+        raise Exception("curl download failed")
+
+    with open(tmp_file, "rb") as f:
+        data = f.read()
+
+    os.remove(tmp_file)
+    return data
+
+
+# ===================== 解析EPG ===================== #
 def parse_epg(content):
     if content[:2] == b'\x1f\x8b':
         content = gzip.decompress(content)
@@ -32,15 +65,14 @@ def parse_epg(content):
     return ET.fromstring(content)
 
 
-# ===================== merge ===================== #
+# ===================== 合并 ===================== #
 def merge_roots(roots):
     tv = ET.Element("tv")
 
     channel_map = {}
-
     seen_prog = set()
 
-    # ===================== CHANNEL ===================== #
+    # ---------- CHANNEL ----------
     for root in roots:
         for ch in root.findall("channel"):
             cid = ch.attrib.get("id")
@@ -56,7 +88,7 @@ def merge_roots(roots):
                     if name not in channel_map[cid]:
                         channel_map[cid].append(name)
 
-    # 写 channel
+    # 写入 channel
     for cid, names in channel_map.items():
         ch = ET.SubElement(tv, "channel", {"id": cid})
 
@@ -64,7 +96,7 @@ def merge_roots(roots):
             dn = ET.SubElement(ch, "display-name")
             dn.text = n
 
-    # ===================== PROGRAMME ===================== #
+    # ---------- PROGRAMME ----------
     for root in roots:
         for prog in root.findall("programme"):
             cid = prog.attrib.get("channel")
@@ -85,7 +117,7 @@ def merge_roots(roots):
     return tv, channel_map
 
 
-# ===================== 输出 XML ===================== #
+# ===================== 写 XML ===================== #
 def write_gz_xml(root):
     xml_str = ET.tostring(root, encoding="utf-8")
 
@@ -95,7 +127,7 @@ def write_gz_xml(root):
     print("[OK] epg.xml.gz saved")
 
 
-# ===================== 输出 JSON ===================== #
+# ===================== 写 JSON ===================== #
 def write_channels_json(channel_map):
     data = {}
 
@@ -115,7 +147,7 @@ def write_channels_json(channel_map):
     print("[OK] channels.json saved")
 
 
-# ===================== main ===================== #
+# ===================== 主流程 ===================== #
 def main():
     roots = []
 
@@ -128,7 +160,7 @@ def main():
             root = parse_epg(content)
             roots.append(root)
         except Exception as e:
-            print("[ERROR]", url, e)
+            print(f"[ERROR] {url} -> {e}")
 
     tv, channel_map = merge_roots(roots)
 
