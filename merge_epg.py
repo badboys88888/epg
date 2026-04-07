@@ -12,31 +12,28 @@ OUTPUT_XML_GZ = "epg.xml.gz"
 OUTPUT_CHANNELS_JSON = "channels.json"
 
 
-# ===================== 下载EPG（核心增强版） ===================== #
+# ===================== 下载EPG ===================== #
 def fetch_epg(url):
     print(f"[FETCH] {url}")
 
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "User-Agent": "Mozilla/5.0",
         "Accept": "*/*",
-        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
         "Referer": "https://epg.iill.top/"
     }
 
     try:
         r = requests.get(url, headers=headers, timeout=30)
 
-        # ❌ 403 自动 fallback curl
         if r.status_code == 403:
-            print("[WARN] 403 detected, switching to curl...")
-
+            print("[WARN] 403 → curl fallback")
             return fetch_with_curl(url)
 
         r.raise_for_status()
         return r.content
 
     except Exception as e:
-        print("[ERROR requests]", e)
+        print(f"[ERROR requests] {e}")
         return fetch_with_curl(url)
 
 
@@ -44,11 +41,11 @@ def fetch_epg(url):
 def fetch_with_curl(url):
     tmp_file = "temp_epg.gz"
 
-    cmd = f'curl -L -A "Mozilla/5.0" -e "https://epg.iill.top/" -o {tmp_file} "{url}"'
+    cmd = f'curl -L -A "Mozilla/5.0" -o {tmp_file} "{url}"'
     os.system(cmd)
 
     if not os.path.exists(tmp_file):
-        raise Exception("curl download failed")
+        raise Exception("curl failed")
 
     with open(tmp_file, "rb") as f:
         data = f.read()
@@ -57,12 +54,19 @@ def fetch_with_curl(url):
     return data
 
 
-# ===================== 解析EPG ===================== #
+# ===================== 解析 ===================== #
 def parse_epg(content):
     if content[:2] == b'\x1f\x8b':
         content = gzip.decompress(content)
 
     return ET.fromstring(content)
+
+
+# ===================== 简单标准化（用于去重） ===================== #
+def normalize_text(text):
+    if not text:
+        return ""
+    return text.strip().replace(" ", "").replace("-", "").lower()
 
 
 # ===================== 合并 ===================== #
@@ -72,12 +76,17 @@ def merge_roots(roots):
     channel_map = {}
     seen_prog = set()
 
+    total_channels = 0
+    total_programs = 0
+
     # ---------- CHANNEL ----------
     for root in roots:
         for ch in root.findall("channel"):
             cid = ch.attrib.get("id")
             if not cid:
                 continue
+
+            total_channels += 1
 
             if cid not in channel_map:
                 channel_map[cid] = []
@@ -87,6 +96,8 @@ def merge_roots(roots):
                     name = dn.text.strip()
                     if name not in channel_map[cid]:
                         channel_map[cid].append(name)
+
+    print(f"[INFO] 收集频道: {len(channel_map)}")
 
     # 写入 channel
     for cid, names in channel_map.items():
@@ -98,14 +109,27 @@ def merge_roots(roots):
 
     # ---------- PROGRAMME ----------
     for root in roots:
+        count = 0
+
         for prog in root.findall("programme"):
             cid = prog.attrib.get("channel")
             start = prog.attrib.get("start")
             stop = prog.attrib.get("stop")
 
-            key = (cid, start, stop)
+            title_elem = prog.find("title")
+            title = title_elem.text if title_elem is not None else ""
+
+            # ✅ 更强去重（频道+时间+标题）
+            key = (
+                cid,
+                start,
+                stop,
+                normalize_text(title)
+            )
+
             if key in seen_prog:
                 continue
+
             seen_prog.add(key)
 
             new_prog = ET.SubElement(tv, "programme", prog.attrib)
@@ -113,6 +137,13 @@ def merge_roots(roots):
             for child in prog:
                 new_child = ET.SubElement(new_prog, child.tag)
                 new_child.text = child.text
+
+            count += 1
+            total_programs += 1
+
+        print(f"[INFO] 本源节目: {count}")
+
+    print(f"[INFO] 合并后节目总数: {total_programs}")
 
     return tv, channel_map
 
@@ -124,7 +155,8 @@ def write_gz_xml(root):
     with gzip.open(OUTPUT_XML_GZ, "wb") as f:
         f.write(xml_str)
 
-    print("[OK] epg.xml.gz saved")
+    size = os.path.getsize(OUTPUT_XML_GZ) / 1024
+    print(f"[OK] epg.xml.gz saved ({size:.1f} KB)")
 
 
 # ===================== 写 JSON ===================== #
@@ -144,7 +176,7 @@ def write_channels_json(channel_map):
     with open(OUTPUT_CHANNELS_JSON, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print("[OK] channels.json saved")
+    print(f"[OK] channels.json saved ({len(data)} channels)")
 
 
 # ===================== 主流程 ===================== #
@@ -154,14 +186,18 @@ def main():
     with open(EPG_SOURCES_FILE, "r", encoding="utf-8") as f:
         urls = [x.strip() for x in f if x.strip()]
 
-    for url in urls:
+    print(f"[INFO] EPG源数量: {len(urls)}")
+
+    for i, url in enumerate(urls, 1):
         try:
+            print(f"\n[{i}/{len(urls)}]")
             content = fetch_epg(url)
             root = parse_epg(content)
             roots.append(root)
         except Exception as e:
             print(f"[ERROR] {url} -> {e}")
 
+    print("\n[INFO] 开始合并...")
     tv, channel_map = merge_roots(roots)
 
     write_gz_xml(tv)
