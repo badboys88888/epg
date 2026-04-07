@@ -12,7 +12,7 @@ OUTPUT_XML_GZ = "epg.xml.gz"
 OUTPUT_CHANNELS_JSON = "channels.json"
 
 
-# ===================== XML 美化 ===================== #
+# ===================== XML缩进 ===================== #
 def indent(elem, level=0):
     i = "\n" + level * "  "
     if len(elem):
@@ -20,8 +20,8 @@ def indent(elem, level=0):
             elem.text = i + "  "
         for child in elem:
             indent(child, level + 1)
-        if not elem.tail or not elem.tail.strip():
-            elem.tail = i
+        if not child.tail or not child.tail.strip():
+            child.tail = i
     else:
         if level and (not elem.tail or not elem.tail.strip()):
             elem.tail = i
@@ -38,18 +38,21 @@ def fetch_epg(url):
 
     try:
         r = requests.get(url, headers=headers, timeout=30)
+
         if r.status_code == 403:
             print("[WARN] 403 -> curl fallback")
             return fetch_with_curl(url)
+
         r.raise_for_status()
         return r.content
+
     except Exception as e:
         print("[ERROR requests]", e)
         return fetch_with_curl(url)
 
 
 def fetch_with_curl(url):
-    tmp = "tmp.gz"
+    tmp = "tmp_epg.gz"
     os.system(f'curl -L -A "Mozilla/5.0" -o {tmp} "{url}"')
 
     with open(tmp, "rb") as f:
@@ -70,10 +73,9 @@ def parse_epg(content):
 def merge_roots(roots):
     tv = ET.Element("tv")
 
+    # ---------------- CHANNEL ---------------- #
     channel_map = {}
-    seen_prog = set()
 
-    # ---------- CHANNEL ----------
     for root, region in roots:
         for ch in root.findall("channel"):
             cid = ch.attrib.get("id")
@@ -81,52 +83,80 @@ def merge_roots(roots):
                 continue
 
             if cid not in channel_map:
-                channel_map[cid] = set()
+                channel_map[cid] = {
+                    "names": set(),
+                    "icon": None,
+                    "sources": set()
+                }
 
+            channel_map[cid]["sources"].add(region)
+
+            # display-name
             for dn in ch.findall("display-name"):
                 if dn.text:
-                    channel_map[cid].add(dn.text.strip())
+                    channel_map[cid]["names"].add(dn.text.strip())
 
-    # 写 channel
-    for cid, names in channel_map.items():
-        ch = ET.SubElement(tv, "channel", {"id": cid})
-        for name in names:
-            dn = ET.SubElement(ch, "display-name")
-            dn.text = name
+            # icon（只保留一个）
+            icon = ch.find("icon")
+            if icon is not None and icon.get("src"):
+                if not channel_map[cid]["icon"]:
+                    channel_map[cid]["icon"] = icon.get("src")
 
-    # ---------- PROGRAMME ----------
+
+    # ---------------- PROGRAMME（核心优化） ---------------- #
+    prog_map = {}
+
     for root, region in roots:
         for prog in root.findall("programme"):
             cid = prog.attrib.get("channel")
             start = prog.attrib.get("start")
             stop = prog.attrib.get("stop")
 
-            title = ""
-            t = prog.find("title")
-            if t is not None and t.text:
-                title = t.text.strip()
+            title_node = prog.find("title")
+            title = title_node.text.strip() if title_node is not None and title_node.text else ""
 
-            # 👉 去重（包含 region）
-            key = (cid, start, stop, title, region)
-            if key in seen_prog:
-                continue
-            seen_prog.add(key)
+            # 👉 去重 key（不包含 region）
+            key = (cid, start, stop, title)
 
-            new_prog = ET.SubElement(tv, "programme", prog.attrib)
+            if key not in prog_map:
+                prog_map[key] = {
+                    "attrib": prog.attrib,
+                    "title": title,
+                    "regions": set()
+                }
 
-            # 复制子节点
-            for child in prog:
-                new_child = ET.SubElement(new_prog, child.tag)
-                new_child.text = child.text
+            prog_map[key]["regions"].add(region)
 
-            # 👉 防止重复 category
-            has_region = False
-            for c in prog.findall("category"):
-                if c.text and c.text.upper() == region:
-                    has_region = True
 
-            if not has_region:
-                ET.SubElement(new_prog, "category").text = region
+    # ---------------- 写 CHANNEL ---------------- #
+    for cid, info in channel_map.items():
+        ch = ET.SubElement(tv, "channel", {
+            "id": cid,
+            "source": ",".join(sorted(info["sources"]))
+        })
+
+        name = sorted(info["names"])[0] if info["names"] else cid
+
+        ET.SubElement(ch, "display-name").text = name
+
+        if info["icon"]:
+            ET.SubElement(ch, "icon", {"src": info["icon"]})
+
+
+    # ---------------- 写 PROGRAMME ---------------- #
+    for (cid, start, stop), info in prog_map.items():
+
+        prog = ET.SubElement(tv, "programme", {
+            "channel": cid,
+            "start": start,
+            "stop": stop
+        })
+
+        ET.SubElement(prog, "title").text = info["title"]
+
+        # 👉 合并地区（CN/HK/TW）
+        ET.SubElement(prog, "category").text = ",".join(sorted(info["regions"]))
+
 
     return tv, channel_map
 
@@ -139,7 +169,6 @@ def write_gz_xml(root):
 
     with gzip.open(OUTPUT_XML_GZ, "wb") as f:
         f.write(b'<?xml version="1.0" encoding="utf-8"?>\n')
-        f.write(b'<!DOCTYPE tv SYSTEM "xmltv.dtd">\n')
         f.write(xml_str)
 
     print("[OK] epg.xml.gz saved")
@@ -149,11 +178,12 @@ def write_gz_xml(root):
 def write_channels_json(channel_map):
     data = {}
 
-    for cid, names in channel_map.items():
+    for cid, info in channel_map.items():
         data[cid] = {
             "epgid": cid,
-            "logo": "",
-            "name": ",".join(names)
+            "name": ",".join(info["names"]),
+            "logo": info["icon"] or "",
+            "source": ",".join(info["sources"])
         }
 
     with open(OUTPUT_CHANNELS_JSON, "w", encoding="utf-8") as f:
@@ -171,7 +201,6 @@ def main():
 
     for line in lines:
         try:
-            # 👉 解析 region
             if "|" in line:
                 url, region = line.split("|", 1)
                 region = region.strip().upper()
