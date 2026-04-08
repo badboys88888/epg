@@ -102,8 +102,7 @@ def merge_roots(roots):
                 if not channel_map[cid]["icon"]:
                     channel_map[cid]["icon"] = icon.get("src")
 
-
-    # ---------------- PROGRAMME（核心优化） ---------------- #
+    # ---------------- PROGRAMME ---------------- #
     prog_map = {}
 
     for root, region in roots:
@@ -115,7 +114,7 @@ def merge_roots(roots):
             title_node = prog.find("title")
             title = title_node.text.strip() if title_node is not None and title_node.text else ""
 
-            # 👉 去重 key（不包含 region）
+            # ✅ 关键：包含 title 做唯一去重
             key = (cid, start, stop, title)
 
             if key not in prog_map:
@@ -126,7 +125,6 @@ def merge_roots(roots):
                 }
 
             prog_map[key]["regions"].add(region)
-
 
     # ---------------- 写 CHANNEL ---------------- #
     for cid, info in channel_map.items():
@@ -142,9 +140,8 @@ def merge_roots(roots):
         if info["icon"]:
             ET.SubElement(ch, "icon", {"src": info["icon"]})
 
-
     # ---------------- 写 PROGRAMME ---------------- #
-    for (cid, start, stop), info in prog_map.items():
+    for (cid, start, stop, title), info in prog_map.items():
 
         prog = ET.SubElement(tv, "programme", {
             "channel": cid,
@@ -152,11 +149,10 @@ def merge_roots(roots):
             "stop": stop
         })
 
-        ET.SubElement(prog, "title").text = info["title"]
+        ET.SubElement(prog, "title").text = title
 
-        # 👉 合并地区（CN/HK/TW）
+        # 合并来源地区
         ET.SubElement(prog, "category").text = ",".join(sorted(info["regions"]))
-
 
     return tv, channel_map
 
@@ -181,9 +177,9 @@ def write_channels_json(channel_map):
     for cid, info in channel_map.items():
         data[cid] = {
             "epgid": cid,
-            "name": ",".join(info["names"]),
+            "name": ",".join(sorted(info["names"])),
             "logo": info["icon"] or "",
-            "source": ",".join(info["sources"])
+            "source": ",".join(sorted(info["sources"]))
         }
 
     with open(OUTPUT_CHANNELS_JSON, "w", encoding="utf-8") as f:
