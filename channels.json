@@ -4324,11 +4324,6 @@
     "name": "CCTV4  HD,CCTV4",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609093540212401_87.png"
   },
-  "369627": {
-    "epgid": "369627",
-    "name": "Bloomberg TV HD,Bloomberg TV",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/BLOOMBERGTV.png"
-  },
   "369628": {
     "epgid": "369628",
     "name": "Astro AEC HD,Astro AEC",
@@ -4518,6 +4513,11 @@
     "epgid": "369679",
     "name": "TVB Xing He HD,TVB Xing He",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609093104731072_47.png"
+  },
+  "369680": {
+    "epgid": "369680",
+    "name": "Al-Hijrah",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
   "369681": {
     "epgid": "369681",
@@ -5024,6 +5024,11 @@
     "name": "RTM World",
     "logo": ""
   },
+  "536626": {
+    "epgid": "536626",
+    "name": "Astro Premier League 3",
+    "logo": ""
+  },
   "536935": {
     "epgid": "536935",
     "name": "Wai FM Iban",
@@ -5048,11 +5053,6 @@
     "epgid": "536939",
     "name": "Bintulu FM",
     "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030131654699_53.png"
-  },
-  "536940": {
-    "epgid": "536940",
-    "name": "Sri Aman FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030150265483_47.png"
   },
   "536941": {
     "epgid": "536941",
@@ -5169,15 +5169,15 @@
     "name": "Radio KLASIK",
     "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030340012421_75.png"
   },
-  "369680": {
-    "epgid": "369680",
-    "name": "Al-Hijrah",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
+  "369627": {
+    "epgid": "369627",
+    "name": "Bloomberg TV HD,Bloomberg TV",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/BLOOMBERGTV.png"
   },
-  "536626": {
-    "epgid": "536626",
-    "name": "Astro Premier League 3",
-    "logo": ""
+  "536940": {
+    "epgid": "536940",
+    "name": "Sri Aman FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030150265483_47.png"
   },
   "411231": {
     "epgid": "411231",
