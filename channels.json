@@ -3734,11 +3734,6 @@
     "name": "History HD,东风卫视,History",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HISTORY.png"
   },
-  "1584": {
-    "epgid": "1584",
-    "name": "Al-Hijrah,EVE",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
-  },
   "1781": {
     "epgid": "1781",
     "name": "Astro Quan Jia HD,Astro Quan Jia",
@@ -3813,11 +3808,6 @@
     "epgid": "2524",
     "name": "TVB Jade",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609081118011631_39.png"
-  },
-  "2552": {
-    "epgid": "2552",
-    "name": "Astro Arena HD,Astro Arena",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
   "2580": {
     "epgid": "2580",
@@ -3994,11 +3984,6 @@
     "name": "Nick Jr.",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NICKJR.png"
   },
-  "3625": {
-    "epgid": "3625",
-    "name": "Premier Sports",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/PREMIERSPORTS1.png"
-  },
   "3683": {
     "epgid": "3683",
     "name": "TV1 HD,TV1",
@@ -4079,11 +4064,6 @@
     "name": "TVS",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609104553161128_90.png"
   },
-  "3958": {
-    "epgid": "3958",
-    "name": "Astro Awani HD,Astro Awani",
-    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609105315486342_76.png"
-  },
   "3968": {
     "epgid": "3968",
     "name": "Lifetime HD,Lifetime",
@@ -4104,11 +4084,6 @@
     "name": "SHOWCASE MOVIES",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png"
   },
-  "4100": {
-    "epgid": "4100",
-    "name": "Astro Arena 2 HD,Astro Arena 2",
-    "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610053350102870_38.png"
-  },
   "4130": {
     "epgid": "4130",
     "name": "ABC Australia HD,ABC Australia",
@@ -4123,11 +4098,6 @@
     "epgid": "4146",
     "name": "beIN Sports 2",
     "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610054207896619_21.png"
-  },
-  "4160": {
-    "epgid": "4160",
-    "name": "TV Okey HD,TV Okey",
-    "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610054511299402_67.png"
   },
   "4171": {
     "epgid": "4171",
@@ -5014,11 +4984,6 @@
     "name": "Astro FAM Time",
     "logo": ""
   },
-  "535942": {
-    "epgid": "535942",
-    "name": "Astro Premier League 3",
-    "logo": ""
-  },
   "535993": {
     "epgid": "535993",
     "name": "RTM Asean",
@@ -5027,11 +4992,6 @@
   "535994": {
     "epgid": "535994",
     "name": "RTM World",
-    "logo": ""
-  },
-  "536626": {
-    "epgid": "536626",
-    "name": "Astro Premier League 3",
     "logo": ""
   },
   "536935": {
@@ -5179,6 +5139,46 @@
     "name": "Radio KLASIK",
     "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030340012421_75.png"
   },
+  "1584": {
+    "epgid": "1584",
+    "name": "Al-Hijrah,EVE",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
+  },
+  "2552": {
+    "epgid": "2552",
+    "name": "Astro Arena HD,Astro Arena",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
+  },
+  "3625": {
+    "epgid": "3625",
+    "name": "Premier Sports",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/PREMIERSPORTS1.png"
+  },
+  "3958": {
+    "epgid": "3958",
+    "name": "Astro Awani HD,Astro Awani",
+    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609105315486342_76.png"
+  },
+  "4100": {
+    "epgid": "4100",
+    "name": "Astro Arena 2 HD,Astro Arena 2",
+    "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610053350102870_38.png"
+  },
+  "4160": {
+    "epgid": "4160",
+    "name": "TV Okey HD,TV Okey",
+    "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610054511299402_67.png"
+  },
+  "535942": {
+    "epgid": "535942",
+    "name": "Astro Premier League 3",
+    "logo": ""
+  },
+  "536626": {
+    "epgid": "536626",
+    "name": "Astro Premier League 3",
+    "logo": ""
+  },
   "411231": {
     "epgid": "411231",
     "name": "Wai FM Iban",
@@ -5263,11 +5263,6 @@
     "epgid": "536615",
     "name": "Sibu FM",
     "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030142123379_82.png"
-  },
-  "536616": {
-    "epgid": "536616",
-    "name": "Sri Aman FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030150265483_47.png"
   },
   "536617": {
     "epgid": "536617",

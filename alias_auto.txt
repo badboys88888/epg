@@ -745,7 +745,6 @@
 1298=Celestial Movies
 1358=Discovery Asia
 1477=History
-1584=Al-Hijrah
 1781=Astro Quan Jia
 1835=BERNAMA
 1889=KBS World
@@ -761,7 +760,6 @@
 2384=Astro Ria
 2473=HGTV
 2524=TVB Jade
-2552=Astro Arena
 2580=beIN Sports
 2636=BOO
 2652=K-Plus
@@ -797,7 +795,6 @@
 3533=Astro Ceria
 3575=HITS Movies
 3600=Nick Jr.
-3625=Premier Sports
 3683=TV1
 3711=TV2
 3735=Astro Vaanavil
@@ -814,16 +811,13 @@
 3920=TVB Entertainment News
 3929=NHK World Premium
 3942=TVS
-3958=Astro Awani
 3968=Lifetime
 4019=BBC Lifestyle
 4030=BBC Earth
 4057=SHOWCASE MOVIES
-4100=Astro Arena 2
 4130=ABC Australia
 4136=Moonbug
 4146=beIN Sports 2
-4160=TV Okey
 4171=Love Nature 4K
 4181=Sun Life
 4183=KTV
@@ -1001,10 +995,8 @@
 523496=CricBuzz
 524198=Astro Sports Plus 2
 535446=Astro FAM Time
-535942=Astro Premier League 3
 535993=RTM Asean
 535994=RTM World
-536626=Astro Premier League 3
 536935=Wai FM Iban
 536936=Keningau FM
 536937=Sandakan FM
@@ -1034,6 +1026,14 @@
 536961=TRAXXfm
 536962=NASIONALfm
 536963=Radio KLASIK
+1584=Al-Hijrah
+2552=Astro Arena
+3625=Premier Sports
+3958=Astro Awani
+4100=Astro Arena 2
+4160=TV Okey
+535942=Astro Premier League 3
+536626=Astro Premier League 3
 411231=Wai FM Iban
 411236=Bintulu FM
 411240=Red FM
@@ -1051,7 +1051,6 @@
 535996=AIfm
 536476=NASIONALfm
 536615=Sibu FM
-536616=Sri Aman FM
 536617=Limbang FM
 536618=Langkawi FM
 536619=Melaka FM
