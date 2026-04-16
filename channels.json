@@ -3809,6 +3809,11 @@
     "name": "TVB Jade",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609081118011631_39.png"
   },
+  "2552": {
+    "epgid": "2552",
+    "name": "Astro Arena HD,Astro Arena",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
+  },
   "2580": {
     "epgid": "2580",
     "name": "beIN Sports HD,beIN Sports",
@@ -4064,6 +4069,11 @@
     "name": "TVS",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609104553161128_90.png"
   },
+  "3958": {
+    "epgid": "3958",
+    "name": "Astro Awani HD,Astro Awani",
+    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609105315486342_76.png"
+  },
   "3968": {
     "epgid": "3968",
     "name": "Lifetime HD,Lifetime",
@@ -4083,6 +4093,11 @@
     "epgid": "4057",
     "name": "SHOWCASE MOVIES",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png"
+  },
+  "4100": {
+    "epgid": "4100",
+    "name": "Astro Arena 2 HD,Astro Arena 2",
+    "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610053350102870_38.png"
   },
   "4130": {
     "epgid": "4130",
@@ -4994,6 +5009,11 @@
     "name": "RTM World",
     "logo": ""
   },
+  "536626": {
+    "epgid": "536626",
+    "name": "Astro Premier League 3",
+    "logo": ""
+  },
   "536935": {
     "epgid": "536935",
     "name": "Wai FM Iban",
@@ -5144,25 +5164,10 @@
     "name": "Al-Hijrah,EVE",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
-  "2552": {
-    "epgid": "2552",
-    "name": "Astro Arena HD,Astro Arena",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
-  },
   "3625": {
     "epgid": "3625",
     "name": "Premier Sports",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/PREMIERSPORTS1.png"
-  },
-  "3958": {
-    "epgid": "3958",
-    "name": "Astro Awani HD,Astro Awani",
-    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609105315486342_76.png"
-  },
-  "4100": {
-    "epgid": "4100",
-    "name": "Astro Arena 2 HD,Astro Arena 2",
-    "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610053350102870_38.png"
   },
   "4160": {
     "epgid": "4160",
@@ -5171,11 +5176,6 @@
   },
   "535942": {
     "epgid": "535942",
-    "name": "Astro Premier League 3",
-    "logo": ""
-  },
-  "536626": {
-    "epgid": "536626",
     "name": "Astro Premier League 3",
     "logo": ""
   },
