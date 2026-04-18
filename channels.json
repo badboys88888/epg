@@ -1529,6 +1529,11 @@
     "name": "頻道總表",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919164924556572_29.png"
   },
+  "457209": {
+    "epgid": "457209",
+    "name": "民視HD,民視",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919164940074251_66.png"
+  },
   "457210": {
     "epgid": "457210",
     "name": "人間衛視HD,人間衛視",
@@ -1989,6 +1994,11 @@
     "name": "ETtoday綜合台",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ETTODAY.png"
   },
+  "457304": {
+    "epgid": "457304",
+    "name": "民視第一台HD,民視第一台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171413138830_75.png"
+  },
   "457305": {
     "epgid": "457305",
     "name": "民視台灣台HD,民視台灣台",
@@ -2278,11 +2288,6 @@
     "epgid": "457364",
     "name": "龍華洋片HD,龍華洋片",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173210969684_85.png"
-  },
-  "457365": {
-    "epgid": "457365",
-    "name": "Warner TV HD,Warner TV",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173225968998_91.png"
   },
   "457366": {
     "epgid": "457366",
@@ -3574,20 +3579,15 @@
     "name": "TV5MONDE STYLE HD 生活時尚",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TV5MONDESTYLE.png"
   },
+  "457365": {
+    "epgid": "457365",
+    "name": "Warner TV HD,Warner TV",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173225968998_91.png"
+  },
   "457353": {
     "epgid": "457353",
     "name": "FRANCE24E HD,FRANCE24E",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png"
-  },
-  "457209": {
-    "epgid": "457209",
-    "name": "民視HD,民視",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919164940074251_66.png"
-  },
-  "457304": {
-    "epgid": "457304",
-    "name": "民視第一台HD,民視第一台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171413138830_75.png"
   },
   "491": {
     "epgid": "491",
@@ -5014,6 +5014,11 @@
     "name": "Astro FAM Time",
     "logo": ""
   },
+  "535942": {
+    "epgid": "535942",
+    "name": "Astro Premier League 3",
+    "logo": ""
+  },
   "535993": {
     "epgid": "535993",
     "name": "RTM Asean",
@@ -5184,9 +5189,14 @@
     "name": "Snap",
     "logo": "https://epg.pw/media/images/epg/2026/04/17/20260417030024461072_91.jpg"
   },
-  "535942": {
-    "epgid": "535942",
-    "name": "Astro Premier League 3",
+  "538269": {
+    "epgid": "538269",
+    "name": "Astro Premier League 4",
+    "logo": ""
+  },
+  "538300": {
+    "epgid": "538300",
+    "name": "Lead",
     "logo": ""
   },
   "411231": {
