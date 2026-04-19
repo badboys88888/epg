@@ -2359,11 +2359,6 @@
     "name": "佛衛慈悲台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173543930752_65.png"
   },
-  "457380": {
-    "epgid": "457380",
-    "name": "華藏衛視HD,華藏衛視",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173558476822_82.png"
-  },
   "457381": {
     "epgid": "457381",
     "name": "正德電視台HD,正德電視台",
@@ -3579,6 +3574,11 @@
     "name": "TV5MONDE STYLE HD 生活時尚",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TV5MONDESTYLE.png"
   },
+  "457380": {
+    "epgid": "457380",
+    "name": "華藏衛視HD,華藏衛視",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173558476822_82.png"
+  },
   "457365": {
     "epgid": "457365",
     "name": "Warner TV HD,Warner TV",
@@ -4519,16 +4519,6 @@
     "name": "TVB Xing He HD,TVB Xing He",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609093104731072_47.png"
   },
-  "369680": {
-    "epgid": "369680",
-    "name": "Al-Hijrah",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
-  },
-  "369681": {
-    "epgid": "369681",
-    "name": "TV Okey HD,TV Okey",
-    "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610054511299402_67.png"
-  },
   "369682": {
     "epgid": "369682",
     "name": "Phoenix Info News HD,Phoenix Info News",
@@ -4813,11 +4803,6 @@
     "epgid": "399507",
     "name": "KTV",
     "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610055032033271_92.png"
-  },
-  "399508": {
-    "epgid": "399508",
-    "name": "Astro Arena 2",
-    "logo": ""
   },
   "399509": {
     "epgid": "399509",
@@ -5197,6 +5182,21 @@
   "538300": {
     "epgid": "538300",
     "name": "Lead",
+    "logo": ""
+  },
+  "369680": {
+    "epgid": "369680",
+    "name": "Al-Hijrah",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
+  },
+  "369681": {
+    "epgid": "369681",
+    "name": "TV Okey HD,TV Okey",
+    "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610054511299402_67.png"
+  },
+  "399508": {
+    "epgid": "399508",
+    "name": "Astro Arena 2",
     "logo": ""
   },
   "411231": {
