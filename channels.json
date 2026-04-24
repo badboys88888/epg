@@ -1534,6 +1534,11 @@
     "name": "人間衛視HD,人間衛視",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919164954903895_76.png"
   },
+  "457211": {
+    "epgid": "457211",
+    "name": "台視HD,台視",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919165016546996_93.png"
+  },
   "457212": {
     "epgid": "457212",
     "name": "大愛電視HD,大愛電視",
@@ -1714,10 +1719,25 @@
     "name": "博斯高球二台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170052267212_87.png"
   },
+  "457249": {
+    "epgid": "457249",
+    "name": "博斯網球HD,博斯網球",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170104225630_51.png"
+  },
   "457250": {
     "epgid": "457250",
     "name": "博斯魅力HD,博斯魅力",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170116799867_91.png"
+  },
+  "457251": {
+    "epgid": "457251",
+    "name": "博斯無限台HD,博斯無限台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170128609835_42.png"
+  },
+  "457252": {
+    "epgid": "457252",
+    "name": "博斯無限二台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170140695264_56.png"
   },
   "457253": {
     "epgid": "457253",
@@ -1733,6 +1753,11 @@
     "epgid": "457255",
     "name": "博斯運動一台",
     "logo": "https://epg.pw/media/images/epg/2026/03/06/20260306050103919090_98.png"
+  },
+  "457256": {
+    "epgid": "457256",
+    "name": "博斯運動二台HD,博斯運動二台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170233978731_90.png"
   },
   "457257": {
     "epgid": "457257",
@@ -1913,6 +1938,11 @@
     "epgid": "457293",
     "name": "Smart 知識HD,Smart 知識",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171141942892_60.png"
+  },
+  "457294": {
+    "epgid": "457294",
+    "name": "台視綜合",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171156069509_21.png"
   },
   "457295": {
     "epgid": "457295",
@@ -2114,6 +2144,11 @@
     "name": "寰宇新聞台灣台HD,寰宇新聞台灣台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172247086233_37.png"
   },
+  "457336": {
+    "epgid": "457336",
+    "name": "台視新聞HD,台視新聞",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172301041141_21.png"
+  },
   "457337": {
     "epgid": "457337",
     "name": "三立財經新聞台HD,三立財經新聞台",
@@ -2143,6 +2178,11 @@
     "epgid": "457342",
     "name": "寰宇財經HD,寰宇財經",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172446201175_37.png"
+  },
+  "457343": {
+    "epgid": "457343",
+    "name": "台視財經HD,台視財經",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172508628996_46.png"
   },
   "457344": {
     "epgid": "457344",
@@ -2273,6 +2313,11 @@
     "epgid": "457371",
     "name": "華藝影劇台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173347105135_84.png"
+  },
+  "457372": {
+    "epgid": "457372",
+    "name": "CatchPlay HD,CatchPlay",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CATCHPLAY.png"
   },
   "457373": {
     "epgid": "457373",
@@ -3524,50 +3569,10 @@
     "name": "DAZN 3",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DAZN.png"
   },
-  "457211": {
-    "epgid": "457211",
-    "name": "台視HD,台視",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919165016546996_93.png"
-  },
-  "457294": {
-    "epgid": "457294",
-    "name": "台視綜合",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171156069509_21.png"
-  },
-  "457336": {
-    "epgid": "457336",
-    "name": "台視新聞HD,台視新聞",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172301041141_21.png"
-  },
-  "457343": {
-    "epgid": "457343",
-    "name": "台視財經HD,台視財經",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172508628996_46.png"
-  },
   "457353": {
     "epgid": "457353",
     "name": "FRANCE24E HD,FRANCE24E",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png"
-  },
-  "457249": {
-    "epgid": "457249",
-    "name": "博斯網球HD,博斯網球",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170104225630_51.png"
-  },
-  "457251": {
-    "epgid": "457251",
-    "name": "博斯無限台HD,博斯無限台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170128609835_42.png"
-  },
-  "457252": {
-    "epgid": "457252",
-    "name": "博斯無限二台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170140695264_56.png"
-  },
-  "457256": {
-    "epgid": "457256",
-    "name": "博斯運動二台HD,博斯運動二台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170233978731_90.png"
   },
   "457209": {
     "epgid": "457209",
@@ -3578,11 +3583,6 @@
     "epgid": "457304",
     "name": "民視第一台HD,民視第一台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171413138830_75.png"
-  },
-  "457372": {
-    "epgid": "457372",
-    "name": "CatchPlay HD,CatchPlay",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CATCHPLAY.png"
   },
   "474641": {
     "epgid": "474641",
@@ -3733,6 +3733,11 @@
     "epgid": "1477",
     "name": "History HD,东风卫视,History",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HISTORY.png"
+  },
+  "1584": {
+    "epgid": "1584",
+    "name": "Al-Hijrah,EVE",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
   "1781": {
     "epgid": "1781",
@@ -4333,11 +4338,6 @@
     "epgid": "369631",
     "name": "KENYALANG",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609080713931920_30.png"
-  },
-  "369632": {
-    "epgid": "369632",
-    "name": "DW English",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DW.png"
   },
   "369633": {
     "epgid": "369633",
@@ -5184,15 +5184,15 @@
     "name": "Lead",
     "logo": ""
   },
+  "369632": {
+    "epgid": "369632",
+    "name": "DW English",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DW.png"
+  },
   "538921": {
     "epgid": "538921",
     "name": "Astro Premier League 4",
     "logo": ""
-  },
-  "1584": {
-    "epgid": "1584",
-    "name": "Al-Hijrah,EVE",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
   "535942": {
     "epgid": "535942",
