@@ -3939,11 +3939,6 @@
     "name": "Cartoon Network HD,Cartoon Network",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CARTOONNETWORK.png"
   },
-  "3416": {
-    "epgid": "3416",
-    "name": "Al Jazeera English HD,Al Jazeera English",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ALJAZEERA.png"
-  },
   "3437": {
     "epgid": "3437",
     "name": "Discovery Channel HD,Discovery Channel",
@@ -5174,14 +5169,19 @@
     "name": "Snap",
     "logo": "https://epg.pw/media/images/epg/2026/04/17/20260417030024461072_91.jpg"
   },
-  "538269": {
-    "epgid": "538269",
-    "name": "Astro Premier League 4",
-    "logo": ""
-  },
   "538300": {
     "epgid": "538300",
     "name": "Lead",
+    "logo": ""
+  },
+  "3416": {
+    "epgid": "3416",
+    "name": "Al Jazeera English HD,Al Jazeera English",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ALJAZEERA.png"
+  },
+  "538269": {
+    "epgid": "538269",
+    "name": "Astro Premier League 4",
     "logo": ""
   },
   "538921": {
