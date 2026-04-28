@@ -3914,6 +3914,11 @@
     "name": "iQIYI HD,iQIYI",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609085652963165_85.png"
   },
+  "3308": {
+    "epgid": "3308",
+    "name": "Star Vijay HD,Star Vijay",
+    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609085931753996_83.png"
+  },
   "3325": {
     "epgid": "3325",
     "name": "Colors Hindi HD,Colors Hindi",
@@ -3938,6 +3943,11 @@
     "epgid": "3403",
     "name": "Cartoon Network HD,Cartoon Network",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CARTOONNETWORK.png"
+  },
+  "3416": {
+    "epgid": "3416",
+    "name": "Al Jazeera English HD,Al Jazeera English",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ALJAZEERA.png"
   },
   "3437": {
     "epgid": "3437",
@@ -4999,11 +5009,6 @@
     "name": "Astro FAM Time",
     "logo": ""
   },
-  "535942": {
-    "epgid": "535942",
-    "name": "Astro Premier League 3",
-    "logo": ""
-  },
   "535993": {
     "epgid": "535993",
     "name": "RTM Asean",
@@ -5174,18 +5179,13 @@
     "name": "Lead",
     "logo": ""
   },
-  "3416": {
-    "epgid": "3416",
-    "name": "Al Jazeera English HD,Al Jazeera English",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ALJAZEERA.png"
+  "535942": {
+    "epgid": "535942",
+    "name": "Astro Premier League 3",
+    "logo": ""
   },
   "538269": {
     "epgid": "538269",
-    "name": "Astro Premier League 4",
-    "logo": ""
-  },
-  "538921": {
-    "epgid": "538921",
     "name": "Astro Premier League 4",
     "logo": ""
   },
@@ -5193,11 +5193,6 @@
     "epgid": "539586",
     "name": "Astro Premier League 5",
     "logo": ""
-  },
-  "3308": {
-    "epgid": "3308",
-    "name": "Star Vijay HD,Star Vijay",
-    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609085931753996_83.png"
   },
   "3313": {
     "epgid": "3313",
