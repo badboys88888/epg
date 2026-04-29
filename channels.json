@@ -3734,20 +3734,10 @@
     "name": "History HD,东风卫视,History",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HISTORY.png"
   },
-  "1584": {
-    "epgid": "1584",
-    "name": "Al-Hijrah,EVE",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
-  },
   "1781": {
     "epgid": "1781",
     "name": "Astro Quan Jia HD,Astro Quan Jia",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
-  },
-  "1835": {
-    "epgid": "1835",
-    "name": "BERNAMA,EUROSPORT",
-    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609080936076627_89.png"
   },
   "1889": {
     "epgid": "1889",
@@ -3918,6 +3908,11 @@
     "epgid": "3308",
     "name": "Star Vijay HD,Star Vijay",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609085931753996_83.png"
+  },
+  "3313": {
+    "epgid": "3313",
+    "name": "SUN TV HD,SUN TV",
+    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609090146766775_54.png"
   },
   "3325": {
     "epgid": "3325",
@@ -5179,6 +5174,31 @@
     "name": "Lead",
     "logo": ""
   },
+  "540529": {
+    "epgid": "540529",
+    "name": "Astro Premier League 5",
+    "logo": ""
+  },
+  "540530": {
+    "epgid": "540530",
+    "name": "Astro Premier League 4",
+    "logo": ""
+  },
+  "540531": {
+    "epgid": "540531",
+    "name": "Astro Premier League 3",
+    "logo": ""
+  },
+  "1584": {
+    "epgid": "1584",
+    "name": "Al-Hijrah,EVE",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
+  },
+  "1835": {
+    "epgid": "1835",
+    "name": "BERNAMA,EUROSPORT",
+    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609080936076627_89.png"
+  },
   "535942": {
     "epgid": "535942",
     "name": "Astro Premier League 3",
@@ -5192,16 +5212,6 @@
   "539586": {
     "epgid": "539586",
     "name": "Astro Premier League 5",
-    "logo": ""
-  },
-  "3313": {
-    "epgid": "3313",
-    "name": "SUN TV HD,SUN TV",
-    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609090146766775_54.png"
-  },
-  "536626": {
-    "epgid": "536626",
-    "name": "Astro Premier League 3",
     "logo": ""
   },
   "369713": {
