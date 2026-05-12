@@ -8579,11 +8579,6 @@
     "name": "四海钓鱼",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/四海钓鱼.png"
   },
-  "1697": {
-    "epgid": "1697",
-    "name": "环球旅游",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/环球旅游.png"
-  },
   "1712": {
     "epgid": "1712",
     "name": "财富天下",
@@ -9059,6 +9054,11 @@
     "name": "新视觉",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/新视觉.png"
   },
+  "1273": {
+    "epgid": "1273",
+    "name": "法治天地",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/法治天地.png"
+  },
   "1276": {
     "epgid": "1276",
     "name": "全纪实",
@@ -9429,6 +9429,11 @@
     "name": "湖南爱晚",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/湖南爱晚.png"
   },
+  "2008": {
+    "epgid": "2008",
+    "name": "山东新闻",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/山东新闻.png"
+  },
   "2011": {
     "epgid": "2011",
     "name": "江西都市",
@@ -9459,35 +9464,15 @@
     "name": "福建综合",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/福建综合.png"
   },
-  "2021": {
-    "epgid": "2021",
-    "name": "福建公共",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/福建公共.png"
-  },
   "2022": {
     "epgid": "2022",
     "name": "福建新闻",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/福建新闻.png"
   },
-  "2023": {
-    "epgid": "2023",
-    "name": "福建电视剧",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/福建电视剧.png"
-  },
   "2024": {
     "epgid": "2024",
     "name": "福建旅游",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/福建旅游.png"
-  },
-  "2025": {
-    "epgid": "2025",
-    "name": "福建经济",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/福建经济.png"
-  },
-  "2026": {
-    "epgid": "2026",
-    "name": "福建体育",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/福建体育.png"
   },
   "2027": {
     "epgid": "2027",
