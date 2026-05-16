@@ -69,6 +69,7 @@
 370233=靖天戲劇台
 370234=靖洋戲劇台
 370235=CI 罪案偵查頻道
+370236=視納華仁紀實頻道
 370238=金光布袋戲
 370239=ROCK Action
 370240=采昌影劇台
@@ -393,6 +394,7 @@
 457301=緯來精采
 457302=高點育樂台
 457303=ETtoday綜合台
+457304=民視第一台
 457305=民視台灣台
 457306=Nice TV 靖天歡樂台
 457307=八大優頻道
@@ -441,9 +443,11 @@
 457350=CNBC Asia
 457351=Euronews
 457352=德國之聲
+457353=FRANCE24E
 457354=TaiwanPlus
 457355=NHK新聞資訊台
 457356=半島英語新聞台Al Jazeera English
+457358=視納華仁紀實台
 457359=影迷數位紀實台
 457360=美亞電影
 457361=龍華電影
@@ -714,10 +718,6 @@
 544783=博斯運動二台
 544784=博斯魅力台
 544785=博斯無限二台
-370236=視納華仁紀實頻道
-457353=FRANCE24E
-457304=民視第一台
-457358=視納華仁紀實台
 491=ERA FM
 492=MY FM
 493=OPUS
@@ -979,12 +979,12 @@
 517641=Astro Showtime
 517642=Rock X Stream
 519419=Astro First
+519420=Astro First
 519423=Astro First
 519425=Astro First
 519428=Astro First
 519430=Astro First
 519886=Astro First
-519887=Astro First
 519888=Astro First
 519889=Astro First
 519890=Astro First
@@ -1033,7 +1033,7 @@
 538300=Lead
 544941=Astro Premier League 4
 544942=Astro Premier League 3
-519420=Astro First
+519887=Astro First
 535942=Astro Premier League 3
 544555=Astro Premier League 4
 369713=FOX News Channel

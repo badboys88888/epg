@@ -354,6 +354,11 @@
     "name": "CI 罪案偵查頻道",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CI.png"
   },
+  "370236": {
+    "epgid": "370236",
+    "name": "視納華仁紀實頻道",
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111550854141_33.png"
+  },
   "370238": {
     "epgid": "370238",
     "name": "金光布袋戲",
@@ -1974,6 +1979,11 @@
     "name": "ETtoday綜合台",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ETTODAY.png"
   },
+  "457304": {
+    "epgid": "457304",
+    "name": "民視第一台HD,民視第一台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171413138830_75.png"
+  },
   "457305": {
     "epgid": "457305",
     "name": "民視台灣台HD,民視台灣台",
@@ -2214,6 +2224,11 @@
     "name": "德國之聲",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172810625748_52.png"
   },
+  "457353": {
+    "epgid": "457353",
+    "name": "FRANCE24E HD,FRANCE24E",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png"
+  },
   "457354": {
     "epgid": "457354",
     "name": "TaiwanPlus",
@@ -2228,6 +2243,11 @@
     "epgid": "457356",
     "name": "半島英語新聞台Al Jazeera English HD,半島英語新聞台Al Jazeera English",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172938466166_87.png"
+  },
+  "457358": {
+    "epgid": "457358",
+    "name": "視納華仁紀實台HD,視納華仁紀實台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173018133016_34.png"
   },
   "457359": {
     "epgid": "457359",
@@ -3579,26 +3599,6 @@
     "name": "博斯無限二台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170140695264_56.png"
   },
-  "370236": {
-    "epgid": "370236",
-    "name": "視納華仁紀實頻道",
-    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111550854141_33.png"
-  },
-  "457353": {
-    "epgid": "457353",
-    "name": "FRANCE24E HD,FRANCE24E",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png"
-  },
-  "457304": {
-    "epgid": "457304",
-    "name": "民視第一台HD,民視第一台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171413138830_75.png"
-  },
-  "457358": {
-    "epgid": "457358",
-    "name": "視納華仁紀實台HD,視納華仁紀實台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173018133016_34.png"
-  },
   "491": {
     "epgid": "491",
     "name": "ERA FM",
@@ -4904,6 +4904,11 @@
     "name": "Astro First HD,Astro First",
     "logo": ""
   },
+  "519420": {
+    "epgid": "519420",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
   "519423": {
     "epgid": "519423",
     "name": "Astro First HD,Astro First",
@@ -4926,11 +4931,6 @@
   },
   "519886": {
     "epgid": "519886",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519887": {
-    "epgid": "519887",
     "name": "Astro First HD,Astro First",
     "logo": ""
   },
@@ -5174,8 +5174,8 @@
     "name": "Astro Premier League 3",
     "logo": ""
   },
-  "519420": {
-    "epgid": "519420",
+  "519887": {
+    "epgid": "519887",
     "name": "Astro First HD,Astro First",
     "logo": ""
   },
