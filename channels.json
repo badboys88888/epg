@@ -9634,6 +9634,11 @@
     "name": "华视新闻",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/华视新闻.png"
   },
+  "218": {
+    "epgid": "218",
+    "name": "GoodTV2",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/GOODTV2.png"
+  },
   "220": {
     "epgid": "220",
     "name": "创世电视",
@@ -9653,11 +9658,6 @@
     "epgid": "226",
     "name": "BBCWorldNews",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/BBCWORLDNEWS.png"
-  },
-  "229": {
-    "epgid": "229",
-    "name": "BBC",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/BBC.png"
   },
   "230": {
     "epgid": "230",
@@ -10033,11 +10033,6 @@
     "epgid": "1530",
     "name": "三立财经新闻台",
     "logo": ""
-  },
-  "1532": {
-    "epgid": "1532",
-    "name": "运通财经",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/运通财经.png"
   },
   "1533": {
     "epgid": "1533",
