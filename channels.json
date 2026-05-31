@@ -7732,7 +7732,7 @@
   "548130": {
     "epgid": "548130",
     "name": "Channel 251",
-    "logo": ""
+    "logo": "https://epg.pw/media/images/epg/2026/05/31/20260531042456333950_88.png"
   },
   "548131": {
     "epgid": "548131",
@@ -9419,6 +9419,11 @@
     "name": "优漫卡通",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/优漫卡通.png"
   },
+  "349": {
+    "epgid": "349",
+    "name": "江苏新闻",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/江苏新闻.png"
+  },
   "351": {
     "epgid": "351",
     "name": "江苏综艺",
@@ -9598,11 +9603,6 @@
     "epgid": "933",
     "name": "云南都市",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/云南都市.png"
-  },
-  "934": {
-    "epgid": "934",
-    "name": "云南影视",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/云南影视.png"
   },
   "936": {
     "epgid": "936",
@@ -9813,11 +9813,6 @@
     "epgid": "1273",
     "name": "法治天地",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/法治天地.png"
-  },
-  "1274": {
-    "epgid": "1274",
-    "name": "金色",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/金色.png"
   },
   "1276": {
     "epgid": "1276",
@@ -10188,6 +10183,11 @@
     "epgid": "2002",
     "name": "湖南爱晚",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/湖南爱晚.png"
+  },
+  "2007": {
+    "epgid": "2007",
+    "name": "山东文旅",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/山东文旅.png"
   },
   "2011": {
     "epgid": "2011",
@@ -11239,11 +11239,6 @@
     "name": "影迷数位电影",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/影迷数位电影.png"
   },
-  "1810": {
-    "epgid": "1810",
-    "name": "ELTV",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ELTV.png"
-  },
   "1811": {
     "epgid": "1811",
     "name": "靖天国际",
@@ -11383,11 +11378,6 @@
     "epgid": "1870",
     "name": "globaltrekker",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/GLOBALTREKKER.png"
-  },
-  "2055": {
-    "epgid": "2055",
-    "name": "凤凰电影",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/凤凰电影.png"
   },
   "368322": {
     "epgid": "368322",
