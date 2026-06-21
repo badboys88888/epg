@@ -7584,6 +7584,11 @@
     "name": "优漫卡通",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/优漫卡通.png"
   },
+  "349": {
+    "epgid": "349",
+    "name": "江苏新闻",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/江苏新闻.png"
+  },
   "351": {
     "epgid": "351",
     "name": "江苏综艺",
@@ -7763,11 +7768,6 @@
     "epgid": "933",
     "name": "云南都市",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/云南都市.png"
-  },
-  "934": {
-    "epgid": "934",
-    "name": "云南影视",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/云南影视.png"
   },
   "936": {
     "epgid": "936",
@@ -8353,6 +8353,16 @@
     "epgid": "2002",
     "name": "湖南爱晚",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/湖南爱晚.png"
+  },
+  "2007": {
+    "epgid": "2007",
+    "name": "山东文旅",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/山东文旅.png"
+  },
+  "2008": {
+    "epgid": "2008",
+    "name": "山东新闻",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/山东新闻.png"
   },
   "2011": {
     "epgid": "2011",
@@ -9548,11 +9558,6 @@
     "epgid": "1870",
     "name": "globaltrekker",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/GLOBALTREKKER.png"
-  },
-  "2055": {
-    "epgid": "2055",
-    "name": "凤凰电影",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/凤凰电影.png"
   },
   "368550": {
     "epgid": "368550",
