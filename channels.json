@@ -1484,11 +1484,6 @@
     "name": "香蕉台",
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917053831077001_42.jpg"
   },
-  "456843": {
-    "epgid": "456843",
-    "name": "樂活頻道",
-    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917053846811460_82.jpg"
-  },
   "456844": {
     "epgid": "456844",
     "name": "玩家頻道",
@@ -1508,6 +1503,11 @@
     "epgid": "457208",
     "name": "頻道總表",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919164924556572_29.png"
+  },
+  "457209": {
+    "epgid": "457209",
+    "name": "民視HD,民視",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919164940074251_66.png"
   },
   "457210": {
     "epgid": "457210",
@@ -1673,6 +1673,11 @@
     "epgid": "457244",
     "name": "愛爾達體育2台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170004562118_16.png"
+  },
+  "457245": {
+    "epgid": "457245",
+    "name": "愛爾達體育3台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170017338225_42.png"
   },
   "457246": {
     "epgid": "457246",
@@ -1954,6 +1959,11 @@
     "name": "高點育樂台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171344799186_72.png"
   },
+  "457304": {
+    "epgid": "457304",
+    "name": "民視第一台HD,民視第一台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171413138830_75.png"
+  },
   "457305": {
     "epgid": "457305",
     "name": "民視台灣台HD,民視台灣台",
@@ -1978,6 +1988,11 @@
     "epgid": "457309",
     "name": "momo2台HD,momo2台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171559507833_83.png"
+  },
+  "457310": {
+    "epgid": "457310",
+    "name": "東森購物3台HD,東森購物3台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171613391209_93.png"
   },
   "457311": {
     "epgid": "457311",
@@ -2024,6 +2039,11 @@
     "name": "EYE TV戲劇台HD,EYE TV戲劇台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171817556696_65.png"
   },
+  "457320": {
+    "epgid": "457320",
+    "name": "東森購物2台HD,東森購物2台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171831230740_52.png"
+  },
   "457321": {
     "epgid": "457321",
     "name": "靖天日本HD,靖天日本",
@@ -2043,6 +2063,11 @@
     "epgid": "457324",
     "name": "OUTtv HD,OUTtv",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171947466637_84.png"
+  },
+  "457325": {
+    "epgid": "457325",
+    "name": "tvN HD,tvN",
+    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609081045631403_71.png"
   },
   "457326": {
     "epgid": "457326",
@@ -2073,6 +2098,11 @@
     "epgid": "457331",
     "name": "momo1台HD,momo1台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172149721207_37.png"
+  },
+  "457332": {
+    "epgid": "457332",
+    "name": "東森購物4台HD,東森購物4台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172204722946_13.png"
   },
   "457333": {
     "epgid": "457333",
@@ -2133,6 +2163,11 @@
     "epgid": "457344",
     "name": "美好1台HD,美好1台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172534569343_73.png"
+  },
+  "457345": {
+    "epgid": "457345",
+    "name": "東森購物5台HD,東森購物5台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172551867978_68.png"
   },
   "457346": {
     "epgid": "457346",
@@ -2349,6 +2384,11 @@
     "name": "Arirang TV HD,Arirang TV",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ARIRANGTV.png"
   },
+  "476521": {
+    "epgid": "476521",
+    "name": "東森購物1台HD,東森購物1台",
+    "logo": "https://epg.pw/media/images/epg/2025/11/01/20251101045150129882_38.png"
+  },
   "485011": {
     "epgid": "485011",
     "name": "彰化生活台",
@@ -2514,10 +2554,10 @@
     "name": "ABC Australia 澳洲公廣頻道",
     "logo": "https://epg.pw/media/images/epg/2026/06/11/20260611050453051249_90.png"
   },
-  "457245": {
-    "epgid": "457245",
-    "name": "愛爾達體育3台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170017338225_42.png"
+  "456843": {
+    "epgid": "456843",
+    "name": "樂活頻道",
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917053846811460_82.jpg"
   },
   "457358": {
     "epgid": "457358",
@@ -2528,31 +2568,6 @@
     "epgid": "457303",
     "name": "ETtoday綜合台",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ETTODAY.png"
-  },
-  "457310": {
-    "epgid": "457310",
-    "name": "東森購物3台HD,東森購物3台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171613391209_93.png"
-  },
-  "457320": {
-    "epgid": "457320",
-    "name": "東森購物2台HD,東森購物2台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171831230740_52.png"
-  },
-  "457325": {
-    "epgid": "457325",
-    "name": "tvN HD,tvN",
-    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609081045631403_71.png"
-  },
-  "457332": {
-    "epgid": "457332",
-    "name": "東森購物4台HD,東森購物4台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172204722946_13.png"
-  },
-  "457345": {
-    "epgid": "457345",
-    "name": "東森購物5台HD,東森購物5台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172551867978_68.png"
   },
   "457349": {
     "epgid": "457349",
@@ -2569,25 +2584,10 @@
     "name": "富立電視台HD,富立電視台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173744621707_19.png"
   },
-  "476521": {
-    "epgid": "476521",
-    "name": "東森購物1台HD,東森購物1台",
-    "logo": "https://epg.pw/media/images/epg/2025/11/01/20251101045150129882_38.png"
-  },
   "457353": {
     "epgid": "457353",
     "name": "FRANCE24E HD,FRANCE24E",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png"
-  },
-  "457209": {
-    "epgid": "457209",
-    "name": "民視HD,民視",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919164940074251_66.png"
-  },
-  "457304": {
-    "epgid": "457304",
-    "name": "民視第一台HD,民視第一台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171413138830_75.png"
   },
   "1072": {
     "epgid": "1072",
