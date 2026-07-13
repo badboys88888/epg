@@ -4157,7 +4157,7 @@
   "556762": {
     "epgid": "556762",
     "name": "Dewan Negara",
-    "logo": ""
+    "logo": "https://epg.pw/media/images/epg/2026/07/13/20260713030345074542_66.png"
   },
   "554726": {
     "epgid": "554726",
@@ -7409,11 +7409,6 @@
     "name": "央视精品",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/央视精品.png"
   },
-  "1662": {
-    "epgid": "1662",
-    "name": "汽摩",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/汽摩.png"
-  },
   "1667": {
     "epgid": "1667",
     "name": "天元围棋",
@@ -7568,11 +7563,6 @@
     "epgid": "348",
     "name": "优漫卡通",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/优漫卡通.png"
-  },
-  "349": {
-    "epgid": "349",
-    "name": "江苏新闻",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/江苏新闻.png"
   },
   "351": {
     "epgid": "351",
@@ -7793,16 +7783,6 @@
     "epgid": "1081",
     "name": "湖北教育",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/湖北教育.png"
-  },
-  "1082": {
-    "epgid": "1082",
-    "name": "湖北生活",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/湖北生活.png"
-  },
-  "1084": {
-    "epgid": "1084",
-    "name": "湖北公共",
-    "logo": ""
   },
   "1085": {
     "epgid": "1085",
@@ -8338,11 +8318,6 @@
     "epgid": "2002",
     "name": "湖南爱晚",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/湖南爱晚.png"
-  },
-  "2007": {
-    "epgid": "2007",
-    "name": "山东文旅",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/山东文旅.png"
   },
   "2011": {
     "epgid": "2011",
@@ -9538,6 +9513,11 @@
     "epgid": "1870",
     "name": "globaltrekker",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/GLOBALTREKKER.png"
+  },
+  "2055": {
+    "epgid": "2055",
+    "name": "凤凰电影",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/凤凰电影.png"
   },
   "368550": {
     "epgid": "368550",
