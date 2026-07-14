@@ -1504,11 +1504,6 @@
     "name": "頻道總表",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919164924556572_29.png"
   },
-  "457209": {
-    "epgid": "457209",
-    "name": "民視HD,民視",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919164940074251_66.png"
-  },
   "457210": {
     "epgid": "457210",
     "name": "人間衛視HD,人間衛視",
@@ -1638,11 +1633,6 @@
     "epgid": "457236",
     "name": "Medici-arts HD,Medici-arts",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CI.png"
-  },
-  "457238": {
-    "epgid": "457238",
-    "name": "MTV綜合台HD,MTV綜合台",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MTV.png"
   },
   "457239": {
     "epgid": "457239",
@@ -1869,11 +1859,6 @@
     "name": "亞洲旅遊HD,亞洲旅遊",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170912098723_29.png"
   },
-  "457284": {
-    "epgid": "457284",
-    "name": "EYE TV旅遊台HD,EYE TV旅遊台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170925819253_83.png"
-  },
   "457285": {
     "epgid": "457285",
     "name": "Travel Channel HD,Travel Channel",
@@ -1964,11 +1949,6 @@
     "name": "ETtoday綜合台",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ETTODAY.png"
   },
-  "457304": {
-    "epgid": "457304",
-    "name": "民視第一台HD,民視第一台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171413138830_75.png"
-  },
   "457305": {
     "epgid": "457305",
     "name": "民視台灣台HD,民視台灣台",
@@ -2038,11 +2018,6 @@
     "epgid": "457318",
     "name": "靖洋戲劇HD,靖洋戲劇",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171803858860_51.png"
-  },
-  "457319": {
-    "epgid": "457319",
-    "name": "EYE TV戲劇台HD,EYE TV戲劇台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171817556696_65.png"
   },
   "457320": {
     "epgid": "457320",
@@ -2298,11 +2273,6 @@
     "epgid": "457371",
     "name": "華藝影劇台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173347105135_84.png"
-  },
-  "457372": {
-    "epgid": "457372",
-    "name": "CatchPlay HD,CatchPlay",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CATCHPLAY.png"
   },
   "457373": {
     "epgid": "457373",
@@ -2573,6 +2543,36 @@
     "epgid": "550115",
     "name": "ABC Australia 澳洲公廣頻道",
     "logo": "https://epg.pw/media/images/epg/2026/06/11/20260611050453051249_90.png"
+  },
+  "457209": {
+    "epgid": "457209",
+    "name": "民視HD,民視",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919164940074251_66.png"
+  },
+  "457238": {
+    "epgid": "457238",
+    "name": "MTV綜合台HD,MTV綜合台",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MTV.png"
+  },
+  "457284": {
+    "epgid": "457284",
+    "name": "EYE TV旅遊台HD,EYE TV旅遊台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170925819253_83.png"
+  },
+  "457304": {
+    "epgid": "457304",
+    "name": "民視第一台HD,民視第一台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171413138830_75.png"
+  },
+  "457319": {
+    "epgid": "457319",
+    "name": "EYE TV戲劇台HD,EYE TV戲劇台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171817556696_65.png"
+  },
+  "457372": {
+    "epgid": "457372",
+    "name": "CatchPlay HD,CatchPlay",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CATCHPLAY.png"
   },
   "474641": {
     "epgid": "474641",
@@ -4154,14 +4154,19 @@
     "name": "Astro Tennis",
     "logo": ""
   },
+  "554726": {
+    "epgid": "554726",
+    "name": "Astro Daebak",
+    "logo": ""
+  },
   "556762": {
     "epgid": "556762",
     "name": "Dewan Negara",
     "logo": "https://epg.pw/media/images/epg/2026/07/13/20260713030345074542_66.png"
   },
-  "554726": {
-    "epgid": "554726",
-    "name": "Astro Daebak",
+  "556887": {
+    "epgid": "556887",
+    "name": "Astro Badminton 2",
     "logo": ""
   },
   "369713": {
