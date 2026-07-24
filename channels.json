@@ -7679,11 +7679,6 @@
     "name": "优漫卡通",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/优漫卡通.png"
   },
-  "349": {
-    "epgid": "349",
-    "name": "江苏新闻",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/江苏新闻.png"
-  },
   "351": {
     "epgid": "351",
     "name": "江苏综艺",
@@ -7863,6 +7858,11 @@
     "epgid": "933",
     "name": "云南都市",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/云南都市.png"
+  },
+  "934": {
+    "epgid": "934",
+    "name": "云南影视",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/云南影视.png"
   },
   "1025": {
     "epgid": "1025",
@@ -8434,6 +8434,11 @@
     "name": "湖南爱晚",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/湖南爱晚.png"
   },
+  "2007": {
+    "epgid": "2007",
+    "name": "山东文旅",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/山东文旅.png"
+  },
   "2011": {
     "epgid": "2011",
     "name": "江西都市",
@@ -8789,20 +8794,10 @@
     "name": "东森幼幼台",
     "logo": ""
   },
-  "1466": {
-    "epgid": "1466",
-    "name": "纬来综合台",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/纬来综合.png"
-  },
   "1467": {
     "epgid": "1467",
     "name": "八大第一台",
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031712852695_68.jpg"
-  },
-  "1468": {
-    "epgid": "1468",
-    "name": "八大综合台",
-    "logo": ""
   },
   "1469": {
     "epgid": "1469",
@@ -8899,11 +8894,6 @@
     "name": "TVBS新闻台",
     "logo": ""
   },
-  "1496": {
-    "epgid": "1496",
-    "name": "TVBS",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TVBS.png"
-  },
   "1497": {
     "epgid": "1497",
     "name": "东森财经新闻台",
@@ -8944,11 +8934,6 @@
     "name": "AXN",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AXN.png"
   },
-  "1508": {
-    "epgid": "1508",
-    "name": "好莱坞电影台",
-    "logo": ""
-  },
   "1511": {
     "epgid": "1511",
     "name": "CINEMAX",
@@ -8963,11 +8948,6 @@
     "epgid": "1517",
     "name": "纬来日本台",
     "logo": ""
-  },
-  "1518": {
-    "epgid": "1518",
-    "name": "国兴卫视",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/国兴卫视.png"
   },
   "1520": {
     "epgid": "1520",
@@ -8994,16 +8974,6 @@
     "name": "冠军电视台,冠军",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/冠军.png"
   },
-  "1527": {
-    "epgid": "1527",
-    "name": "台湾艺术台",
-    "logo": ""
-  },
-  "1528": {
-    "epgid": "1528",
-    "name": "全大电视台,全大",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/全大.png"
-  },
   "1529": {
     "epgid": "1529",
     "name": "非凡商业台",
@@ -9028,11 +8998,6 @@
     "epgid": "1534",
     "name": "诚心电视台,诚心",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/诚心.png"
-  },
-  "1536": {
-    "epgid": "1536",
-    "name": "MTV",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MTV.png"
   },
   "1537": {
     "epgid": "1537",
@@ -9628,6 +9593,11 @@
     "epgid": "1870",
     "name": "globaltrekker",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/GLOBALTREKKER.png"
+  },
+  "2055": {
+    "epgid": "2055",
+    "name": "凤凰电影",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/凤凰电影.png"
   },
   "368322": {
     "epgid": "368322",
