@@ -1809,11 +1809,6 @@
     "name": "PET CLUB TV HD,PET CLUB TV",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/PETCLUBTV.png"
   },
-  "457273": {
-    "epgid": "457273",
-    "name": "LUXE TV HD,LUXE TV",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/LUXETV.png"
-  },
   "457274": {
     "epgid": "457274",
     "name": "Lifetime HD,Lifetime",
@@ -1863,11 +1858,6 @@
     "epgid": "457283",
     "name": "亞洲旅遊HD,亞洲旅遊",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170912098723_29.png"
-  },
-  "457284": {
-    "epgid": "457284",
-    "name": "EYE TV旅遊台HD,EYE TV旅遊台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170925819253_83.png"
   },
   "457285": {
     "epgid": "457285",
@@ -1959,11 +1949,6 @@
     "name": "ETtoday綜合台",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ETTODAY.png"
   },
-  "457304": {
-    "epgid": "457304",
-    "name": "民視第一台HD,民視第一台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171413138830_75.png"
-  },
   "457305": {
     "epgid": "457305",
     "name": "民視台灣台HD,民視台灣台",
@@ -2014,16 +1999,6 @@
     "name": "龍華偶像HD,龍華偶像",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171708780431_98.png"
   },
-  "457315": {
-    "epgid": "457315",
-    "name": "龍華影劇HD,龍華影劇",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171721333904_52.png"
-  },
-  "457316": {
-    "epgid": "457316",
-    "name": "愛爾達影劇台HD,愛爾達影劇台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171734740564_46.png"
-  },
   "457317": {
     "epgid": "457317",
     "name": "靖天戲劇HD,靖天戲劇",
@@ -2033,11 +2008,6 @@
     "epgid": "457318",
     "name": "靖洋戲劇HD,靖洋戲劇",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171803858860_51.png"
-  },
-  "457319": {
-    "epgid": "457319",
-    "name": "EYE TV戲劇台HD,EYE TV戲劇台",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171817556696_65.png"
   },
   "457320": {
     "epgid": "457320",
@@ -2204,6 +2174,11 @@
     "name": "德國之聲",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172810625748_52.png"
   },
+  "457353": {
+    "epgid": "457353",
+    "name": "FRANCE24E HD,FRANCE24E",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png"
+  },
   "457354": {
     "epgid": "457354",
     "name": "TaiwanPlus",
@@ -2238,11 +2213,6 @@
     "epgid": "457361",
     "name": "龍華電影HD,龍華電影",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173121682426_53.png"
-  },
-  "457362": {
-    "epgid": "457362",
-    "name": "靖天映畫HD,靖天映畫",
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173144005395_86.png"
   },
   "457363": {
     "epgid": "457363",
@@ -2288,11 +2258,6 @@
     "epgid": "457371",
     "name": "華藝影劇台",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173347105135_84.png"
-  },
-  "457372": {
-    "epgid": "457372",
-    "name": "CatchPlay HD,CatchPlay",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CATCHPLAY.png"
   },
   "457373": {
     "epgid": "457373",
@@ -2584,15 +2549,50 @@
     "name": "寰宇新聞台",
     "logo": "https://epg.pw/media/images/epg/2026/02/04/20260204045923438501_61.png"
   },
+  "457273": {
+    "epgid": "457273",
+    "name": "LUXE TV HD,LUXE TV",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/LUXETV.png"
+  },
+  "457284": {
+    "epgid": "457284",
+    "name": "EYE TV旅遊台HD,EYE TV旅遊台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170925819253_83.png"
+  },
+  "457304": {
+    "epgid": "457304",
+    "name": "民視第一台HD,民視第一台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171413138830_75.png"
+  },
+  "457315": {
+    "epgid": "457315",
+    "name": "龍華影劇HD,龍華影劇",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171721333904_52.png"
+  },
+  "457316": {
+    "epgid": "457316",
+    "name": "愛爾達影劇台HD,愛爾達影劇台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171734740564_46.png"
+  },
+  "457319": {
+    "epgid": "457319",
+    "name": "EYE TV戲劇台HD,EYE TV戲劇台",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171817556696_65.png"
+  },
+  "457362": {
+    "epgid": "457362",
+    "name": "靖天映畫HD,靖天映畫",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173144005395_86.png"
+  },
+  "457372": {
+    "epgid": "457372",
+    "name": "CatchPlay HD,CatchPlay",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CATCHPLAY.png"
+  },
   "570765": {
     "epgid": "570765",
     "name": "Arirang TV HD",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ARIRANGTV.png"
-  },
-  "457353": {
-    "epgid": "457353",
-    "name": "FRANCE24E HD,FRANCE24E",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png"
   },
   "491": {
     "epgid": "491",
@@ -2724,6 +2724,11 @@
     "name": "Celestial Movies HD,Celestial Movies",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png"
   },
+  "1358": {
+    "epgid": "1358",
+    "name": "Discovery Asia HD,SCTV7,Discovery Asia",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DISCOVERYASIA.png"
+  },
   "1477": {
     "epgid": "1477",
     "name": "History HD,东风卫视,History",
@@ -2732,6 +2737,11 @@
   "1584": {
     "epgid": "1584",
     "name": "Al-Hijrah,EVE",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
+  },
+  "1781": {
+    "epgid": "1781",
+    "name": "Astro Quan Jia HD,Astro Quan Jia",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
   "1835": {
@@ -2754,6 +2764,11 @@
     "name": "Astro Vinmeen HD,Astro Vinmeen",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609081001967269_62.png"
   },
+  "2124": {
+    "epgid": "2124",
+    "name": "Astro AOD 311",
+    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609081008343330_76.png"
+  },
   "2181": {
     "epgid": "2181",
     "name": "ABO Movies Thangathirai HD,ABO Movies Thangathirai",
@@ -2773,6 +2788,11 @@
     "epgid": "2280",
     "name": "Celestial Classic Movies",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png"
+  },
+  "2300": {
+    "epgid": "2300",
+    "name": "Golf Channel HD,Golf Channel",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/GOLFCHANNEL.png"
   },
   "2323": {
     "epgid": "2323",
@@ -3129,11 +3149,6 @@
     "name": "Love Nature",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/LOVENATURE.png"
   },
-  "4209": {
-    "epgid": "4209",
-    "name": "Arena Bola",
-    "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610061514055903_10.png"
-  },
   "4215": {
     "epgid": "4215",
     "name": "Arena Bola 2",
@@ -3148,6 +3163,471 @@
     "epgid": "48630",
     "name": "W-Sport",
     "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610061834905582_46.png"
+  },
+  "370132": {
+    "epgid": "370132",
+    "name": "Berita RTM",
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105841045864_53.jpg"
+  },
+  "370133": {
+    "epgid": "370133",
+    "name": "Sukan RTM",
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105846735817_20.png"
+  },
+  "370134": {
+    "epgid": "370134",
+    "name": "Okey",
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105852137983_56.png"
+  },
+  "370135": {
+    "epgid": "370135",
+    "name": "TV2",
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105858041931_48.png"
+  },
+  "370136": {
+    "epgid": "370136",
+    "name": "TV1",
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105904271177_79.png"
+  },
+  "397396": {
+    "epgid": "397396",
+    "name": "Astro Premier League",
+    "logo": "https://epg.pw/media/images/epg/2024/10/18/20241018011443588338_92.png"
+  },
+  "397397": {
+    "epgid": "397397",
+    "name": "Astro Premier League 2",
+    "logo": "https://epg.pw/media/images/epg/2024/10/18/20241018013047543202_17.png"
+  },
+  "397400": {
+    "epgid": "397400",
+    "name": "Astro Badminton",
+    "logo": "https://epg.pw/media/images/epg/2024/10/18/20241018014354440490_31.png"
+  },
+  "397402": {
+    "epgid": "397402",
+    "name": "Astro Sports Plus",
+    "logo": "https://epg.pw/media/images/epg/2024/10/18/20241018015108639260_15.png"
+  },
+  "397403": {
+    "epgid": "397403",
+    "name": "Astro Grandstand",
+    "logo": "https://epg.pw/media/images/epg/2024/10/18/20241018015738343204_94.png"
+  },
+  "400446": {
+    "epgid": "400446",
+    "name": "Blippi & Friends",
+    "logo": "https://epg.pw/media/images/epg/2024/11/02/20241102013043014227_40.png"
+  },
+  "461591": {
+    "epgid": "461591",
+    "name": "CGTN Documentary",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CGTNDOCUMENTARY.png"
+  },
+  "479618": {
+    "epgid": "479618",
+    "name": "Aura",
+    "logo": "https://epg.pw/media/images/epg/2025/11/15/20251115030013047540_44.jpg"
+  },
+  "479619": {
+    "epgid": "479619",
+    "name": "Apetito",
+    "logo": "https://epg.pw/media/images/epg/2025/11/15/20251115030018059797_56.jpg"
+  },
+  "502308": {
+    "epgid": "502308",
+    "name": "JR.",
+    "logo": "https://epg.pw/media/images/epg/2026/02/06/20260206030021576552_69.jpg"
+  },
+  "517640": {
+    "epgid": "517640",
+    "name": "Rock Action",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ROCKACTION.png"
+  },
+  "517641": {
+    "epgid": "517641",
+    "name": "Astro Showtime",
+    "logo": ""
+  },
+  "517642": {
+    "epgid": "517642",
+    "name": "Rock X Stream",
+    "logo": ""
+  },
+  "519419": {
+    "epgid": "519419",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519420": {
+    "epgid": "519420",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519423": {
+    "epgid": "519423",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519425": {
+    "epgid": "519425",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519428": {
+    "epgid": "519428",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519430": {
+    "epgid": "519430",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519886": {
+    "epgid": "519886",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519887": {
+    "epgid": "519887",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519888": {
+    "epgid": "519888",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519889": {
+    "epgid": "519889",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519890": {
+    "epgid": "519890",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519891": {
+    "epgid": "519891",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "519892": {
+    "epgid": "519892",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "520015": {
+    "epgid": "520015",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "520016": {
+    "epgid": "520016",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "520017": {
+    "epgid": "520017",
+    "name": "Astro First HD,Astro First",
+    "logo": ""
+  },
+  "521957": {
+    "epgid": "521957",
+    "name": "ROLL",
+    "logo": "https://epg.pw/media/images/epg/2026/03/08/20260308030037614233_64.jpg"
+  },
+  "523496": {
+    "epgid": "523496",
+    "name": "CricBuzz",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/Z.png"
+  },
+  "535446": {
+    "epgid": "535446",
+    "name": "Astro FAM Time",
+    "logo": ""
+  },
+  "535993": {
+    "epgid": "535993",
+    "name": "RTM Asean",
+    "logo": ""
+  },
+  "536935": {
+    "epgid": "536935",
+    "name": "Wai FM Iban",
+    "logo": ""
+  },
+  "536936": {
+    "epgid": "536936",
+    "name": "Keningau FM",
+    "logo": "https://epg.pw/media/images/epg/2026/01/07/20260107030119801006_53.png"
+  },
+  "536937": {
+    "epgid": "536937",
+    "name": "Sandakan FM",
+    "logo": "https://epg.pw/media/images/epg/2026/02/18/20260218030125790538_59.png"
+  },
+  "536938": {
+    "epgid": "536938",
+    "name": "Sibu FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030142123379_82.png"
+  },
+  "536939": {
+    "epgid": "536939",
+    "name": "Bintulu FM",
+    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030131654699_53.png"
+  },
+  "536940": {
+    "epgid": "536940",
+    "name": "Sri Aman FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030150265483_47.png"
+  },
+  "536941": {
+    "epgid": "536941",
+    "name": "Miri FM",
+    "logo": "https://epg.pw/media/images/epg/2026/01/07/20260107030136814287_77.png"
+  },
+  "536942": {
+    "epgid": "536942",
+    "name": "Limbang FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030157767827_85.png"
+  },
+  "536943": {
+    "epgid": "536943",
+    "name": "Langkawi FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030203512205_68.png"
+  },
+  "536944": {
+    "epgid": "536944",
+    "name": "Red FM",
+    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030159769932_21.png"
+  },
+  "536945": {
+    "epgid": "536945",
+    "name": "Wai FM",
+    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030206283600_23.png"
+  },
+  "536946": {
+    "epgid": "536946",
+    "name": "Melaka FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030217916539_70.png"
+  },
+  "536947": {
+    "epgid": "536947",
+    "name": "Perlis FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/09/20260409030209037011_70.png"
+  },
+  "536948": {
+    "epgid": "536948",
+    "name": "Mutiara FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030225482647_78.png"
+  },
+  "536949": {
+    "epgid": "536949",
+    "name": "Perak FM",
+    "logo": "https://epg.pw/media/images/epg/2025/04/29/20250429030234372512_82.png"
+  },
+  "536950": {
+    "epgid": "536950",
+    "name": "Johor FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/10/20260410030312344082_11.png"
+  },
+  "536951": {
+    "epgid": "536951",
+    "name": "Pahang FM",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
+  },
+  "536952": {
+    "epgid": "536952",
+    "name": "Terengganu FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/09/20260409030229182736_42.png"
+  },
+  "536953": {
+    "epgid": "536953",
+    "name": "KL FM",
+    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030305889781_75.png"
+  },
+  "536954": {
+    "epgid": "536954",
+    "name": "Kedah FM",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
+  },
+  "536955": {
+    "epgid": "536955",
+    "name": "Labuan FM",
+    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030317074039_45.png"
+  },
+  "536956": {
+    "epgid": "536956",
+    "name": "SabahV FM",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
+  },
+  "536957": {
+    "epgid": "536957",
+    "name": "Selangor FM",
+    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030333177597_20.png"
+  },
+  "536958": {
+    "epgid": "536958",
+    "name": "Asyik FM",
+    "logo": ""
+  },
+  "536959": {
+    "epgid": "536959",
+    "name": "MINNALfm",
+    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030326201034_47.png"
+  },
+  "536960": {
+    "epgid": "536960",
+    "name": "AIfm",
+    "logo": "https://epg.pw/media/images/epg/2026/04/04/20260404030314265581_85.png"
+  },
+  "536961": {
+    "epgid": "536961",
+    "name": "TRAXXfm",
+    "logo": "https://epg.pw/media/images/epg/2025/02/08/20250208030243963518_28.png"
+  },
+  "536962": {
+    "epgid": "536962",
+    "name": "NASIONALfm",
+    "logo": "https://epg.pw/media/images/epg/2026/04/07/20260407030304513714_44.png"
+  },
+  "536963": {
+    "epgid": "536963",
+    "name": "Radio KLASIK",
+    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030340012421_75.png"
+  },
+  "547908": {
+    "epgid": "547908",
+    "name": "Sarawak FM",
+    "logo": "https://epg.pw/media/images/epg/2026/05/30/20260530030250077335_86.png"
+  },
+  "548885": {
+    "epgid": "548885",
+    "name": "Radio Muzik",
+    "logo": "https://epg.pw/media/images/epg/2026/06/04/20260604030013279320_65.png"
+  },
+  "548887": {
+    "epgid": "548887",
+    "name": "Snap",
+    "logo": "https://epg.pw/media/images/epg/2026/04/17/20260417030024461072_91.jpg"
+  },
+  "548888": {
+    "epgid": "548888",
+    "name": "Lead",
+    "logo": ""
+  },
+  "554002": {
+    "epgid": "554002",
+    "name": "Astro Tennis",
+    "logo": ""
+  },
+  "554726": {
+    "epgid": "554726",
+    "name": "Astro Daebak",
+    "logo": ""
+  },
+  "558518": {
+    "epgid": "558518",
+    "name": "Berita RTM",
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105841045864_53.jpg"
+  },
+  "558536": {
+    "epgid": "558536",
+    "name": "AI FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/04/20260404030314265581_85.png"
+  },
+  "558537": {
+    "epgid": "558537",
+    "name": "MINNAL FM",
+    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030326201034_47.png"
+  },
+  "558538": {
+    "epgid": "558538",
+    "name": "TRAXX FM",
+    "logo": "https://epg.pw/media/images/epg/2025/02/08/20250208030243963518_28.png"
+  },
+  "558703": {
+    "epgid": "558703",
+    "name": "NAS FM",
+    "logo": ""
+  },
+  "558712": {
+    "epgid": "558712",
+    "name": "V FM",
+    "logo": ""
+  },
+  "558838": {
+    "epgid": "558838",
+    "name": "ASYIK FM",
+    "logo": ""
+  },
+  "558842": {
+    "epgid": "558842",
+    "name": "WAI FM",
+    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030206283600_23.png"
+  },
+  "562589": {
+    "epgid": "562589",
+    "name": "Astro30",
+    "logo": ""
+  },
+  "562755": {
+    "epgid": "562755",
+    "name": "Aniplus",
+    "logo": ""
+  },
+  "569649": {
+    "epgid": "569649",
+    "name": "Mango TV",
+    "logo": ""
+  },
+  "569835": {
+    "epgid": "569835",
+    "name": "U Panda TV",
+    "logo": ""
+  },
+  "570317": {
+    "epgid": "570317",
+    "name": "Dewan Rakyat",
+    "logo": ""
+  },
+  "570768": {
+    "epgid": "570768",
+    "name": "Pokémon",
+    "logo": ""
+  },
+  "571287": {
+    "epgid": "571287",
+    "name": "Astro Premier League 3",
+    "logo": ""
+  },
+  "571674": {
+    "epgid": "571674",
+    "name": "Fitrah",
+    "logo": "https://epg.pw/media/images/epg/2025/11/14/20251114030010874052_39.jpg"
+  },
+  "571952": {
+    "epgid": "571952",
+    "name": "Astro Premier League 3",
+    "logo": ""
+  },
+  "572282": {
+    "epgid": "572282",
+    "name": "RTM World",
+    "logo": ""
+  },
+  "572993": {
+    "epgid": "572993",
+    "name": "Astro Sports Plus 2",
+    "logo": ""
+  },
+  "4209": {
+    "epgid": "4209",
+    "name": "Arena Bola",
+    "logo": "https://epg.pw/media/images/epg/2024/06/10/20240610061514055903_10.png"
   },
   "369578": {
     "epgid": "369578",
@@ -3604,60 +4084,10 @@
     "name": "HITZ FM",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/Z.png"
   },
-  "370132": {
-    "epgid": "370132",
-    "name": "Berita RTM",
-    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105841045864_53.jpg"
-  },
-  "370133": {
-    "epgid": "370133",
-    "name": "Sukan RTM",
-    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105846735817_20.png"
-  },
-  "370134": {
-    "epgid": "370134",
-    "name": "Okey",
-    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105852137983_56.png"
-  },
-  "370135": {
-    "epgid": "370135",
-    "name": "TV2",
-    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105858041931_48.png"
-  },
-  "370136": {
-    "epgid": "370136",
-    "name": "TV1",
-    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105904271177_79.png"
-  },
-  "397396": {
-    "epgid": "397396",
-    "name": "Astro Premier League",
-    "logo": "https://epg.pw/media/images/epg/2024/10/18/20241018011443588338_92.png"
-  },
-  "397397": {
-    "epgid": "397397",
-    "name": "Astro Premier League 2",
-    "logo": "https://epg.pw/media/images/epg/2024/10/18/20241018013047543202_17.png"
-  },
   "397399": {
     "epgid": "397399",
     "name": "Astro Football",
     "logo": "https://epg.pw/media/images/epg/2024/10/18/20241018014020330238_34.png"
-  },
-  "397400": {
-    "epgid": "397400",
-    "name": "Astro Badminton",
-    "logo": "https://epg.pw/media/images/epg/2024/10/18/20241018014354440490_31.png"
-  },
-  "397402": {
-    "epgid": "397402",
-    "name": "Astro Sports Plus",
-    "logo": "https://epg.pw/media/images/epg/2024/10/18/20241018015108639260_15.png"
-  },
-  "397403": {
-    "epgid": "397403",
-    "name": "Astro Grandstand",
-    "logo": "https://epg.pw/media/images/epg/2024/10/18/20241018015738343204_94.png"
   },
   "399481": {
     "epgid": "399481",
@@ -3804,355 +4234,15 @@
     "name": "Astro Arena",
     "logo": ""
   },
-  "400446": {
-    "epgid": "400446",
-    "name": "Blippi & Friends",
-    "logo": "https://epg.pw/media/images/epg/2024/11/02/20241102013043014227_40.png"
-  },
   "421399": {
     "epgid": "421399",
     "name": "MY FM",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609080530310687_46.png"
   },
-  "461591": {
-    "epgid": "461591",
-    "name": "CGTN Documentary",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CGTNDOCUMENTARY.png"
-  },
-  "479618": {
-    "epgid": "479618",
-    "name": "Aura",
-    "logo": "https://epg.pw/media/images/epg/2025/11/15/20251115030013047540_44.jpg"
-  },
-  "479619": {
-    "epgid": "479619",
-    "name": "Apetito",
-    "logo": "https://epg.pw/media/images/epg/2025/11/15/20251115030018059797_56.jpg"
-  },
-  "502308": {
-    "epgid": "502308",
-    "name": "JR.",
-    "logo": "https://epg.pw/media/images/epg/2026/02/06/20260206030021576552_69.jpg"
-  },
-  "517640": {
-    "epgid": "517640",
-    "name": "Rock Action",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ROCKACTION.png"
-  },
-  "517641": {
-    "epgid": "517641",
-    "name": "Astro Showtime",
-    "logo": ""
-  },
-  "517642": {
-    "epgid": "517642",
-    "name": "Rock X Stream",
-    "logo": ""
-  },
-  "519419": {
-    "epgid": "519419",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519420": {
-    "epgid": "519420",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519423": {
-    "epgid": "519423",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519425": {
-    "epgid": "519425",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519428": {
-    "epgid": "519428",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519430": {
-    "epgid": "519430",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519886": {
-    "epgid": "519886",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519887": {
-    "epgid": "519887",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519888": {
-    "epgid": "519888",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519889": {
-    "epgid": "519889",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519890": {
-    "epgid": "519890",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519891": {
-    "epgid": "519891",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "519892": {
-    "epgid": "519892",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "520015": {
-    "epgid": "520015",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "520016": {
-    "epgid": "520016",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
-  "520017": {
-    "epgid": "520017",
-    "name": "Astro First HD,Astro First",
-    "logo": ""
-  },
   "520490": {
     "epgid": "520490",
     "name": "OPUS",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609080536195791_22.png"
-  },
-  "521957": {
-    "epgid": "521957",
-    "name": "ROLL",
-    "logo": "https://epg.pw/media/images/epg/2026/03/08/20260308030037614233_64.jpg"
-  },
-  "523496": {
-    "epgid": "523496",
-    "name": "CricBuzz",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/Z.png"
-  },
-  "535446": {
-    "epgid": "535446",
-    "name": "Astro FAM Time",
-    "logo": ""
-  },
-  "535993": {
-    "epgid": "535993",
-    "name": "RTM Asean",
-    "logo": ""
-  },
-  "536935": {
-    "epgid": "536935",
-    "name": "Wai FM Iban",
-    "logo": ""
-  },
-  "536936": {
-    "epgid": "536936",
-    "name": "Keningau FM",
-    "logo": "https://epg.pw/media/images/epg/2026/01/07/20260107030119801006_53.png"
-  },
-  "536937": {
-    "epgid": "536937",
-    "name": "Sandakan FM",
-    "logo": "https://epg.pw/media/images/epg/2026/02/18/20260218030125790538_59.png"
-  },
-  "536938": {
-    "epgid": "536938",
-    "name": "Sibu FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030142123379_82.png"
-  },
-  "536939": {
-    "epgid": "536939",
-    "name": "Bintulu FM",
-    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030131654699_53.png"
-  },
-  "536940": {
-    "epgid": "536940",
-    "name": "Sri Aman FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030150265483_47.png"
-  },
-  "536941": {
-    "epgid": "536941",
-    "name": "Miri FM",
-    "logo": "https://epg.pw/media/images/epg/2026/01/07/20260107030136814287_77.png"
-  },
-  "536942": {
-    "epgid": "536942",
-    "name": "Limbang FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030157767827_85.png"
-  },
-  "536943": {
-    "epgid": "536943",
-    "name": "Langkawi FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030203512205_68.png"
-  },
-  "536944": {
-    "epgid": "536944",
-    "name": "Red FM",
-    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030159769932_21.png"
-  },
-  "536945": {
-    "epgid": "536945",
-    "name": "Wai FM",
-    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030206283600_23.png"
-  },
-  "536946": {
-    "epgid": "536946",
-    "name": "Melaka FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030217916539_70.png"
-  },
-  "536947": {
-    "epgid": "536947",
-    "name": "Perlis FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/09/20260409030209037011_70.png"
-  },
-  "536948": {
-    "epgid": "536948",
-    "name": "Mutiara FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030225482647_78.png"
-  },
-  "536949": {
-    "epgid": "536949",
-    "name": "Perak FM",
-    "logo": "https://epg.pw/media/images/epg/2025/04/29/20250429030234372512_82.png"
-  },
-  "536950": {
-    "epgid": "536950",
-    "name": "Johor FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/10/20260410030312344082_11.png"
-  },
-  "536951": {
-    "epgid": "536951",
-    "name": "Pahang FM",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
-  },
-  "536952": {
-    "epgid": "536952",
-    "name": "Terengganu FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/09/20260409030229182736_42.png"
-  },
-  "536953": {
-    "epgid": "536953",
-    "name": "KL FM",
-    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030305889781_75.png"
-  },
-  "536954": {
-    "epgid": "536954",
-    "name": "Kedah FM",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
-  },
-  "536955": {
-    "epgid": "536955",
-    "name": "Labuan FM",
-    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030317074039_45.png"
-  },
-  "536956": {
-    "epgid": "536956",
-    "name": "SabahV FM",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
-  },
-  "536957": {
-    "epgid": "536957",
-    "name": "Selangor FM",
-    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030333177597_20.png"
-  },
-  "536958": {
-    "epgid": "536958",
-    "name": "Asyik FM",
-    "logo": ""
-  },
-  "536959": {
-    "epgid": "536959",
-    "name": "MINNALfm",
-    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030326201034_47.png"
-  },
-  "536960": {
-    "epgid": "536960",
-    "name": "AIfm",
-    "logo": "https://epg.pw/media/images/epg/2026/04/04/20260404030314265581_85.png"
-  },
-  "536961": {
-    "epgid": "536961",
-    "name": "TRAXXfm",
-    "logo": "https://epg.pw/media/images/epg/2025/02/08/20250208030243963518_28.png"
-  },
-  "536962": {
-    "epgid": "536962",
-    "name": "NASIONALfm",
-    "logo": "https://epg.pw/media/images/epg/2026/04/07/20260407030304513714_44.png"
-  },
-  "536963": {
-    "epgid": "536963",
-    "name": "Radio KLASIK",
-    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030340012421_75.png"
-  },
-  "547908": {
-    "epgid": "547908",
-    "name": "Sarawak FM",
-    "logo": "https://epg.pw/media/images/epg/2026/05/30/20260530030250077335_86.png"
-  },
-  "548885": {
-    "epgid": "548885",
-    "name": "Radio Muzik",
-    "logo": "https://epg.pw/media/images/epg/2026/06/04/20260604030013279320_65.png"
-  },
-  "548887": {
-    "epgid": "548887",
-    "name": "Snap",
-    "logo": "https://epg.pw/media/images/epg/2026/04/17/20260417030024461072_91.jpg"
-  },
-  "548888": {
-    "epgid": "548888",
-    "name": "Lead",
-    "logo": ""
-  },
-  "554002": {
-    "epgid": "554002",
-    "name": "Astro Tennis",
-    "logo": ""
-  },
-  "554726": {
-    "epgid": "554726",
-    "name": "Astro Daebak",
-    "logo": ""
-  },
-  "558518": {
-    "epgid": "558518",
-    "name": "Berita RTM",
-    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612105841045864_53.jpg"
-  },
-  "558536": {
-    "epgid": "558536",
-    "name": "AI FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/04/20260404030314265581_85.png"
-  },
-  "558537": {
-    "epgid": "558537",
-    "name": "MINNAL FM",
-    "logo": "https://epg.pw/media/images/epg/2026/04/08/20260408030326201034_47.png"
-  },
-  "558538": {
-    "epgid": "558538",
-    "name": "TRAXX FM",
-    "logo": "https://epg.pw/media/images/epg/2025/02/08/20250208030243963518_28.png"
-  },
-  "558703": {
-    "epgid": "558703",
-    "name": "NAS FM",
-    "logo": ""
   },
   "558705": {
     "epgid": "558705",
@@ -4189,66 +4279,6 @@
     "name": "ASYIK FM",
     "logo": ""
   },
-  "558712": {
-    "epgid": "558712",
-    "name": "V FM",
-    "logo": ""
-  },
-  "558838": {
-    "epgid": "558838",
-    "name": "ASYIK FM",
-    "logo": ""
-  },
-  "558842": {
-    "epgid": "558842",
-    "name": "WAI FM",
-    "logo": "https://epg.pw/media/images/epg/2025/02/07/20250207030206283600_23.png"
-  },
-  "562589": {
-    "epgid": "562589",
-    "name": "Astro30",
-    "logo": ""
-  },
-  "562755": {
-    "epgid": "562755",
-    "name": "Aniplus",
-    "logo": ""
-  },
-  "569649": {
-    "epgid": "569649",
-    "name": "Mango TV",
-    "logo": ""
-  },
-  "569835": {
-    "epgid": "569835",
-    "name": "U Panda TV",
-    "logo": ""
-  },
-  "570317": {
-    "epgid": "570317",
-    "name": "Dewan Rakyat",
-    "logo": ""
-  },
-  "570768": {
-    "epgid": "570768",
-    "name": "Pokémon",
-    "logo": ""
-  },
-  "571287": {
-    "epgid": "571287",
-    "name": "Astro Premier League 3",
-    "logo": ""
-  },
-  "571674": {
-    "epgid": "571674",
-    "name": "Fitrah",
-    "logo": "https://epg.pw/media/images/epg/2025/11/14/20251114030010874052_39.jpg"
-  },
-  "572282": {
-    "epgid": "572282",
-    "name": "RTM World",
-    "logo": ""
-  },
   "572489": {
     "epgid": "572489",
     "name": "Astro Badminton 2",
@@ -4258,36 +4288,6 @@
     "epgid": "572657",
     "name": "MotoGP 2026",
     "logo": ""
-  },
-  "572993": {
-    "epgid": "572993",
-    "name": "Astro Sports Plus 2",
-    "logo": ""
-  },
-  "2124": {
-    "epgid": "2124",
-    "name": "Astro AOD 311",
-    "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609081008343330_76.png"
-  },
-  "2300": {
-    "epgid": "2300",
-    "name": "Golf Channel HD,Golf Channel",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/GOLFCHANNEL.png"
-  },
-  "571952": {
-    "epgid": "571952",
-    "name": "Astro Premier League 3",
-    "logo": ""
-  },
-  "1358": {
-    "epgid": "1358",
-    "name": "Discovery Asia HD,SCTV7,Discovery Asia",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DISCOVERYASIA.png"
-  },
-  "1781": {
-    "epgid": "1781",
-    "name": "Astro Quan Jia HD,Astro Quan Jia",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
   "186250": {
     "epgid": "186250",
@@ -5484,613 +5484,613 @@
     "name": "SPOTV2",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042853421916_26.png"
   },
-  "573025": {
-    "epgid": "573025",
+  "573173": {
+    "epgid": "573173",
     "name": "ROCK Action (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ROCKACTION.png"
   },
-  "573026": {
-    "epgid": "573026",
+  "573174": {
+    "epgid": "573174",
     "name": "MTV India",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MTV.png"
   },
-  "573027": {
-    "epgid": "573027",
+  "573175": {
+    "epgid": "573175",
     "name": "STAR Plus",
     "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130014728926986_40.png"
   },
-  "573028": {
-    "epgid": "573028",
+  "573176": {
+    "epgid": "573176",
     "name": "TVBS News",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042603581878_71.png"
   },
-  "573029": {
-    "epgid": "573029",
+  "573177": {
+    "epgid": "573177",
     "name": "Lifetime (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/LIFETIME.png"
   },
-  "573030": {
-    "epgid": "573030",
+  "573178": {
+    "epgid": "573178",
     "name": "HITS (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HITS.png"
   },
-  "573031": {
-    "epgid": "573031",
+  "573179": {
+    "epgid": "573179",
     "name": "TechStorm (HD)",
     "logo": ""
   },
-  "573032": {
-    "epgid": "573032",
+  "573180": {
+    "epgid": "573180",
     "name": "HITS MOVIES (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png"
   },
-  "573033": {
-    "epgid": "573033",
+  "573181": {
+    "epgid": "573181",
     "name": "HITS NOW (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HITS.png"
   },
-  "573034": {
-    "epgid": "573034",
+  "573182": {
+    "epgid": "573182",
     "name": "AXN (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AXN.png"
   },
-  "573035": {
-    "epgid": "573035",
+  "573183": {
+    "epgid": "573183",
     "name": "ETTV Asia (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
-  "573036": {
-    "epgid": "573036",
+  "573184": {
+    "epgid": "573184",
     "name": "e-Le (HD)",
     "logo": ""
   },
-  "573037": {
-    "epgid": "573037",
+  "573185": {
+    "epgid": "573185",
     "name": "Times Now",
     "logo": ""
   },
-  "573038": {
-    "epgid": "573038",
+  "573186": {
+    "epgid": "573186",
     "name": "Zoom TV",
     "logo": ""
   },
-  "573039": {
-    "epgid": "573039",
+  "573187": {
+    "epgid": "573187",
     "name": "HBO Family (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HBOFAMILY.png"
   },
-  "573040": {
-    "epgid": "573040",
+  "573188": {
+    "epgid": "573188",
     "name": "MOLA Sport (HD)",
     "logo": ""
   },
-  "573041": {
-    "epgid": "573041",
+  "573189": {
+    "epgid": "573189",
     "name": "BBC Earth (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/BBCEARTH.png"
   },
-  "573042": {
-    "epgid": "573042",
+  "573190": {
+    "epgid": "573190",
     "name": "(HD) Outdoor Channel",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/OUTDOORCHANNEL.png"
   },
-  "573043": {
-    "epgid": "573043",
+  "573191": {
+    "epgid": "573191",
     "name": "HBO Signature (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HBOSIGNATURE.png"
   },
-  "573044": {
-    "epgid": "573044",
+  "573192": {
+    "epgid": "573192",
     "name": "Cartoonito (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CARTOONITO.png"
   },
-  "573045": {
-    "epgid": "573045",
+  "573193": {
+    "epgid": "573193",
     "name": "Cartoon Network (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CARTOONNETWORK.png"
   },
-  "573046": {
-    "epgid": "573046",
+  "573194": {
+    "epgid": "573194",
     "name": "SAB TV",
     "logo": ""
   },
-  "573047": {
-    "epgid": "573047",
+  "573195": {
+    "epgid": "573195",
     "name": "BRTV International",
     "logo": ""
   },
-  "573048": {
-    "epgid": "573048",
+  "573196": {
+    "epgid": "573196",
     "name": "Dragon TV Intl",
     "logo": ""
   },
-  "573049": {
-    "epgid": "573049",
+  "573197": {
+    "epgid": "573197",
     "name": "CCTV Entertainment",
     "logo": ""
   },
-  "573050": {
-    "epgid": "573050",
+  "573198": {
+    "epgid": "573198",
     "name": "China Movie Channel",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png"
   },
-  "573051": {
-    "epgid": "573051",
+  "573199": {
+    "epgid": "573199",
     "name": "CNBC Asia (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CNBCASIA.png"
   },
-  "573052": {
-    "epgid": "573052",
+  "573200": {
+    "epgid": "573200",
     "name": "Bloomberg TV (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/BLOOMBERGTV.png"
   },
-  "573053": {
-    "epgid": "573053",
+  "573201": {
+    "epgid": "573201",
     "name": "Celestial Movies(HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png"
   },
-  "573054": {
-    "epgid": "573054",
+  "573202": {
+    "epgid": "573202",
     "name": "CCM",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042655872956_65.png"
   },
-  "573055": {
-    "epgid": "573055",
+  "573203": {
+    "epgid": "573203",
     "name": "Adithya TV",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042335528683_39.png"
   },
-  "573056": {
-    "epgid": "573056",
+  "573204": {
+    "epgid": "573204",
     "name": "Sun Music HD",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609102129729789_96.png"
   },
-  "573057": {
-    "epgid": "573057",
+  "573205": {
+    "epgid": "573205",
     "name": "KTV HD",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212043013766539_97.png"
   },
-  "573058": {
-    "epgid": "573058",
+  "573206": {
+    "epgid": "573206",
     "name": "Zee Thirai",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042922084483_28.png"
   },
-  "573059": {
-    "epgid": "573059",
+  "573207": {
+    "epgid": "573207",
     "name": "Colors Tamil HD",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609082645830029_30.png"
   },
-  "573060": {
-    "epgid": "573060",
+  "573208": {
+    "epgid": "573208",
     "name": "Sun TV HD",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609090146766775_54.png"
   },
-  "573061": {
-    "epgid": "573061",
+  "573209": {
+    "epgid": "573209",
     "name": "Drama Channel",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DRAMA.png"
   },
-  "573062": {
-    "epgid": "573062",
+  "573210": {
+    "epgid": "573210",
     "name": "tvN HD",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609081045631403_71.png"
   },
-  "573063": {
-    "epgid": "573063",
+  "573211": {
+    "epgid": "573211",
     "name": "The Filipino Ch (HD)",
     "logo": ""
   },
-  "573064": {
-    "epgid": "573064",
+  "573212": {
+    "epgid": "573212",
     "name": "GMA News TV Intl",
     "logo": ""
   },
-  "573065": {
-    "epgid": "573065",
+  "573213": {
+    "epgid": "573213",
     "name": "SEA Today",
     "logo": ""
   },
-  "573066": {
-    "epgid": "573066",
+  "573214": {
+    "epgid": "573214",
     "name": "Food Network (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FOODNETWORK.png"
   },
-  "573067": {
-    "epgid": "573067",
+  "573215": {
+    "epgid": "573215",
     "name": "ROCK ENT (HD)",
     "logo": ""
   },
-  "573068": {
-    "epgid": "573068",
+  "573216": {
+    "epgid": "573216",
     "name": "AFN (HD)",
     "logo": ""
   },
-  "573069": {
-    "epgid": "573069",
+  "573217": {
+    "epgid": "573217",
     "name": "TRACE Sport Stars HD",
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170156924780_29.png"
   },
-  "573070": {
-    "epgid": "573070",
+  "573218": {
+    "epgid": "573218",
     "name": "TLC (HD)",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609085327368966_31.png"
   },
-  "573071": {
-    "epgid": "573071",
+  "573219": {
+    "epgid": "573219",
     "name": "Hunan International",
     "logo": ""
   },
-  "573072": {
-    "epgid": "573072",
+  "573220": {
+    "epgid": "573220",
     "name": "KBS World (HD)",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609080942280528_38.png"
   },
-  "573073": {
-    "epgid": "573073",
+  "573221": {
+    "epgid": "573221",
     "name": "STAR Gold",
     "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130012415432693_88.png"
   },
-  "573074": {
-    "epgid": "573074",
+  "573222": {
+    "epgid": "573222",
     "name": "Animal Planet (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ANIMALPLANET.png"
   },
-  "573075": {
-    "epgid": "573075",
+  "573223": {
+    "epgid": "573223",
     "name": "Sony MAX",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/SONYMAX.png"
   },
-  "573076": {
-    "epgid": "573076",
+  "573224": {
+    "epgid": "573224",
     "name": "Pesona HD",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
-  "573077": {
-    "epgid": "573077",
+  "573225": {
+    "epgid": "573225",
     "name": "CGTN-Documentary",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CGTNDOCUMENTARY.png"
   },
-  "573078": {
-    "epgid": "573078",
+  "573226": {
+    "epgid": "573226",
     "name": "NHK World Premium HD",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NHKWORLDPREMIUM.png"
   },
-  "573079": {
-    "epgid": "573079",
+  "573227": {
+    "epgid": "573227",
     "name": "Jia Le Channel (HD)",
     "logo": ""
   },
-  "573080": {
-    "epgid": "573080",
+  "573228": {
+    "epgid": "573228",
     "name": "Nickelodeon Asia HD",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NICKELODEON.png"
   },
-  "573081": {
-    "epgid": "573081",
+  "573229": {
+    "epgid": "573229",
     "name": "Animax (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ANIMAX.png"
   },
-  "573082": {
-    "epgid": "573082",
+  "573230": {
+    "epgid": "573230",
     "name": "Citra Drama (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DRAMA.png"
   },
-  "573083": {
-    "epgid": "573083",
+  "573231": {
+    "epgid": "573231",
     "name": "beIN SPORTS 2 (HD)",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042406293456_76.png"
   },
-  "573084": {
-    "epgid": "573084",
+  "573232": {
+    "epgid": "573232",
     "name": "WION",
     "logo": ""
   },
-  "573085": {
-    "epgid": "573085",
+  "573233": {
+    "epgid": "573233",
     "name": "EUROSPORT (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/EUROSPORT.png"
   },
-  "573086": {
-    "epgid": "573086",
+  "573234": {
+    "epgid": "573234",
     "name": "BBC Lifestyle (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/BBCLIFESTYLE.png"
   },
-  "573087": {
-    "epgid": "573087",
+  "573235": {
+    "epgid": "573235",
     "name": "MTV LIVE HD",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MTVLIVEHD.png"
   },
-  "573088": {
-    "epgid": "573088",
+  "573236": {
+    "epgid": "573236",
     "name": "GMA Life TV",
     "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129231930209109_68.png"
   },
-  "573089": {
-    "epgid": "573089",
+  "573237": {
+    "epgid": "573237",
     "name": "CM+",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/天映.png"
   },
-  "573090": {
-    "epgid": "573090",
+  "573238": {
+    "epgid": "573238",
     "name": "maa movies",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png"
   },
-  "573091": {
-    "epgid": "573091",
+  "573239": {
+    "epgid": "573239",
     "name": "Star Maa",
     "logo": ""
   },
-  "573092": {
-    "epgid": "573092",
+  "573240": {
+    "epgid": "573240",
     "name": "CCTV-4 (HD)",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609093540212401_87.png"
   },
-  "573093": {
-    "epgid": "573093",
+  "573241": {
+    "epgid": "573241",
     "name": "CTI Asia (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
-  "573094": {
-    "epgid": "573094",
+  "573242": {
+    "epgid": "573242",
     "name": "HGTV (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HGTV.png"
   },
-  "573095": {
-    "epgid": "573095",
+  "573243": {
+    "epgid": "573243",
     "name": "Star Bharat",
     "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130020518427329_18.png"
   },
-  "573096": {
-    "epgid": "573096",
+  "573244": {
+    "epgid": "573244",
     "name": "Colors",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042605957464_10.png"
   },
-  "573097": {
-    "epgid": "573097",
+  "573245": {
+    "epgid": "573245",
     "name": "mio Sports",
     "logo": ""
   },
-  "573098": {
-    "epgid": "573098",
+  "573246": {
+    "epgid": "573246",
     "name": "mio Sports 2",
     "logo": ""
   },
-  "573099": {
-    "epgid": "573099",
+  "573247": {
+    "epgid": "573247",
     "name": "TVBS Asia",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042924394028_53.png"
   },
-  "573100": {
-    "epgid": "573100",
+  "573248": {
+    "epgid": "573248",
     "name": "Premier Sports",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/PREMIERSPORTS1.png"
   },
-  "573101": {
-    "epgid": "573101",
+  "573249": {
+    "epgid": "573249",
     "name": "GMA Pinoy TV",
     "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129230704777558_16.png"
   },
-  "573102": {
-    "epgid": "573102",
+  "573250": {
+    "epgid": "573250",
     "name": "Discovery Ch (HD)",
     "logo": ""
   },
-  "573103": {
-    "epgid": "573103",
+  "573251": {
+    "epgid": "573251",
     "name": "Discovery Asia (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DISCOVERYASIA.png"
   },
-  "573104": {
-    "epgid": "573104",
+  "573252": {
+    "epgid": "573252",
     "name": "C+I (HD)",
     "logo": ""
   },
-  "573105": {
-    "epgid": "573105",
+  "573253": {
+    "epgid": "573253",
     "name": "HISTORY (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HISTORY.png"
   },
-  "573106": {
-    "epgid": "573106",
+  "573254": {
+    "epgid": "573254",
     "name": "tvN HD (Mandarin)",
     "logo": ""
   },
-  "573107": {
-    "epgid": "573107",
+  "573255": {
+    "epgid": "573255",
     "name": "beIN SPORTS (HD)",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609081130229297_57.png"
   },
-  "573108": {
-    "epgid": "573108",
+  "573256": {
+    "epgid": "573256",
     "name": "TVB Jade (HD)",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042439684116_76.png"
   },
-  "573109": {
-    "epgid": "573109",
+  "573257": {
+    "epgid": "573257",
     "name": "ONE HD (Mandarin)",
     "logo": ""
   },
-  "573110": {
-    "epgid": "573110",
+  "573258": {
+    "epgid": "573258",
     "name": "now Jelli (HD)",
     "logo": ""
   },
-  "573111": {
-    "epgid": "573111",
+  "573259": {
+    "epgid": "573259",
     "name": "TVB Xing He (HD)",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609093104731072_47.png"
   },
-  "573112": {
-    "epgid": "573112",
+  "573260": {
+    "epgid": "573260",
     "name": "Sky News HD",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/SKYNEWS.png"
   },
-  "573113": {
-    "epgid": "573113",
+  "573261": {
+    "epgid": "573261",
     "name": "CGTN (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CGTN.png"
   },
-  "573114": {
-    "epgid": "573114",
+  "573262": {
+    "epgid": "573262",
     "name": "NHK World - Japan",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NHKWORLD.png"
   },
-  "573115": {
-    "epgid": "573115",
+  "573263": {
+    "epgid": "573263",
     "name": "ONE HD (Malay)",
     "logo": ""
   },
-  "573116": {
-    "epgid": "573116",
+  "573264": {
+    "epgid": "573264",
     "name": "Astro Prima HD",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
-  "573117": {
-    "epgid": "573117",
+  "573265": {
+    "epgid": "573265",
     "name": "Astro Ria HD",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AH.png"
   },
-  "573118": {
-    "epgid": "573118",
+  "573266": {
+    "epgid": "573266",
     "name": "CNN International",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CNN.png"
   },
-  "573119": {
-    "epgid": "573119",
+  "573267": {
+    "epgid": "573267",
     "name": "ETTV Asia News (HD)",
     "logo": ""
   },
-  "573120": {
-    "epgid": "573120",
+  "573268": {
+    "epgid": "573268",
     "name": "beIN SPORTS 4 (HD)",
     "logo": "https://epg.pw/media/images/epg/2026/01/10/20260110042457228723_89.png"
   },
-  "573121": {
-    "epgid": "573121",
+  "573269": {
+    "epgid": "573269",
     "name": "CINEMAX (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CINEMAX.png"
   },
-  "573122": {
-    "epgid": "573122",
+  "573270": {
+    "epgid": "573270",
     "name": "HBO HD",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HBOHD.png"
   },
-  "573123": {
-    "epgid": "573123",
+  "573271": {
+    "epgid": "573271",
     "name": "HBO Hits (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HBOHITS.png"
   },
-  "573124": {
-    "epgid": "573124",
+  "573272": {
+    "epgid": "573272",
     "name": "BBC News (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/BBCNEWS.png"
   },
-  "573125": {
-    "epgid": "573125",
+  "573273": {
+    "epgid": "573273",
     "name": "Nick Jr (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NICKJR.png"
   },
-  "573126": {
-    "epgid": "573126",
+  "573274": {
+    "epgid": "573274",
     "name": "DreamWorks (HD)",
     "logo": "https://epg.pw/media/images/epg/2026/01/10/20260110064546259265_92.png"
   },
-  "573127": {
-    "epgid": "573127",
+  "573275": {
+    "epgid": "573275",
     "name": "ANIPLUS HD",
     "logo": ""
   },
-  "573128": {
-    "epgid": "573128",
+  "573276": {
+    "epgid": "573276",
     "name": "Fight Sports (HD)",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042702948578_27.png"
   },
-  "573129": {
-    "epgid": "573129",
+  "573277": {
+    "epgid": "573277",
     "name": "SPOTV (HD)",
     "logo": ""
   },
-  "573130": {
-    "epgid": "573130",
+  "573278": {
+    "epgid": "573278",
     "name": "SPOTV 2 (HD)",
     "logo": ""
   },
-  "573131": {
-    "epgid": "573131",
+  "573279": {
+    "epgid": "573279",
     "name": "beIN SPORTS 3 (HD)",
     "logo": "https://epg.pw/media/images/epg/2026/03/12/20260312010043416240_30.png"
   },
-  "573132": {
-    "epgid": "573132",
+  "573280": {
+    "epgid": "573280",
     "name": "Sony YAY",
     "logo": ""
   },
-  "573133": {
-    "epgid": "573133",
+  "573281": {
+    "epgid": "573281",
     "name": "Zee Tamil HD",
     "logo": "https://epg.pw/media/images/epg/2024/06/09/20240609082504728100_87.png"
   },
-  "573134": {
-    "epgid": "573134",
+  "573282": {
+    "epgid": "573282",
     "name": "tvN Movies On Demand",
     "logo": ""
   },
-  "573135": {
-    "epgid": "573135",
+  "573283": {
+    "epgid": "573283",
     "name": "SET (HINDI)",
     "logo": ""
   },
-  "573136": {
-    "epgid": "573136",
+  "573284": {
+    "epgid": "573284",
     "name": "Zee TV",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042222390497_98.png"
   },
-  "573137": {
-    "epgid": "573137",
+  "573285": {
+    "epgid": "573285",
     "name": "DW (English)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DW.png"
   },
-  "573138": {
-    "epgid": "573138",
+  "573286": {
+    "epgid": "573286",
     "name": "FOX News Channel HD",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FOXNEWS.png"
   },
-  "573139": {
-    "epgid": "573139",
+  "573287": {
+    "epgid": "573287",
     "name": "ABC Australia",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ABCAUSTRALIA.png"
   },
-  "573140": {
-    "epgid": "573140",
+  "573288": {
+    "epgid": "573288",
     "name": "France 24 (English)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png"
   },
-  "573141": {
-    "epgid": "573141",
+  "573289": {
+    "epgid": "573289",
     "name": "France 24 (French)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png"
   },
-  "573142": {
-    "epgid": "573142",
+  "573290": {
+    "epgid": "573290",
     "name": "Phoenix InfoNews",
     "logo": ""
   },
-  "573143": {
-    "epgid": "573143",
+  "573291": {
+    "epgid": "573291",
     "name": "Asianet",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042121372938_89.png"
   },
-  "573144": {
-    "epgid": "573144",
+  "573292": {
+    "epgid": "573292",
     "name": "Asianet Movies",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png"
   },
-  "573145": {
-    "epgid": "573145",
+  "573293": {
+    "epgid": "573293",
     "name": "Vijay TV (HD)",
     "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042518215568_35.png"
   },
-  "573146": {
-    "epgid": "573146",
+  "573294": {
+    "epgid": "573294",
     "name": "CBeebies (HD)",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CBEEBIES.png"
   },
@@ -9149,241 +9149,6 @@
     "name": "globaltrekker",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/GLOBALTREKKER.png"
   },
-  "368322": {
-    "epgid": "368322",
-    "name": "PopC",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/POPC.png"
-  },
-  "368323": {
-    "epgid": "368323",
-    "name": "娛樂新聞台",
-    "logo": ""
-  },
-  "368325": {
-    "epgid": "368325",
-    "name": "千禧經典台",
-    "logo": ""
-  },
-  "368326": {
-    "epgid": "368326",
-    "name": "tvN",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TVN.png"
-  },
-  "368327": {
-    "epgid": "368327",
-    "name": "半島電視台英語頻道",
-    "logo": "https://epg.pw/media/images/epg/2025/01/28/20250128185426183255_39.png"
-  },
-  "368328": {
-    "epgid": "368328",
-    "name": "myTV SUPER直播足球4台",
-    "logo": ""
-  },
-  "368329": {
-    "epgid": "368329",
-    "name": "創世電視",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/创世电视.png"
-  },
-  "368330": {
-    "epgid": "368330",
-    "name": "中國電影頻道",
-    "logo": ""
-  },
-  "368332": {
-    "epgid": "368332",
-    "name": "ROCK綜藝娛樂",
-    "logo": ""
-  },
-  "368334": {
-    "epgid": "368334",
-    "name": "myTV SUPER 18台",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MYTVSUPER18.png"
-  },
-  "368335": {
-    "epgid": "368335",
-    "name": "亞洲劇台",
-    "logo": ""
-  },
-  "368336": {
-    "epgid": "368336",
-    "name": "Nickelodeon",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NICKELODEON.png"
-  },
-  "368337": {
-    "epgid": "368337",
-    "name": "NHK World-Japan",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NHKWORLD.png"
-  },
-  "368339": {
-    "epgid": "368339",
-    "name": "Thrill",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/THRILL.png"
-  },
-  "368340": {
-    "epgid": "368340",
-    "name": "東方衛視國際頻道",
-    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129153959826528_66.png"
-  },
-  "368342": {
-    "epgid": "368342",
-    "name": "France 24",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png"
-  },
-  "368344": {
-    "epgid": "368344",
-    "name": "華語劇台",
-    "logo": ""
-  },
-  "368345": {
-    "epgid": "368345",
-    "name": "myTV SUPER直播足球3台",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MYTVSUPER.png"
-  },
-  "368346": {
-    "epgid": "368346",
-    "name": "CGTN (中國環球電視網)英語頻道",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CGTN.png"
-  },
-  "368347": {
-    "epgid": "368347",
-    "name": "CGTN (中國環球電視網)記錄頻道",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CGTN.png"
-  },
-  "368348": {
-    "epgid": "368348",
-    "name": "美亞電影台",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/美亚电影.png"
-  },
-  "368350": {
-    "epgid": "368350",
-    "name": "KIX",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/KIX.png"
-  },
-  "368351": {
-    "epgid": "368351",
-    "name": "黃金華劇台",
-    "logo": ""
-  },
-  "368353": {
-    "epgid": "368353",
-    "name": "戲曲台",
-    "logo": ""
-  },
-  "368355": {
-    "epgid": "368355",
-    "name": "Love Nature HD,Love Nature",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/LOVENATURE.png"
-  },
-  "368356": {
-    "epgid": "368356",
-    "name": "Global Trekker",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/GLOBALTREKKER.png"
-  },
-  "368357": {
-    "epgid": "368357",
-    "name": "無線衛星亞洲台",
-    "logo": ""
-  },
-  "368358": {
-    "epgid": "368358",
-    "name": "黃金翡翠台",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/翡翠.png"
-  },
-  "368359": {
-    "epgid": "368359",
-    "name": "無綫新聞台",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/无线新闻.png"
-  },
-  "368361": {
-    "epgid": "368361",
-    "name": "TVB Plus",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TVBPLUS.png"
-  },
-  "368362": {
-    "epgid": "368362",
-    "name": "ROCK Action",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ROCKACTION.png"
-  },
-  "368363": {
-    "epgid": "368363",
-    "name": "無線衛星新聞台",
-    "logo": ""
-  },
-  "368364": {
-    "epgid": "368364",
-    "name": "Love Nature 4K",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/LOVENATURE4K.png"
-  },
-  "368366": {
-    "epgid": "368366",
-    "name": "翡翠台",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/翡翠.png"
-  },
-  "368367": {
-    "epgid": "368367",
-    "name": "Nick Jr",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NICKJR.png"
-  },
-  "368368": {
-    "epgid": "368368",
-    "name": "ZooMoo",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ZOOMOO.png"
-  },
-  "368369": {
-    "epgid": "368369",
-    "name": "明珠台",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/明珠.png"
-  },
-  "368370": {
-    "epgid": "368370",
-    "name": "Arirang TV",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ARIRANGTV.png"
-  },
-  "368371": {
-    "epgid": "368371",
-    "name": "天映經典頻道",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/天映.png"
-  },
-  "368373": {
-    "epgid": "368373",
-    "name": "DW",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DW.png"
-  },
-  "368375": {
-    "epgid": "368375",
-    "name": "中央電視台綜合頻道 (港澳版)",
-    "logo": ""
-  },
-  "368376": {
-    "epgid": "368376",
-    "name": "SUPER FREE",
-    "logo": ""
-  },
-  "368377": {
-    "epgid": "368377",
-    "name": "亞洲新聞台",
-    "logo": "https://epg.pw/media/images/epg/2025/01/28/20250128175001663894_17.png"
-  },
-  "368378": {
-    "epgid": "368378",
-    "name": "測試頻道",
-    "logo": ""
-  },
-  "368379": {
-    "epgid": "368379",
-    "name": "myTV SUPER直播足球5台",
-    "logo": ""
-  },
-  "368380": {
-    "epgid": "368380",
-    "name": "SUPER Kids Channel",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/SUPERKIDSCHANNEL.png"
-  },
-  "368381": {
-    "epgid": "368381",
-    "name": "粵語片台",
-    "logo": ""
-  },
   "368550": {
     "epgid": "368550",
     "name": "港台电视31",
@@ -9407,16 +9172,6 @@
   "368554": {
     "epgid": "368554",
     "name": "港台电视35",
-    "logo": ""
-  },
-  "397763": {
-    "epgid": "397763",
-    "name": "myTV SUPER直播足球2台",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MYTVSUPER.png"
-  },
-  "398976": {
-    "epgid": "398976",
-    "name": "myTV SUPER直播足球6台",
     "logo": ""
   },
   "410275": {
@@ -9484,15 +9239,15 @@
     "name": "tvN",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TVN.png"
   },
-  "410289": {
-    "epgid": "410289",
-    "name": "KBS World",
-    "logo": "https://epg.pw/media/images/epg/2025/01/28/20250128132005125401_90.png"
-  },
   "410292": {
     "epgid": "410292",
     "name": "熊貓 TV",
     "logo": "https://epg.pw/media/images/epg/2025/01/28/20250128133908461237_16.png"
+  },
+  "410293": {
+    "epgid": "410293",
+    "name": "Discovery Asia",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DISCOVERYASIA.png"
   },
   "410294": {
     "epgid": "410294",
@@ -9608,21 +9363,6 @@
     "epgid": "410342",
     "name": "中國環球電視網",
     "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129055136213881_55.png"
-  },
-  "410343": {
-    "epgid": "410343",
-    "name": "Now直播台",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NOW直播.png"
-  },
-  "410344": {
-    "epgid": "410344",
-    "name": "Now新聞台",
-    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129063901847212_30.png"
-  },
-  "410345": {
-    "epgid": "410345",
-    "name": "Now財經台",
-    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129070159584201_42.png"
   },
   "410346": {
     "epgid": "410346",
@@ -9904,6 +9644,346 @@
     "name": "TV5MONDE ASIE",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TV5MONDEASIE.png"
   },
+  "412087": {
+    "epgid": "412087",
+    "name": "HITS MOVIES",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png"
+  },
+  "412204": {
+    "epgid": "412204",
+    "name": "HITS",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HITS.png"
+  },
+  "415544": {
+    "epgid": "415544",
+    "name": "Now Sports 英超6台",
+    "logo": "https://epg.pw/media/images/epg/2025/03/07/20250307072605751128_33.png"
+  },
+  "415545": {
+    "epgid": "415545",
+    "name": "Now Sports 英超7台",
+    "logo": "https://epg.pw/media/images/epg/2025/03/07/20250307072905772044_53.png"
+  },
+  "420138": {
+    "epgid": "420138",
+    "name": "TV5MONDE Style",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TV5MONDESTYLE.png"
+  },
+  "421332": {
+    "epgid": "421332",
+    "name": "Now Sports 647",
+    "logo": "https://epg.pw/media/images/epg/2025/04/03/20250403080005697064_74.png"
+  },
+  "540037": {
+    "epgid": "540037",
+    "name": "深圳衛視",
+    "logo": "https://epg.pw/media/images/epg/2026/04/25/20260425064010279369_85.png"
+  },
+  "565551": {
+    "epgid": "565551",
+    "name": "ViuTVsix",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/VIUTVSIX.png"
+  },
+  "565569": {
+    "epgid": "565569",
+    "name": "ViuTV",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/VIUTV.png"
+  },
+  "565602": {
+    "epgid": "565602",
+    "name": "Now 影視點播站",
+    "logo": "https://epg.pw/media/images/epg/2025/10/22/20251022040351932889_34.png"
+  },
+  "565676": {
+    "epgid": "565676",
+    "name": "MOOV 演唱會/MV台",
+    "logo": "https://epg.pw/media/images/epg/2025/01/28/20250128133738183109_51.png"
+  },
+  "565678": {
+    "epgid": "565678",
+    "name": "Netflix",
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129140355751556_35.png"
+  },
+  "567240": {
+    "epgid": "567240",
+    "name": "Now Sports 英超8台",
+    "logo": "https://epg.pw/media/images/epg/2026/09/09/20260909064820148475_75.png"
+  },
+  "567241": {
+    "epgid": "567241",
+    "name": "Now Sports 英超9台",
+    "logo": "https://epg.pw/media/images/epg/2026/09/09/20260909065413273111_32.png"
+  },
+  "571821": {
+    "epgid": "571821",
+    "name": "euronews",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/EURONEWS.png"
+  },
+  "368322": {
+    "epgid": "368322",
+    "name": "PopC",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/POPC.png"
+  },
+  "368323": {
+    "epgid": "368323",
+    "name": "娛樂新聞台",
+    "logo": ""
+  },
+  "368325": {
+    "epgid": "368325",
+    "name": "千禧經典台",
+    "logo": ""
+  },
+  "368326": {
+    "epgid": "368326",
+    "name": "tvN",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TVN.png"
+  },
+  "368327": {
+    "epgid": "368327",
+    "name": "半島電視台英語頻道",
+    "logo": "https://epg.pw/media/images/epg/2025/01/28/20250128185426183255_39.png"
+  },
+  "368328": {
+    "epgid": "368328",
+    "name": "myTV SUPER直播足球4台",
+    "logo": ""
+  },
+  "368329": {
+    "epgid": "368329",
+    "name": "創世電視",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/创世电视.png"
+  },
+  "368330": {
+    "epgid": "368330",
+    "name": "中國電影頻道",
+    "logo": ""
+  },
+  "368332": {
+    "epgid": "368332",
+    "name": "ROCK綜藝娛樂",
+    "logo": ""
+  },
+  "368334": {
+    "epgid": "368334",
+    "name": "myTV SUPER 18台",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MYTVSUPER18.png"
+  },
+  "368335": {
+    "epgid": "368335",
+    "name": "亞洲劇台",
+    "logo": ""
+  },
+  "368336": {
+    "epgid": "368336",
+    "name": "Nickelodeon",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NICKELODEON.png"
+  },
+  "368337": {
+    "epgid": "368337",
+    "name": "NHK World-Japan",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NHKWORLD.png"
+  },
+  "368339": {
+    "epgid": "368339",
+    "name": "Thrill",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/THRILL.png"
+  },
+  "368340": {
+    "epgid": "368340",
+    "name": "東方衛視國際頻道",
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129153959826528_66.png"
+  },
+  "368342": {
+    "epgid": "368342",
+    "name": "France 24",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/FRANCE24.png"
+  },
+  "368344": {
+    "epgid": "368344",
+    "name": "華語劇台",
+    "logo": ""
+  },
+  "368345": {
+    "epgid": "368345",
+    "name": "myTV SUPER直播足球3台",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MYTVSUPER.png"
+  },
+  "368346": {
+    "epgid": "368346",
+    "name": "CGTN (中國環球電視網)英語頻道",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CGTN.png"
+  },
+  "368347": {
+    "epgid": "368347",
+    "name": "CGTN (中國環球電視網)記錄頻道",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CGTN.png"
+  },
+  "368348": {
+    "epgid": "368348",
+    "name": "美亞電影台",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/美亚电影.png"
+  },
+  "368350": {
+    "epgid": "368350",
+    "name": "KIX",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/KIX.png"
+  },
+  "368351": {
+    "epgid": "368351",
+    "name": "黃金華劇台",
+    "logo": ""
+  },
+  "368353": {
+    "epgid": "368353",
+    "name": "戲曲台",
+    "logo": ""
+  },
+  "368355": {
+    "epgid": "368355",
+    "name": "Love Nature HD,Love Nature",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/LOVENATURE.png"
+  },
+  "368356": {
+    "epgid": "368356",
+    "name": "Global Trekker",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/GLOBALTREKKER.png"
+  },
+  "368357": {
+    "epgid": "368357",
+    "name": "無線衛星亞洲台",
+    "logo": ""
+  },
+  "368358": {
+    "epgid": "368358",
+    "name": "黃金翡翠台",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/翡翠.png"
+  },
+  "368359": {
+    "epgid": "368359",
+    "name": "無綫新聞台",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/无线新闻.png"
+  },
+  "368361": {
+    "epgid": "368361",
+    "name": "TVB Plus",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TVBPLUS.png"
+  },
+  "368362": {
+    "epgid": "368362",
+    "name": "ROCK Action",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ROCKACTION.png"
+  },
+  "368363": {
+    "epgid": "368363",
+    "name": "無線衛星新聞台",
+    "logo": ""
+  },
+  "368364": {
+    "epgid": "368364",
+    "name": "Love Nature 4K",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/LOVENATURE4K.png"
+  },
+  "368366": {
+    "epgid": "368366",
+    "name": "翡翠台",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/翡翠.png"
+  },
+  "368367": {
+    "epgid": "368367",
+    "name": "Nick Jr",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NICKJR.png"
+  },
+  "368368": {
+    "epgid": "368368",
+    "name": "ZooMoo",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ZOOMOO.png"
+  },
+  "368369": {
+    "epgid": "368369",
+    "name": "明珠台",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/明珠.png"
+  },
+  "368370": {
+    "epgid": "368370",
+    "name": "Arirang TV",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ARIRANGTV.png"
+  },
+  "368371": {
+    "epgid": "368371",
+    "name": "天映經典頻道",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/天映.png"
+  },
+  "368373": {
+    "epgid": "368373",
+    "name": "DW",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DW.png"
+  },
+  "368375": {
+    "epgid": "368375",
+    "name": "中央電視台綜合頻道 (港澳版)",
+    "logo": ""
+  },
+  "368376": {
+    "epgid": "368376",
+    "name": "SUPER FREE",
+    "logo": ""
+  },
+  "368377": {
+    "epgid": "368377",
+    "name": "亞洲新聞台",
+    "logo": "https://epg.pw/media/images/epg/2025/01/28/20250128175001663894_17.png"
+  },
+  "368378": {
+    "epgid": "368378",
+    "name": "測試頻道",
+    "logo": ""
+  },
+  "368379": {
+    "epgid": "368379",
+    "name": "myTV SUPER直播足球5台",
+    "logo": ""
+  },
+  "368380": {
+    "epgid": "368380",
+    "name": "SUPER Kids Channel",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/SUPERKIDSCHANNEL.png"
+  },
+  "368381": {
+    "epgid": "368381",
+    "name": "粵語片台",
+    "logo": ""
+  },
+  "397763": {
+    "epgid": "397763",
+    "name": "myTV SUPER直播足球2台",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MYTVSUPER.png"
+  },
+  "398976": {
+    "epgid": "398976",
+    "name": "myTV SUPER直播足球6台",
+    "logo": ""
+  },
+  "410289": {
+    "epgid": "410289",
+    "name": "KBS World",
+    "logo": "https://epg.pw/media/images/epg/2025/01/28/20250128132005125401_90.png"
+  },
+  "410343": {
+    "epgid": "410343",
+    "name": "Now直播台",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/NOW直播.png"
+  },
+  "410344": {
+    "epgid": "410344",
+    "name": "Now新聞台",
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129063901847212_30.png"
+  },
+  "410345": {
+    "epgid": "410345",
+    "name": "Now財經台",
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129070159584201_42.png"
+  },
   "410426": {
     "epgid": "410426",
     "name": "GMA Pinoy TV",
@@ -9944,40 +10024,45 @@
     "name": "MTV India",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MTV.png"
   },
-  "412087": {
-    "epgid": "412087",
-    "name": "HITS MOVIES",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/MOVIE.png"
+  "410435": {
+    "epgid": "410435",
+    "name": "Zee Cinema International",
+    "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130005235041882_38.png"
   },
-  "412204": {
-    "epgid": "412204",
-    "name": "HITS",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HITS.png"
+  "410436": {
+    "epgid": "410436",
+    "name": "Zee TV",
+    "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042222390497_98.png"
   },
-  "415544": {
-    "epgid": "415544",
-    "name": "Now Sports 英超6台",
-    "logo": "https://epg.pw/media/images/epg/2025/03/07/20250307072605751128_33.png"
+  "410437": {
+    "epgid": "410437",
+    "name": "Zee News",
+    "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130011902266984_55.png"
   },
-  "415545": {
-    "epgid": "415545",
-    "name": "Now Sports 英超7台",
-    "logo": "https://epg.pw/media/images/epg/2025/03/07/20250307072905772044_53.png"
+  "410438": {
+    "epgid": "410438",
+    "name": "Star Gold",
+    "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130012415432693_88.png"
+  },
+  "410439": {
+    "epgid": "410439",
+    "name": "STAR PLUS",
+    "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130014728926986_40.png"
+  },
+  "410440": {
+    "epgid": "410440",
+    "name": "Star Bharat",
+    "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130020518427329_18.png"
   },
   "416310": {
     "epgid": "416310",
     "name": "myTV SUPER直播足球7台",
     "logo": ""
   },
-  "420138": {
-    "epgid": "420138",
-    "name": "TV5MONDE Style",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TV5MONDESTYLE.png"
-  },
-  "421332": {
-    "epgid": "421332",
-    "name": "Now Sports 647",
-    "logo": "https://epg.pw/media/images/epg/2025/04/03/20250403080005697064_74.png"
+  "420293": {
+    "epgid": "420293",
+    "name": "COLORS",
+    "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042605957464_10.png"
   },
   "425921": {
     "epgid": "425921",
@@ -10164,11 +10249,6 @@
     "name": "ROCK Extreme",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ROCKEXTREME.png"
   },
-  "540037": {
-    "epgid": "540037",
-    "name": "深圳衛視",
-    "logo": "https://epg.pw/media/images/epg/2026/04/25/20260425064010279369_85.png"
-  },
   "548540": {
     "epgid": "548540",
     "name": "NewTV古裝劇場 (免費)",
@@ -10194,81 +10274,6 @@
     "name": "The Indonesia Channel (免費)",
     "logo": ""
   },
-  "565551": {
-    "epgid": "565551",
-    "name": "ViuTVsix",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/VIUTVSIX.png"
-  },
-  "565569": {
-    "epgid": "565569",
-    "name": "ViuTV",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/VIUTV.png"
-  },
-  "565602": {
-    "epgid": "565602",
-    "name": "Now 影視點播站",
-    "logo": "https://epg.pw/media/images/epg/2025/10/22/20251022040351932889_34.png"
-  },
-  "565676": {
-    "epgid": "565676",
-    "name": "MOOV 演唱會/MV台",
-    "logo": "https://epg.pw/media/images/epg/2025/01/28/20250128133738183109_51.png"
-  },
-  "565678": {
-    "epgid": "565678",
-    "name": "Netflix",
-    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129140355751556_35.png"
-  },
-  "567240": {
-    "epgid": "567240",
-    "name": "Now Sports 英超8台",
-    "logo": "https://epg.pw/media/images/epg/2026/09/09/20260909064820148475_75.png"
-  },
-  "567241": {
-    "epgid": "567241",
-    "name": "Now Sports 英超9台",
-    "logo": "https://epg.pw/media/images/epg/2026/09/09/20260909065413273111_32.png"
-  },
-  "571821": {
-    "epgid": "571821",
-    "name": "euronews",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/EURONEWS.png"
-  },
-  "410435": {
-    "epgid": "410435",
-    "name": "Zee Cinema International",
-    "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130005235041882_38.png"
-  },
-  "410436": {
-    "epgid": "410436",
-    "name": "Zee TV",
-    "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042222390497_98.png"
-  },
-  "410437": {
-    "epgid": "410437",
-    "name": "Zee News",
-    "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130011902266984_55.png"
-  },
-  "410438": {
-    "epgid": "410438",
-    "name": "Star Gold",
-    "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130012415432693_88.png"
-  },
-  "410439": {
-    "epgid": "410439",
-    "name": "STAR PLUS",
-    "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130014728926986_40.png"
-  },
-  "410440": {
-    "epgid": "410440",
-    "name": "Star Bharat",
-    "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130020518427329_18.png"
-  },
-  "420293": {
-    "epgid": "420293",
-    "name": "COLORS",
-    "logo": "https://epg.pw/media/images/epg/2025/02/12/20250212042605957464_10.png"
-  },
   "565680": {
     "epgid": "565680",
     "name": "冰火頻道",
@@ -10278,11 +10283,6 @@
     "epgid": "565681",
     "name": "成人極品台",
     "logo": "https://epg.pw/media/images/epg/2025/01/30/20250130022257833990_66.png"
-  },
-  "410293": {
-    "epgid": "410293",
-    "name": "Discovery Asia",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/DISCOVERYASIA.png"
   },
   "410425": {
     "epgid": "410425",
