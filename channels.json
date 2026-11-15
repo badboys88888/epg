@@ -6934,6 +6934,11 @@
     "name": "凤凰资讯",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/凤凰资讯.png"
   },
+  "189": {
+    "epgid": "189",
+    "name": "HKS",
+    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HKS.png"
+  },
   "1424": {
     "epgid": "1424",
     "name": "风云足球",
@@ -7189,11 +7194,6 @@
     "name": "贵州大众",
     "logo": ""
   },
-  "537": {
-    "epgid": "537",
-    "name": "贵州科教",
-    "logo": ""
-  },
   "565": {
     "epgid": "565",
     "name": "河北都市",
@@ -7248,16 +7248,6 @@
     "epgid": "729",
     "name": "山东体育",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/山东体育.png"
-  },
-  "730": {
-    "epgid": "730",
-    "name": "山东农科",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/山东农科.png"
-  },
-  "732": {
-    "epgid": "732",
-    "name": "山东少儿",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/山东少儿.png"
   },
   "734": {
     "epgid": "734",
@@ -7333,11 +7323,6 @@
     "epgid": "933",
     "name": "云南都市",
     "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/云南都市.png"
-  },
-  "934": {
-    "epgid": "934",
-    "name": "云南影视",
-    "logo": "https://gcore.jsdelivr.net/gh/taksssss/tv/icon/云南影视.png"
   },
   "1025": {
     "epgid": "1025",
